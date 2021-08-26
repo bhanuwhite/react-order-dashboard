@@ -2,8 +2,8 @@
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <div className="row no-gutters">
-        <div className="col-lg-7">
+      <div className="row no-gutters justify-content-between">
+        <div className="">
           <ul className="widget-links">
             <li>
               <a href="">Service Status</a>
@@ -13,7 +13,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-lg-5 text-right">
+        <div className="mr-5">
           <ul className="widget-links">
             <li>
               <a href="">Terms of Use</a>

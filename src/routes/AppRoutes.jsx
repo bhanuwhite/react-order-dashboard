@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Footer from "../components/Footer";
 import LoginForm from "../components/LoginForm";
+import Home from "../components/Home";
+
 
 const Layout = ({ children }) => {
   return (
@@ -18,7 +20,8 @@ const AppRoutes = () => {
       <Router>
         <Switch>
           <Route exact path="/login" component={LoginForm} />
-          <Redirect from="/" to="/login" />
+          <Route exact path="/home" component={Home} />
+          <Redirect from="/" to="/home" />
         </Switch>
       </Router>
     </Layout>
