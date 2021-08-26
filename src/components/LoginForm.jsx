@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import adEdgeLogo from "../assets/imgs/logo.png";
+import adEdgeLogo from "../assets/imgs/logo2.svg";
 const LoginForm = () => {
   return (
     <div className="login-wrapper">

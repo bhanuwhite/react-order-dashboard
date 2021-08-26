@@ -1,6 +1,6 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import personImage from '../assets/imgs/person-img.png';
-import adEdgeLogo from "../assets/imgs/logo.png";
+import adEdgeLogo from "../assets/imgs/logo2.svg";
 import bellSvg from "../assets/imgs/Alarm.svg";
 import searchIcon from "../assets/imgs/search-icon.svg";
 
