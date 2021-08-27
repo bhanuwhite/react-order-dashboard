@@ -4,7 +4,6 @@ import adEdgeLogo from "../assets/imgs/logo2.svg";
 import bellSvg from "../assets/imgs/Alarm.svg";
 import searchIcon from "../assets/imgs/search-icon.svg";
 
-
 const Home = () => {
     return (
         /* header */
