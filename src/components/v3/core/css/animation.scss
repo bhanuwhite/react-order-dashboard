@@ -1,0 +1,14 @@
+
+@for $i from 1 through 5 {
+    .delay-#{$i}s {
+        animation-delay: #{$i}s;
+    }
+}
+
+@for $i from 1 through 10 {
+    $v: $i * 100;
+
+    .duration-#{$v}ms {
+        animation-duration: #{$v}ms;
+    }
+}

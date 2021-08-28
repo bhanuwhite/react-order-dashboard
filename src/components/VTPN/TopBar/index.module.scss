@@ -1,0 +1,124 @@
+@import "@/components/core/scss/consts";
+@import "@/components/core/scss/veea-colors";
+
+.menu {
+    width: 100%;
+    height: 60px;
+    z-index: 10000;
+    border-bottom: 1px solid rgba(0,0,0,0.11);
+}
+
+.logo {
+    width: 67px;
+    height: 24px;
+    margin-right: 15px;
+    // margin-top: 17px;
+}
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+    // Extracted from https://veea.com/home
+    width: 90%;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 1300px;
+    height: 60px;
+}
+
+@media (max-width: 1024px) {
+    .menuContainer, .menu {
+        height: 45px;
+    }
+
+    .menuContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    body.openMobileMenu {
+        overflow: hidden !important;
+        position: relative;
+        height: 100%;
+    }
+}
+
+.mobileMenu {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url("~ASSETS_IMAGES_FOLDER/mobile/menu.svg");
+    background-size: 17px 17px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+body.openMobileMenu .mobileMenu {
+    background-image: url("~ASSETS_IMAGES_FOLDER/mobile/menu-close.svg");
+    background-size: 13px;
+}
+
+@media (max-width: 1024px) {
+    .mobileMenuContainer {
+        background: #f7f7f7;
+        width: 100%;
+        padding: 0 !important;
+        top: 45px;
+        position: absolute;
+        flex-direction: column;
+        opacity: 0;
+        height: 0 !important;
+        transition-property: opacity, height;
+        transition-duration: 0.28s;
+        transition-timing-function: ease-in-out;
+        pointer-events: none;
+
+        & > :global(.btn) {
+            background: none;
+            margin: 0;
+            width: 100%;
+            color: $grey-63;
+            font-size: 14px;
+            padding: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: left;
+            line-height: 45px;
+        }
+
+        & > :global(.btn):hover {
+            color: $primary-color !important;
+        }
+
+        & > div > a {
+            width: 100%;
+            height: 100%;
+            line-height: 45px;
+        }
+
+        & > div, & > :global(.btn) {
+            height: 45px !important;
+            background-image: url("~ASSETS_IMAGES_FOLDER/mobile/chevron.svg");
+            background-size: auto 10px;
+            background-repeat: no-repeat;
+            background-position: right center;
+            border-bottom: 1px solid $light-grey;
+
+            &:hover {
+                border-top: none !important;
+                background-color: $lighter-grey !important;
+            }
+        }
+    }
+
+    body.openMobileMenu .mobileMenuContainer {
+        height: 100vh !important;
+        opacity: 1;
+        overflow: auto;
+        pointer-events: auto;
+    }
+}

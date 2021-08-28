@@ -1,0 +1,133 @@
+@import "@/components/core/scss/consts";
+
+.tab-bar + .container.white-background {
+    margin-top: -1px;
+    z-index: 1;
+}
+
+.tab-bar {
+    background: rgb(251,251,251);
+    display: flex;
+    border-bottom: 1px solid rgb(200,200,200);
+    overflow: hidden;
+    height: 42px;
+    padding-left: 5px;
+    z-index: 1000;
+
+    // Add iOS momentum scrolling.
+    -webkit-overflow-scrolling: touch;
+
+    &.transparent {
+        background: transparent;
+        border-bottom: 0;
+    }
+
+    .scroller {
+        position: relative;
+        display: inline-block;
+        flex: 1 1 auto;
+        white-space: nowrap;
+        // scrollable
+        overflow-x: scroll;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        // fixed
+        // overflow-x: hidden;
+        // width: 100%;
+    }
+
+    * {
+       user-select: none;
+    }
+
+    &.large .tab-item {
+        font-size: 13px;
+        padding: 0px 30px;
+        margin-top: 4px;
+        height: 38px;
+        line-height: 38px;
+        @media only screen and (max-width: 1250px) {
+            padding: 0px 20px;
+        }
+    }
+
+    &.large .tab-item.active {
+        margin-top: 4px;
+        height: 38px;
+        line-height: 38px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .wrapper.tab-bar {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+.tab-item {
+    display: inline-block;
+    // float: left;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 0px;
+    background: rgb(242,242,242);
+    padding: 0px 18px;
+    font-size: 12.5px;
+    line-height: 32px;
+    height: 32px;
+    margin-top: 10px;
+    border: 1px solid rgb(200,200,200);
+    color: $grey;
+    font-weight: $fw-regular;
+    cursor: pointer;
+    /* transition: background-color 0.33s ease-in-out, margin-top 0.23s ease-in-out, line-height 0.23s ease-in-out, height 0.23s ease-in-out; */
+
+    &:hover {
+        background: white;
+    }
+
+    &.active {
+        background: white;
+        border-bottom: 0px;
+        color: $d-grey;
+        line-height: 36px;
+        height: 36px;
+        margin-top: 6px;
+        box-shadow: inset 0px 1px 0px #c93a3d;
+        border-top-color: #9a1c1f;
+    }
+}
+
+.within-content-tab-item {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 0px;
+    font-size: 16px;
+    line-height: 32px;
+    height: 32px;
+    margin-top: 10px;
+    color: $grey;
+    font-weight: $fw-regular;
+    text-align: center;
+    cursor: pointer;
+
+    &:not(.active):hover {
+        text-decoration: underline;
+    }
+
+    &.active {
+        border-bottom: solid 4px #c93a3d;
+        font-weight: $fw-bold;
+        color: $d-grey;
+        line-height: 36px;
+        height: 36px;
+        margin-top: 6px;
+        border-bottom-color: #9a1c1f;
+    }
+}

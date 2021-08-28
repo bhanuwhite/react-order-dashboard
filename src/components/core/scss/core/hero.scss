@@ -1,0 +1,19 @@
+.hero {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.hero-primary {
+        background: $primary-color;
+        color: $text-color-on-primary;
+    }
+
+    .hero-body {
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 3rem 1.5rem;
+        padding-bottom: 18rem;
+        padding-top: 18rem;
+    }
+}

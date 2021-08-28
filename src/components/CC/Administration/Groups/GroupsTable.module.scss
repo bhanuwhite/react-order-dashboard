@@ -1,0 +1,88 @@
+@import "@/components/core/scss/consts";
+@import "@/components/core/scss/veea-colors";
+
+$num-groups-table-columns: 8;
+$top-bottom-row-padding: 15px;
+
+.groupsTable {
+    display: grid;
+    flex-grow: 2;
+    grid-template-columns: 3fr 5fr 3fr repeat($num-groups-table-columns - 4, 2fr) 60px;
+
+    .rowWrapper {
+        display: contents;
+
+        & .errorBox {
+            grid-column: 1 / -1;
+            justify-content: center;
+        }
+
+        & a {
+            text-decoration: none;
+            font-weight: $fw-regular !important;
+
+            &:hover {
+                font-weight: $fw-bold !important;
+                text-decoration: underline;
+            }
+        }
+
+        & > div, & a {
+            padding: $top-bottom-row-padding 0px;
+            text-align: left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: pre;
+
+            &.loadingCell, &.noGroupsFound {
+                grid-column: 1 / -1;
+                height: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &.noGroupsFound {
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+                height: 250px;
+            }
+
+            &:not(:nth-child(#{$num-groups-table-columns}n + 1)) {
+                padding-left: 10px;
+            }
+        }
+
+        &:hover {
+            & > .groupItemCell {
+                background: #f8f8f8;
+            }
+        }
+
+    }
+
+    .headerCell {
+        border-bottom: 1px solid black;
+        font-weight: $fw-bold;
+    }
+
+    .groupItemCell {
+        border-bottom: 1px solid #e6e6e6;
+
+        &:nth-last-child(-n+#{$num-groups-table-columns}) {
+            border-bottom: none;
+        }
+    }
+
+    .selectRowTogggle {
+        padding: 0px 0px 0px 20px;
+        width: 20px;
+        min-height: 20px;
+        margin: 0px 0px 0px 5px;
+
+        &:before  {
+            left: 0px;
+            top: 0px;
+        }
+    }
+}

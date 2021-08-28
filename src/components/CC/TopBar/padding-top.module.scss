@@ -1,0 +1,7 @@
+.paddingTop {
+    padding-top: 60px;
+
+    & :global(.separator):global(.sticky) {
+        top: 60px;
+    }
+}

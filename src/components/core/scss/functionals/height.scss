@@ -1,0 +1,12 @@
+// .h-0 to .h-200 (inc 5)
+@for $i from 0 through 20 {
+    $v: $i * 5;
+    .h-#{$v} { height: #{$v}px !important; }
+}
+// .h-100 to .h-500 (inc 25)
+@for $i from 4 through 20 {
+    $v: $i * 25;
+    .h-#{$v} { height: #{$v}px !important; }
+}
+
+.h-full { height: 100%; }

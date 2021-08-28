@@ -1,16 +1,30 @@
 {
-  "extends": "./paths.json",
+  "extends": "./path.json",
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "es2016.array.include",
+      "ES2017.Object",
+      "ES2020.Promise",
+      "ES2017.String",
+      "ESNext.String"
     ],
-    "allowJs": true,
+    "allowJs": false,
     "skipLibCheck": true,
+    "sourceMap": true,
+    "importHelpers": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "allowUnreachableCode": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
@@ -21,6 +35,10 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "typeRoots": [
+    "node_modules/@types",
+    "custom_typings"
+  ],
   "include": [
     "src"
   ]

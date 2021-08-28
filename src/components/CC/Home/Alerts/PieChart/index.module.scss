@@ -1,0 +1,13 @@
+
+@import "@/components/core/scss/consts";
+
+.tooltip {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    font-size: 14px;
+
+    .textcolor {
+        color: green;
+    }
+}

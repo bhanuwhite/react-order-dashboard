@@ -1,0 +1,111 @@
+@import "@/components/core/scss/consts";
+
+.dateRangeLabel {
+    margin-top: 20px;
+    font-weight: $fw-bold;
+    margin-bottom: 5px;
+}
+
+.dateRangeContainer {
+    display: flex;
+    align-items: center;
+
+    & > div:nth-child(2), & > div:last-child {
+        margin-left: 25px;
+    }
+}
+
+.dateLabel {
+    font-size: 14px;
+    font-weight: 400;
+    color: #505064;
+    text-transform: uppercase;
+}
+
+.datePickerInput {
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    padding: 10px;
+    max-width: fit-content;
+    margin-left: 5px;
+
+    &.datePickerInputShow {
+        background-color: #eeeeee;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #eeeeee;
+    }
+}
+
+.datePicker {
+    position: fixed;
+    visibility: hidden;
+    background-color: white;
+    z-index: 1;
+
+    button i {
+        margin: 0px;
+    }
+
+    :global(.m-input-moment) {
+        padding-bottom: 0px;
+
+        :global(.options) {
+            display: none;
+        }
+    }
+
+    &.datePickerShow {
+        visibility: visible;
+    }
+}
+
+.separator {
+    width: 708px;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+.rotateLogsNote {
+    display: flex;
+    width: 525px;
+    padding: 15px;
+    color: #757583;
+
+    i {
+        margin-right: 15px;
+    }
+}
+
+.downloadLogsButton, .rotateLogsButton {
+    display: flex;
+    align-items: center;
+
+    i {
+        margin: 0px 15px 0px 5px;
+    }
+
+    &.activeLogsButton {
+        padding-left: 5px;
+    }
+
+    .spinnerButtonWrapper {
+        margin-right: 5px;
+
+        div {
+            padding: 0px;
+            
+            :global(.bounce1), :global(.bounce2), :global(.bounce3) {
+                background-color: #fff;
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+.downloadLogsButton {
+    margin-left: 8px;
+}

@@ -1,0 +1,105 @@
+@import "@/components/core/scss/veea-colors";
+
+.listItemLink {
+    text-decoration: none;
+    display: block;
+    overflow: auto;
+
+    &:last-child .listItem {
+        border-bottom: 0;
+    }
+}
+
+
+.listItem {
+    display: block;
+    position: relative;
+    min-height: 32px;
+    padding: 15px 30px 15px 75px;
+    color: black;
+    border-bottom: 1px solid rgb(230,230,230);
+
+    &:not(.listItemDisabled):hover {
+        cursor: pointer;
+        background: rgb(245,245,245);
+    }
+
+    img.icon {
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        margin-top: -21px;
+        border-radius: 3px;
+    }
+
+    div.title {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 900;
+        color: #9a1c1f;
+        display: inline-block;
+    }
+
+    div.description {
+        font-weight: 100;
+        font-size: 14px;
+        color: rgb(100,100,100);
+        line-height: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 25px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .listItem {
+        padding: 15px 15px 15px 15px;
+
+        img.icon {
+            display: none;
+        }
+    }
+}
+
+
+p.deviceStatus {
+    background: rgb(100,100,100);
+    color: white;
+    display: block;
+    text-transform: uppercase;
+    width: 85px;
+    font-size: 9px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0px;
+    margin-right: 10px;
+    float: left;
+    line-height: 22px;
+    margin-top: 1px;
+
+    &.right-float {
+        float: right;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    &.healthy {
+        background: $healthy-2-color;
+    }
+
+    &.busy,
+    &.need-reboot,
+    &.installing,
+    &.warning {
+        background: $busy-color;
+    }
+
+    &.offline {
+        background: $offline-2-color;
+    }
+}

@@ -1,0 +1,101 @@
+.statusLine {
+    display: block;
+    border: 1px solid rgb(238,238,238);
+    margin: 15px 0px;
+    border-radius: 6px;
+    position: relative;
+    padding-left: 70px;
+    width: 24%;
+    margin: 0.5%;
+    float: left;
+    height: 100px;
+    margin-bottom: 8px;
+    overflow: hidden;
+
+    &:global(.operational-true) {
+        background: rgb(230, 243, 233);
+        border: 1px solid rgb(230, 243, 233);
+    }
+
+    .statusTitle {
+        display: block;
+        font-weight: 900;
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    .statusDescription {
+        display: block;
+        font-weight: 200;
+        font-size: 12px;
+        color: rgb(100,100,100);
+        line-height: 1.3em
+    }
+
+    &:global(.operational-false) .statusTitle,
+    &:global(.operational-false) .statusDescription  {
+        color: rgb(160,160,160);
+    }
+
+    &:global(.operational-true) .statusTitle,
+    &:global(.operational-true) .statusDescription  {
+        color: #164d16;
+    }
+}
+.statusContainer {
+    overflow: auto;
+}
+.statusSeparator {
+    margin-left: 1%;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgb(104, 104, 104);
+    padding: 0px 0px;
+    padding-top: 20px;
+    clear: both;
+    margin-bottom: 8px;
+
+    &:first {
+        padding: 0;
+    }
+}
+.statusLineInner {
+    position: absolute;
+    left: 60px;
+    top: 19px;
+    padding-right: 30px;
+}
+
+.statusIcon {
+    position: absolute;
+    top: 18px; left: 18px;
+    width: 28px; height: 28px;
+
+    &:global(.operational-false) {
+        filter: invert(75%) sepia(2%) saturate(14%) hue-rotate(329deg) brightness(86%) contrast(91%);
+        opacity: 0.7
+    }
+
+    &:global(.operational-true) {
+        filter: invert(21%) sepia(9%) saturate(4933%) hue-rotate(76deg) brightness(97%) contrast(89%);
+    }
+}
+
+.statusValue {
+    position: absolute;
+    top: 50%;
+    line-height: 25px;
+    margin-top: -12px;
+    right: 20px;
+    font-size: 12px;
+    padding: 0px 10px;
+    color: white;
+    border-radius: 4px;
+    display: none;
+
+    &:global(.operational-false) {
+        background: gray;
+    }
+    &:global(.operational-true) {
+        background: green;
+    }
+}

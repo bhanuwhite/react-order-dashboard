@@ -1,0 +1,56 @@
+// Taken from https://tailwindcss.com/docs/border-width
+.border { border-width: 1px; }
+.border-0 { border-width: 0px !important; }
+.border-2 { border-width: 2px !important; }
+.border-4 { border-width: 4px; }
+.border-8 { border-width: 8px; }
+.border-t-0 { border-top-width: 0px; }
+.border-r-0 { border-right-width: 0px; }
+.border-b-0 { border-bottom-width: 0px; }
+.border-l-0 { border-left-width: 0px; }
+.border-t-2 { border-top-width: 2px; }
+.border-r-2 { border-right-width: 2px; }
+.border-b-2 { border-bottom-width: 2px; }
+.border-l-2 { border-left-width: 2px; }
+.border-t-4 { border-top-width: 4px; }
+.border-r-4 { border-right-width: 4px; }
+.border-b-4 { border-bottom-width: 4px; }
+.border-l-4 { border-left-width: 4px; }
+.border-t-8 { border-top-width: 8px; }
+.border-r-8 { border-right-width: 8px; }
+.border-b-8 { border-bottom-width: 8px; }
+.border-l-8 { border-left-width: 8px; }
+.border-t { border-top-width: 1px; }
+.border-r { border-right-width: 1px; }
+.border-b { border-bottom-width: 1px; }
+.border-l { border-left-width: 1px !important; }
+
+// Taken from https://tailwindcss.com/docs/border-style
+.border-solid { border-style: solid; }
+.border-dashed { border-style: dashed; }
+.border-dotted { border-style: dotted; }
+.border-double { border-style: double; }
+.border-none { border-style: none; }
+
+// https://tailwindcss.com/docs/hover-focus-and-other-states#last-child
+.last\:border-none:last-child { border-style: none; }
+
+// Inspired by https://tailwindcss.com/docs/border-radius
+.rounded { border-radius: 4px; }
+.rounded-6 { border-radius: 6px !important; }
+.rounded-16 { border-radius: 16px; }
+.rounded-70 { border-radius: 70px; }
+.rounded-100 { border-radius: 100px; }
+.rounded-none { border-radius: 0px !important; }
+
+// Inspired by https://tailwindcss.com/docs/border-color
+.border-transparent { border-color: transparent; }
+
+@each $name, $color in $all-colors {
+    .border-#{$name} { border-color: $color !important; }
+    .border-l-#{$name} { border-left-color: $color !important; }
+    .hover\:border-#{$name}:hover { border-color: $color; }
+}
+
+.border-t-primary { border-top-color: $primary-color; }
+.hover\:border-t-primary:hover { border-top-color: $primary-color; }

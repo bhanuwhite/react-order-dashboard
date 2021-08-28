@@ -1,0 +1,132 @@
+.text-field.autocomplete.has-matches {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.autocomplete-tag {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    margin: 2px;
+    line-height: 22px;
+    background-color: $default-color;
+    border: 1px solid $light-grey;
+    color: $text-color-on-default;
+    font-weight: $fw-bold;
+    border-radius: 2px;
+    box-sizing: content-box;
+    padding: 0 4px 0 10px;
+    outline: 0;
+    overflow: hidden;
+    cursor: default;
+
+    &:first-child {
+        margin-left: 4px;
+    }
+
+    &:hover {
+        color: $dark-grey;
+
+        & i {
+            color: $primary-color;
+        }
+    }
+
+    & span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    & i {
+        font-size: 12px;
+        padding: 4px;
+        margin-left: 4px;
+        cursor: pointer;
+    }
+
+    // .text-field.focus & {
+    //     border: 1px solid $light-grey;
+    // }
+
+    & + .text-field--inner {
+        & input, & label {
+            padding-left: 4px;
+        }
+    }
+}
+
+.autocomplete-results {
+
+    position: absolute;
+    list-style: none;
+    overflow: auto;
+    max-height: 250px;
+    border-radius: 0px 0px 4px 4px;
+    margin-top: 0px;
+    left: -1px;
+    right: -1px;
+    z-index: 1000000;
+    background: white;
+    border-bottom: 1px solid $dark-grey;
+    border-right: 1px solid $dark-grey;
+    border-left: 1px solid $dark-grey;
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    &.invalid {
+        border-color: $offline-color;
+    }
+
+    & .result {
+
+        padding: 5px 12px;
+        display: flex;
+
+        & span {
+            flex-grow: 1;
+        }
+
+        & i.fa-check {
+            color: transparent;
+            padding-top: 3px;
+        }
+
+        &[aria-selected='true'] {
+            background-color: #fafafa;
+            font-weight: $fw-bold;
+        }
+
+        &[data-focus='true'] {
+            background-color: $white-highlight-color;
+            cursor: pointer;
+        }
+    }
+
+    &.multiple .result[aria-selected='true'] i {
+        color: $primary-color;
+    }
+
+    &.multiple .result[data-focus='true'] i {
+        color: $dark-grey;
+    }
+}
+
+.autocomplete-status {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    padding-right: 12px;
+
+    &.loading {
+        opacity: 1;
+    }
+
+    & i {
+        animation: fullRotation 2s linear infinite;
+    }
+}
+
+@keyframes fullRotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

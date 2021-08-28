@@ -1,0 +1,33 @@
+.homeCard + .homeCard {
+    margin-left: 20px;
+}
+
+.homeCard {
+
+    border-top: 9px solid #7c1718!important;
+    max-width: 280px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    .homeCardHeader {
+        flex-grow: 1;
+    }
+
+    .homeCardActions {
+        flex-shrink: 1;
+        flex-grow: 0;
+    }
+
+    .homeBtn {
+        width: 100%;
+    }
+
+    .homeTitle {
+        font-size: 19px !important;
+    }
+
+    .homeDescription {
+
+    }
+}

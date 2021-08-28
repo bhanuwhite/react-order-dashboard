@@ -1,0 +1,48 @@
+// Inspired by
+// https://tailwindcss.com/docs/text-color
+.text-transparent { color: transparent; }
+
+@each $name, $color in $all-colors {
+    .text-#{$name} { color: $color !important; }
+    .hover\:text-#{$name}:hover { color: $color !important; }
+    .group:hover .group-hover\:text-#{$name} { color: $color !important; }
+}
+
+// https://tailwindcss.com/docs/text-overflow
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.overflow-ellipsis { text-overflow: ellipsis; }
+.overflow-clip { text-overflow: clip; }
+
+// https://tailwindcss.com/docs/whitespace
+.whitespace-normal { white-space: normal; }
+.whitespace-nowrap { white-space: nowrap; }
+.whitespace-pre { white-space: pre; }
+.whitespace-pre-line { white-space: pre-line; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+
+// https://tailwindcss.com/docs/text-decoration
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+// https://tailwindcss.com/docs/text-align
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+// See https://tailwindcss.com/docs/breakpoints
+@media (min-width: 1024px) {
+    .lg\:text-left { text-align: left; }
+    .lg\:text-center { text-align: center; }
+    .lg\:text-right { text-align: right; }
+    .lg\:text-justify { text-align: justify; }
+}
+
+// https://tailwindcss.com/docs/text-transform
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.normal-case { text-transform: none; }
+
+.hover\:underline:hover { text-decoration: underline; }

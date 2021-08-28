@@ -1,0 +1,165 @@
+.eventViewer {
+    resize: none;
+    width: 100%;
+    height: 50vh;
+    margin-top: 20px;
+    line-height: inherit;
+}
+
+.textareaContainer {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+}
+
+.download__btn{
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    padding: 4px;
+}
+
+.centerAlign {
+    text-align: center;
+}
+
+.applicationPopupListSection {
+    margin-bottom: 40px;
+
+    &:first-child .applicationPopupDetailsSeparator {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.applicationPopupDetailsSeparator {
+    font-size: 12px;
+    font-weight: 900;
+    color: rgb(90,90,90);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 15px;
+    margin-bottom: 20px;
+}
+
+.buttonsContainer {
+    padding-top: 15px;
+}
+
+.subTitle {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgb(90,90,90);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 15px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.startDateContainer {
+    width: 50%;
+    float: left;
+}
+
+.col {
+    width: 33%;
+    float: left;
+    @media only screen and (max-width: 1250px) {
+        width: 100%;
+    }
+
+    &_pad {
+        @extend .col;
+        padding: 0 5px;
+    }
+
+    &_half {
+        @extend .col;
+        width: 16.5%;
+    }
+}
+
+.twoThirds {
+    width: 60%;
+    float: left;
+}
+
+.includeMetadata {
+    width: 16.5%;
+    float: left;
+    padding-top: 30px;
+    text-align: center;
+    @media only screen and (max-width: 1250px) {
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.fullWidth {
+    width: 100%;
+    display: inline-block;
+}
+
+.search {
+    width: 90%;
+    display: inline-block;
+}
+
+.searchHelp {
+    padding-left: 10px;
+}
+
+.endDateContainer {
+    width: 50%;
+    float: right;
+}
+
+.dateLabel {
+    font-size: 14px;
+    font-weight: 400;
+    color: #505064;
+    text-transform: uppercase;
+}
+
+.datepicker {
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+}
+
+.paginationContainer {
+    padding-top: 10px;
+}
+
+.playButton {
+    margin-top: 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.inputDateError {
+    border-color: rgb(212, 70, 14);
+}
+
+.dateMsgError {
+    color:  rgb(212, 70, 14);
+    margin: 10px;
+}
+
+.loggingConfigModal {
+    height: 350px;
+}
+
+.modalButtons {
+    padding-top: 20px;
+    padding-bottom: 80px;
+}

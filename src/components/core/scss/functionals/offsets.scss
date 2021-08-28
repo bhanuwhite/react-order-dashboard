@@ -1,0 +1,13 @@
+// Inspired by https://tailwindcss.com/docs/top-right-bottom-left
+
+@for $i from 0 through 45 {
+    $v: $i;
+    .top-#{$v} { top: #{$v}px; }
+    .bottom-#{$v} { bottom: #{$v}px; }
+    .left-#{$v} { left: #{$v}px; }
+    .right-#{$v} { right: #{$v}px; }
+    .-top-#{$v} { top: -#{$v}px; }
+    .-bottom-#{$v} { bottom: -#{$v}px; }
+    .-left-#{$v} { left: -#{$v}px; }
+    .-right-#{$v} { right: -#{$v}px; }
+}

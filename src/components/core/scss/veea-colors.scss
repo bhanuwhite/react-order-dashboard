@@ -1,0 +1,123 @@
+// Greys
+// FIXME this naming is horrendous
+//       once we use tailwind we can use grey-x00 names
+$grey-249: rgb(249, 249, 249);
+$grey-245: rgb(245,245,245);
+$grey-242: rgb(242,242,242);
+$grey-240: rgb(240, 240, 240);
+$darken-21: rgba(0,0,0,0.21);
+$darken-22: rgba(0,0,0,0.22);
+$lighter-grey: rgb(226, 226, 226);
+$light-grey: rgb(200, 200, 200);
+$grey: rgb(125, 125, 125);
+$d-grey: rgb(105,105,105);
+$grey-63: rgb(63, 63, 66);
+$dark-grey: rgb(40, 40, 48);
+$light-blue: rgb(80, 117, 255);
+
+// Greens
+$green-248-230: rgb(230, 248, 230);
+
+// Reds
+$red-248-230: rgb(248, 230, 230);
+
+// Colors
+$primary-color: #9a1c1f;
+$info-color: #3871b3;
+$secondary-color: #a8a8a8;
+$success-color: #268733;
+$error-color: #ef8700;
+$default-color: rgba(251, 251, 251, 0.961);
+$yellow-color: rgb(255, 235, 147);
+$light-yellow-color: #fffbeb;
+$light-red-color: rgb(255, 206, 187);
+$orange-color: rgb(212, 70, 14);
+
+// Colors used for statuses (could be use elsewhere)
+$busy-color: #b86e20;
+$busy-shadow-color: rgba(204, 135, 32, 0.5);
+$offline-color: #c11330;
+$offline-2-color: #a80f0f;
+$offline-shadow-color: rgba(204, 32, 61, 0.5);
+$healthy-color: #12ba42;
+$healthy-2-color: #59a80f;
+$healthy-shadow-color: rgba(31, 209, 82, 0.5);
+$errors-color: #525252;
+$errors-shadow-color: rgba(124, 124, 124, 0.5);
+
+$shadow-colors: (
+    "busy": $busy-shadow-color,
+    "offline": $offline-shadow-color,
+    "healthy": $healthy-shadow-color,
+    "errors": $errors-shadow-color,
+);
+
+$body-color: rgb(248,248,249);
+$white-highlight-color: #ffe3e4;
+
+$hover-primary-color: #c42c2e;
+$hover-info-color:#2892e2;
+$hover-success-color: #2c9e3b;
+$hover-error-color: #ff9205;
+$hover-default-color: white;
+
+$active-primary-color: #7c1718;
+$active-info-color: #0b4b94;
+$active-success-color: #157222;
+$active-error-color: #c26e00;
+$active-default-color: rgb(199, 199, 199);
+
+// Text on colors
+$text-color-on-primary: #fff;
+$text-color-on-info: #fff;
+$text-color-on-success: #fff;
+$text-color-on-error: #fff;
+$text-color-on-default: rgb(90, 90, 92);
+
+$text-color-on-hover-success: #fff;
+$text-color-on-hover-error: #fff;
+$text-color-on-hover-primary: #fff;
+$text-color-on-hover-info: #fff;
+
+$text-color-on-active-success: #fff;
+$text-color-on-active-error: #fff;
+$text-color-on-active-primary: #fff;
+$text-color-on-active-info: #fff;
+
+// This map is used by functionals to generate properties
+// for all colors.
+$all-colors: (
+    "grey-249": $grey-249,
+    "grey-245": $grey-245,
+    "grey-242": $grey-242,
+    "grey-240": $grey-240,
+    "darken-21": $darken-21,
+    "darken-22": $darken-22,
+    "lighter-grey": $lighter-grey,
+    "light-grey": $light-grey,
+    "grey": $grey,
+    "d-grey": $d-grey,
+    "grey-63": $grey-63,
+    "dark-grey": $dark-grey,
+    "black": black,
+    "white": white,
+    "transparent": transparent,
+    "white-highlight": $white-highlight-color,
+    "primary": $primary-color,
+    "primary-light": $hover-primary-color,
+    "info": $info-color,
+    "success": $success-color,
+    "default": $default-color,
+    "yellow": $yellow-color,
+    "light-yellow": $light-yellow-color,
+    "light-red": $light-red-color,
+    "orange": $orange-color,
+    "busy": $busy-color,
+    "offline": $offline-color,
+    "offline-2": $offline-2-color,
+    "healthy": $healthy-color,
+    "healthy-2": $healthy-2-color,
+    "errors": $errors-color,
+    "red-248-230": $red-248-230,
+    "green-248-230": $green-248-230,
+);

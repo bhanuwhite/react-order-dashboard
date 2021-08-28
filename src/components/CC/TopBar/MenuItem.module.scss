@@ -1,0 +1,53 @@
+.chevronUp, .chevronDown {
+    background-size: 19px;
+    background-position: right 39px top 14px;
+    background-repeat: no-repeat;
+
+    &.chevronUp {
+        background-image: url("~ASSETS_IMAGES_FOLDER/topbar/icon-chevron-up.svg");
+    }
+
+    &.chevronDown {
+        background-image: url("~ASSETS_IMAGES_FOLDER/topbar/icon-chevron-down-white.svg");
+    }
+}
+
+.menuItem {
+
+    a:global(.selected) & i {
+        opacity: 1;
+    }
+
+    a:first-of-type {
+        @media only screen and (max-width: 768px) {
+            margin-left: 0px !important;
+        }
+    }
+
+    a:global(.selected) & {
+        background: rgba(0,0,0,0.21);
+    }
+
+    a:not(:global(.selected)) &:hover {
+        background-color: rgba(255,255,255,0.14);
+    }
+
+    & > :global(.icon-privafy) {
+        background: url("~ASSETS_IMAGES_FOLDER/vh/default-privafy-icon.svg") no-repeat;
+        background-size: 20px;
+    }
+}
+
+.menuItemText {
+    transform: translateX(-50%);
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
+}

@@ -1,0 +1,19 @@
+/**
+ * This file contains all :before
+ * classes that we use in our code base.
+ */
+
+.before-grey-line {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAADklEQVQYV2NggAJjMA0AAUEANMsYfAYAAAAASUVORK5CYII=') repeat-x;
+        background-position: 0px 50%;
+    }
+}

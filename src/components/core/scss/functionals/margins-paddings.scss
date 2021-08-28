@@ -1,0 +1,118 @@
+// Padding / Margin classes
+// The order in the generated CSS is important
+// because it defines the priority (which class
+// take over another)
+
+// Thus the duplication of for loops.
+
+// Padding
+@for $i from 0 through 20 {
+    $v: $i * 5;
+    .p-#{$v}  { padding: #{$v}px !important; }
+}
+// See https://tailwindcss.com/docs/breakpoints
+@media (min-width: 1024px) {
+    @for $i from 0 through 20 {
+        $v: $i * 5;
+        .lg\:p-#{$v} { padding: #{$v}px !important; }
+    }
+}
+@media (min-width: 768px) {
+    @for $i from 0 through 20 {
+        $v: $i * 5;
+        .md\:p-#{$v} { padding: #{$v}px !important; }
+    }
+}
+
+// Padding left / right / top / bottom
+// (they can be together because they don't conflict with one another)
+@for $i from 0 through 20 {
+    $v: $i * 5;
+    .pl-#{$v} { padding-left: #{$v}px !important; }
+    .pr-#{$v} { padding-right: #{$v}px !important; }
+    .pt-#{$v} { padding-top: #{$v}px !important; }
+    .pb-#{$v} { padding-bottom: #{$v}px !important; }
+}
+// See https://tailwindcss.com/docs/breakpoints
+@media (min-width: 1024px) {
+    @for $i from 0 through 20 {
+        $v: $i * 5;
+        .lg\:pl-#{$v} { padding-left: #{$v}px !important; }
+        .lg\:pr-#{$v} { padding-right: #{$v}px !important; }
+        .lg\:pt-#{$v} { padding-top: #{$v}px !important; }
+        .lg\:pb-#{$v} { padding-bottom: #{$v}px !important; }
+    }
+}
+@media (min-width: 768px) {
+    @for $i from 0 through 20 {
+        $v: $i * 5;
+        .md\:pl-#{$v} { padding-left: #{$v}px !important; }
+        .md\:pr-#{$v} { padding-right: #{$v}px !important; }
+        .md\:pt-#{$v} { padding-top: #{$v}px !important; }
+        .md\:pb-#{$v} { padding-bottom: #{$v}px !important; }
+    }
+}
+
+
+// Margin
+@for $i from 0 through 20 {
+    $v: $i * 5;
+    .m-#{$v}  { margin: #{$v}px !important; }
+}
+// See https://tailwindcss.com/docs/breakpoints
+@media (min-width: 1024px) {
+    @for $i from 0 through 20 {
+        $v: $i * 5;
+        .lg\:m-#{$v} { margin: #{$v}px !important; }
+    }
+}
+@media (min-width: 768px) {
+    @for $i from 0 through 20 {
+        $v: $i * 5;
+        .md\:m-#{$v} { margin: #{$v}px !important; }
+    }
+}
+
+// Margin left / right / top / bottom
+// (they can be together because they don't conflict with one another)
+@for $i from 0 through 20 {
+    $v: $i * 5;
+    .ml-#{$v} { margin-left: #{$v}px !important; }
+    .mr-#{$v} { margin-right: #{$v}px !important; }
+    .mt-#{$v} { margin-top: #{$v}px !important; }
+    .mb-#{$v} { margin-bottom: #{$v}px !important; }
+}
+// See https://tailwindcss.com/docs/breakpoints
+@media (min-width: 1024px) {
+    @for $i from 0 through 20 {
+        $v: $i * 5;
+        .lg\:ml-#{$v} { margin-left: #{$v}px !important; }
+        .lg\:mr-#{$v} { margin-right: #{$v}px !important; }
+        .lg\:mt-#{$v} { margin-top: #{$v}px !important; }
+        .lg\:mb-#{$v} { margin-bottom: #{$v}px !important; }
+    }
+}
+@media (min-width: 768px) {
+    @for $i from 0 through 20 {
+        $v: $i * 5;
+        .md\:ml-#{$v} { margin-left: #{$v}px !important; }
+        .md\:mr-#{$v} { margin-right: #{$v}px !important; }
+        .md\:mt-#{$v} { margin-top: #{$v}px !important; }
+        .md\:mb-#{$v} { margin-bottom: #{$v}px !important; }
+    }
+}
+
+// Margin auto
+.m-auto { margin: auto; }
+.mt-auto { margin-top: auto; }
+.mr-auto { margin-right: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+
+// See https://tailwindcss.com/docs/breakpoints
+@media (min-width: 1024px) {
+    .lg\:m-auto { margin: auto; }
+}
+@media (min-width: 768px) {
+    .md\:m-auto { margin: auto; }
+}

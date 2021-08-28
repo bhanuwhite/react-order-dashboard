@@ -1,0 +1,87 @@
+@import "@/components/core/scss/veea-colors";
+
+.enumFilter {
+
+    cursor: pointer;
+    position: relative;
+    background: white;
+
+    .title {
+        font-size: 14px;
+        color: $grey;
+    }
+
+    & > .title:hover {
+        color: $dark-grey;
+    }
+
+    & .arrowDown {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAANklEQVQoU2NkIAIwEqGGgWhFvoRMg5mET+FmZOuwKdwMsgXdTcgKwQqwKQKJgRTCFeBShOEPAOqvBFev9ShjAAAAAElFTkSuQmCC);
+        background-repeat: no-repeat;
+        background-size: 5px 8px;
+        background-position: 100% 50%;
+    }
+}
+
+
+.menu {
+
+    display: none;
+
+    &.open {
+        display: block;
+    }
+
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    top: 1px;
+    left: -6px;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 0 0 6px 0px;
+    border: 1px solid #c8c8c8;
+
+    & > .title {
+        padding: 8px 15px;
+        color: $d-grey;
+        background-color: #f7fbff;
+        border: 0px solid #f3f2f2;
+        border-bottom-width: 1px;
+        margin-bottom: 6px;
+        /* box-shadow: inset 0px 1px 0px #c93a3d; */
+        /* border-top-color: #9a1c1f; */
+        border-top-width: 1px;
+    }
+
+    .option {
+        padding: 8px 35px 8px 15px;
+        white-space: nowrap;
+        font-size: 14px;
+        position: relative;
+
+        &:hover {
+            background-color: #f9f9f9;
+            // color: white;
+        }
+
+        & i {
+            display: none;
+        }
+
+        &.checked {
+
+            background-color: #f0f0f0;
+
+            & i {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+        }
+    }
+}

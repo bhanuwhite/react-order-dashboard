@@ -1,0 +1,97 @@
+@import "@/components/core/scss/consts";
+
+.packageFormHeader {
+    font-weight: $fw-bold;
+}
+
+.packageFormRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.packageFormGroupHalf {
+    flex-grow: 1;
+    max-width: 47.5%;
+
+    :global(.switch) {
+        left: 0px;
+    }
+}
+
+.packageFormGroupFull {
+    width: 100%;
+}
+
+.packageFormTextField, .featuresTextArea, .jsonSchemaTextArea {
+    width: 100%;
+    input {
+        scroll-margin-top: 125px;
+    }
+
+    &.disabled label {
+        display: none;
+    }
+}
+
+.featuresTextArea {
+    height: 125px;
+}
+
+.jsonSchemaFieldHeader {
+    display: flex;
+    justify-content: space-between;
+
+    :global(.toggle) {
+        min-height: 30px;
+    }
+
+    :global(.switch) {
+        left: 17px;
+        top: 0px;
+    }
+}
+
+.jsonSchemaTextArea {
+    height: 300px;
+    white-space: pre-wrap;
+}
+
+.jsonSchemaPreviewSubmitButton {
+    margin-left: 2.50%;
+    margin-top: 5px;
+}
+
+.uploadFileButton {
+    border: 1px solid #e2e2e2;
+    display: flex !important;
+    justify-content: center;
+    margin: 10px 0px;
+    padding-left: 20px !important;
+
+    i {
+        position: static !important;
+        margin-right: 5px;
+    }
+
+    .displayedFileName {
+        margin-left: 25px;
+    }
+}
+
+.hiddenFileUploadInput {
+    opacity: 0;
+    width: 100%;
+    height: 1px;
+    pointer-events: none;
+}
+
+.submitButtonRow {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+
+    button:first-child {
+        margin-right: 15px;
+    }
+}

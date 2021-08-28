@@ -1,0 +1,62 @@
+
+
+// US states obtained from: https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations
+// Using the following script in the devtools:
+//
+//      var a = $("tbody > tr > td:nth-child(6)").toArray().map(el => el.innerHTML)
+//      var b = $("tbody > tr > td:nth-child(1) > a").toArray().map(el => el.innerHTML)
+//      console.log(JSON.stringify(a.map((code, i) => [code, b[i]]).filter(v => v[0]), undefined, 4))
+//
+export const USPS_CODES: [code: string, name: string][] = [
+    [ 'AL', 'Alabama' ],
+    [ 'AK', 'Alaska' ],
+    [ 'AZ', 'Arizona' ],
+    [ 'AR', 'Arkansas' ],
+    [ 'CA', 'California' ],
+    [ 'CO', 'Colorado' ],
+    [ 'CT', 'Connecticut' ],
+    [ 'DE', 'Delaware' ],
+    [ 'DC', 'District of Columbia' ],
+    [ 'FL', 'Florida' ],
+    [ 'GA', 'Georgia' ],
+    [ 'HI', 'Hawaii' ],
+    [ 'ID', 'Idaho' ],
+    [ 'IL', 'Illinois' ],
+    [ 'IN', 'Indiana' ],
+    [ 'IA', 'Iowa' ],
+    [ 'KS', 'Kansas' ],
+    [ 'KY', 'Kentucky' ],
+    [ 'LA', 'Louisiana' ],
+    [ 'ME', 'Maine' ],
+    [ 'MD', 'Maryland' ],
+    [ 'MA', 'Massachusetts' ],
+    [ 'MI', 'Michigan' ],
+    [ 'MN', 'Minnesota' ],
+    [ 'MS', 'Mississippi' ],
+    [ 'MO', 'Missouri' ],
+    [ 'MT', 'Montana' ],
+    [ 'NE', 'Nebraska' ],
+    [ 'NV', 'Nevada' ],
+    [ 'NH', 'New Hampshire' ],
+    [ 'NJ', 'New Jersey' ],
+    [ 'NM', 'New Mexico' ],
+    [ 'NY', 'New York' ],
+    [ 'NC', 'North Carolina' ],
+    [ 'ND', 'North Dakota' ],
+    [ 'OH', 'Ohio' ],
+    [ 'OK', 'Oklahoma' ],
+    [ 'OR', 'Oregon' ],
+    [ 'PA', 'Pennsylvania' ],
+    [ 'RI', 'Rhode Island' ],
+    [ 'SC', 'South Carolina' ],
+    [ 'SD', 'South Dakota' ],
+    [ 'TN', 'Tennessee' ],
+    [ 'TX', 'Texas' ],
+    [ 'UT', 'Utah' ],
+    [ 'VT', 'Vermont' ],
+    [ 'VA', 'Virginia' ],
+    [ 'WA', 'Washington' ],
+    [ 'WV', 'West Virginia' ],
+    [ 'WI', 'Wisconsin' ],
+    [ 'WY', 'Wyoming' ],
+];

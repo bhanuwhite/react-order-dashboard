@@ -1,0 +1,48 @@
+
+.card {
+    background: white;
+    width: 49%;
+    height: 340px;
+    float: left;
+    margin: 0.5%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 40px;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,0.18);
+
+    .cardHeader {
+        position: relative;
+        height: 40px;
+        border-bottom: 1px solid rgba(0,0,0,0.11);
+        line-height: 40px;
+        padding-left: 40px;
+        font-size: 11px;
+        color: rgb(130,130,135);
+        background: rgb(243, 243, 247);
+        text-transform: uppercase;
+        padding-right: 15px;
+        display: block;
+        letter-spacing: 1px;
+
+        .cardName {
+            float: left;
+        }
+
+        .cardIcon {
+            font-size: 14px;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            border-radius: 3px;
+        }
+    }
+
+    .cardContent {
+        position: relative;
+        height: 100%;
+        display: block;
+        overflow-y: scroll;
+    }
+}

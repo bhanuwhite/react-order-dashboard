@@ -1,0 +1,24 @@
+/**
+ * I suppose someday TailwindCSS will support (maybe we could contribute it)
+ * pseudo selectors for :nth-child and :not (which will definitely need
+ * the JIT mode).
+ * Today it does not, thus this file.
+ */
+
+.grid {
+    div:not(:last-child) {
+        .item-cell {
+            border-bottom: 1px solid #e6e6e6;
+
+            .dark & {
+                border-bottom: 1px solid rgb(63, 63, 70);
+            }
+        }
+    }
+}
+
+.grid {
+    .item-cell:nth-child(n+2), .header-cell:nth-child(n+2) {
+        padding-left: 0.75rem;
+    }
+}

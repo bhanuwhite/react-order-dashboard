@@ -1,0 +1,29 @@
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0);
+    } 40% {
+        transform: scale(1.0);
+    }
+}
+
+.spinner {
+    & > div {
+        width: 13px;
+        height: 13px;
+        background-color: rgba(0,0,0,0.65);
+        border-radius: 100%;
+        margin: 0px 2px;
+        display: inline-block;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+
+    .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+
+    .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+}

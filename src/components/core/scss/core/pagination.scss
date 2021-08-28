@@ -1,0 +1,47 @@
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        display: inline;
+        background-color: unset;
+        border-color: unset;
+        appearance: unset;
+        border-width: unset;
+        border-style: unset;
+        font-size: inherit;
+        padding: unset;
+        text-align: left;
+    }
+
+    button:first-child, button:last-child {
+        &[disabled] {
+            color: rgba(90, 90, 92, 0.27);
+            cursor: default;
+        }
+        &:not([disabled]):hover {
+            font-weight: $fw-bold;
+            cursor: pointer;
+        }
+    }
+
+    button:first-child {
+        width: 90px;
+    }
+
+    .page-number {
+        padding-top: 9px;
+    }
+
+    button:last-child {
+        width: 63px;
+        text-align: right;
+    }
+
+    i {
+        position: relative;
+        font-size: 22px;
+        top: 3px;
+        padding: 5px;
+    }
+}
