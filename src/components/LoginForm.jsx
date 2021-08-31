@@ -3,9 +3,11 @@ import adEdgeLogo from "../assets/imgs/logo2.svg";
 import {
   Button  
 } from "../core/components";
+import Footer from "../components/UI-Components/Footer";
 
 const LoginForm = () => {
   return (
+    <>
     <div className="login-wrapper">
       <div className="row no-gutters">
         <div className="col-lg-6">
@@ -36,6 +38,8 @@ const LoginForm = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import Footer from "./UI-Components/Footer";
 import Header from "./UI-Components/Header";
 import Sidebar from "./UI-Components/Sidebar";
 
+
 const Home = () => {
   return (
       <>
