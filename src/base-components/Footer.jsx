@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <div className="row no-gutters justify-content-between">
+      <div className="privacy-block">
         <div>
           <ul className="widget-links">
             <li>
@@ -13,7 +13,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="mr-5">
+        <div>
           <ul className="widget-links">
             <li>
               <a href="">Terms of Use</a>

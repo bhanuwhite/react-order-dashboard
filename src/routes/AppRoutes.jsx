@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import Footer from "../base-components/Footer";
 import LoginForm from "../base-components/LoginForm";
 import Home from "../base-components/Home";
-
+import Orders from "../base-components/Orders";
 const Layout = ({ children }) => {
   return (
     <div className="main-wrapper">
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
@@ -20,7 +20,8 @@ const AppRoutes = () => {
         <Switch>
           <Route exact path="/login" component={LoginForm} />
           <Route exact path="/home" component={Home} />
-          <Redirect from="/" to="/home" />
+          <Route exact path="/orders" component={Orders} />
+          <Redirect from="/" to="/orders" />
         </Switch>
       </Router>
     </Layout>
