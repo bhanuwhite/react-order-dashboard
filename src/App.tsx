@@ -1,9 +1,34 @@
-import AppRoutes from "./routes/AppRoutes";
+// import React from "react";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+
+import { Demo } from "./pages/demo/Demo";
+import Footer from "./components/Footer";
+import LoginForm from "./components/LoginForm";
+import Home from "./components/Home";
+
+const Layout = ({ children }) => {
+  return (
+    <div className="main-wrapper">
+      {children}
+      <Footer />
+    </div>
+  );
+};
+
 
 function App() {
   return (
-    <AppRoutes />
-)
+    <Layout>
+    <Router>
+      <Switch>
+        <Route exact path="/demo" component={Demo} />
+        <Route exact path="/login" component={LoginForm} />
+        <Route exact path="/home" component={Home} />
+        <Redirect from="/" to="/login" />
+      </Switch>
+    </Router>
+    </Layout>
+  );
 }
 
 export default App;
