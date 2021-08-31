@@ -5,7 +5,7 @@ import bellSvg from "../assets/imgs/Alarm.svg";
 import searchIcon from "../assets/imgs/search-icon.svg";
 import sidebarMenu from '../assets/imgs/sidebar-menu.svg';
 import homeIcon from "../assets/imgs/home-icon.svg";
-import entities from "../assets/imgs/entities.svg";
+import settings from "../assets/imgs/settings.svg";
 import help from "../assets/imgs/help.svg";
 
 const Home = () => {
@@ -16,213 +16,146 @@ const Home = () => {
   
     return (
       <div>
-        {/* header */}
-        <div className="topnav">
-          <div className="navbar-header">
+             {/* header */}
+        <header>
+              <div class="home-header">
+              <div className="navbar-header">
             <img src={sidebarMenu} alt="sidebarMenuIcon"   className="navbar-toggle collapsed"
               onClick={handleSidebarShow}/>
           </div>
-  
-          <div className="d-flex align-items-center inner-topnav">
-            <img src={adEdgeLogo} alt="AdEdge Logo" className="inner-logo-img" />
-            <a className="order-text" href="#home">
-              AdEdge Order Center
-            </a>
-          </div>
-  
-          {/* <div className="search-container">
-            <form action="" className="position-relative form-input">
-              <img
-                src={searchIcon}
-                alt="alarm-logo"
-                className="search-img position-absolute"
-              />
-              <input
-                type="text"
-                placeholder="Search orders,products and more"
-                name="search"
-                className="input-search pl-5"
-              />
-            </form>
-          </div> */}
-  
-          <div className="d-flex align-items-center inner-wrapper">
-            <a className="hicks-text">A. Hicks</a>
-            <img src={personImage} alt="Avatar" className="avatar mr-2" />
-            <img src={bellSvg} alt="alarm-logo" className="ml-1" />
-          </div>
-        </div>
-        <hr className="mb-0 mt-0" />
-  
-        <form action="" className="position-relative responsive-seachbar">
-          <img
-            src={searchIcon}
-            alt="alarm-logo"
-            className="search-img position-absolute"
-          />
-          <input
-            type="text"
-            placeholder="Search orders,products and more"
-            name="search"
-            className="responsive-searchinput pl-5"
-          />
-        </form>
-  
-        {/* sidebar */}
-  
-        <div className="banner">
-          <div className={show ? "sidebar" : "sidebar-none"}>
-  
-            <div className="btn-group">
-              <a type="button" className="btn-text">
-                Atesh's Group
-              </a>
-              <button
-                type="button"
-                className="btn btn-text ml-5 dropdown-toggle dropdown-toggle-split"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span className="sr-only">Toggle Dropdown</span>
-              </button>
-            </div>
-            <div>
-              <a href="#home" className="mt-3">
-                <img src={homeIcon} alt="home-icon" className="mr-1 mb-1" /> Home
-              </a>
-              <a href="#services">
-                <img
-                  src={help}
-                  alt="help-icon"
-                  className="mr-1 mb-1 dashboad-icons"
-                />
-                Orders
-              </a>
-              <a href="#clients">
-                <img
-                  src={help}
-                  alt="help-icon"
-                  className="mr-1 mb-1 dashboad-icons"
-                />{" "}
-                Products
-              </a>
-              <a href="#contact">
-                <img
-                  src={help}
-                  alt="help-icon"
-                  className="mr-1 mb-1 dashboad-icons"
-                />{" "}
-                Prices
-              </a>
-              <a href="#contact">
-                <img
-                  src={help}
-                  alt="help-icon"
-                  className="mr-1 mb-1 dashboad-icons"
-                />{" "}
-                Reports
-              </a>
-              <a href="#contact">
-                <img
-                  src={entities}
-                  alt="entities-icon"
-                  className="mr-1 mb-1 dashboad-icons"
-                />{" "}
-                Entities
-              </a>
-            </div>
-            <div className="bottom-line">
-              <a href="#contact" className="mt-3">
-                <img
-                  src={entities}
-                  alt="entities-icon"
-                  className="mr-1 mb-1 dashboad-icons"
-                />{" "}
-                Settings
-              </a>
-              <a href="#contact">
-                <img
-                  src={help}
-                  alt="help-icon"
-                  className="mr-1 mb-1 dashboad-icons"
-                />{" "}
-                Help
-              </a>
-            </div>
-            <div className="d-flex align-items-center  logo-wrapper d-lg-none d-md-block d-sm-block">
-              <div className="d-flex align-items-center inner-topnav">
-                <img
-                  src={adEdgeLogo}
-                  alt="AdEdge Logo"
-                  className="inner-logo-img"
-                />
-                <a className="order-firm" href="#home">
-                  AdEdge Order Center
-                </a>
-                <button className="cross-icon ml-5" onClick={handleSidebarShow}>
-                  X
-                </button>
+                  <div class="header-logo">
+                      <img src={adEdgeLogo} alt="AdEdge Logo" />
+                      <h3 class="logo-text mb-none">AdEdge Order Center</h3>
+                  </div>
+
+                  <div class="form-group has-search">
+                      <span class="form-control-feedback">
+                              <img src={searchIcon} alt="serarch" />
+                          </span>
+                      <input type="text" class="form-control" placeholder="Search orders,products and more" />
+                  </div>
+                  <div class="notification-block">
+                      <span class="mb-none">A.Hicks</span>
+                      <span class="mb-none">
+                          <img src={personImage} alt="Avatar" class="user-profile"/>
+                      </span>
+                      <span>
+                          <a href=""><img src={bellSvg} alt="alarm-logo" class="notification"/></a>
+                      </span>
+                  </div>
               </div>
-            </div>
-          </div>
-  
-          <hr className="mb-0 mt-0" />
-  
-          {/* home main-content */}
-          <div className="home-main-wrapper">
-            <p className="inner-home-text">Home</p>
-  
-            <div className="d-flex align-items-center cards-wrapper">
-              <div className="order-card">
-                <div className="d-flex align-items-center inner-offer-card">
-                  <p className="mb-0 orders-text">Orders</p>
-                  <p className="mb-0 see-text">see all</p>
+      </header>
+      <div class="form-group has-search mobile-filter">
+        <span class="form-control-feedback">
+                <img src={searchIcon} alt="serarch" />
+            </span>
+        <input type="text" class="form-control" placeholder="Search orders,products and more" />
+    </div>
+     {/* Main Conetnt */}
+     <div class="main-layout">
+            <div class="main-conetnt">
+              <div class="sidemenu">
+                <select class="custom-select" id="gender2">
+                    <option selected>Atesh's Group</option>
+                    <option value="1">Group</option>
+                    <option value="2">Group1</option>
+                  </select>
+                <div class="divider mb-8"></div>
+                  <ul class="navbar-nav">
+                      <li class="navlink">
+                          <a href="#"><img src={homeIcon} alt="Home Page" class="nav-icons"/> Home</a>
+                      </li>
+                      <li class="navlink">
+                          <a href="#"><img src={homeIcon} alt="Home Page" class="nav-icons"/> Orders</a>
+                      </li>
+                      <li class="navlink">
+                          <a href="#"><img src={homeIcon} alt="Home Page" class="nav-icons"/> Products</a>
+                      </li>
+                      <li class="navlink">
+                          <a href="#"><img src={homeIcon} alt="Home Page" class="nav-icons"/> Reports</a>
+                      </li>
+                      <li class="navlink">
+                          <a href="#"><img src={homeIcon} alt="Home Page" class="nav-icons"/> Entities</a>
+                      </li>
+                      <div class="divider mbt-8"></div>
+                      <li class="navlink">
+                          <a href="#"><img src={settings} alt="Home Page" class="nav-icons"/> Settings</a>
+                      </li>
+                      <li class="navlink">
+                          <a href="#"><img src={help} alt="Home Page" class="nav-icons"/> Help</a>
+                      </li>
+                  </ul>
                 </div>
-              </div>
-              <div className="occupancy-card">
-                <center className="occupied-text">occupancy</center>
-              </div>
-              <div className="occupancy-card">
-                <center className="occupied-text">availability</center>
-              </div>
-              <div className="occupancy-card">
-                <center className="occupied-text">warnings</center>
-                <button type="button" className="warn-btn ml-2">
-                  4
-                </button>
-                <center className="occupied-text">errors</center>
-                <button type="button" className="error-btn ml-2">
-                  0
-                </button>
-              </div>
-              <div className="order-card"></div>
+            <div class="content-wrapper">
+                <h2 class="heading">Home</h2>
+                <div class="stats-block">
+                  <div class="order-card">
+                    <div class="order-card-text">
+                    <p className="orders-text">Orders</p>
+                    <p className="see-all">see all</p>
+                    </div>
+                  </div>
+                  <div class="occupancy-block">
+                    <div class="occupancy-card">
+                      <p className="orders-text">Occupancy</p>
+                      <div class="progress cstm-border">
+                          <span class="title timer" data-from="0" data-to="70" data-speed="1800">70%</span>
+                          <div class="overlay"></div>
+                          <div class="left cstm-border"></div>
+                          <div class="right cstm-border"></div>
+                      </div>
+                    </div>
+                    <div class="occupancy-card">
+                      <p className="orders-text">Availability</p>
+                    
+                    </div>
+                    <div class="occupancy-card">
+                      <p className="orders-text">Warnings</p>
+                      <button className="warning">4</button>
+                      <p className="orders-text">Errors</p>
+                      <button className="errors">0</button>
+                    </div>
+                  </div>
+                  <div class="order-card mb-none">
+                     <div className="order-text-inside"><span class="number">38</span> <span class="text">total orders</span></div>
+                     <div className="order-text-inside"><span class="number">8</span> <span class="text">total products</span></div>
+                     <div className="order-text-inside"><span class="number">12</span> <span class="text">total entities</span></div>
+                     <div className="order-text-inside"><span class="number">5</span> <span class="text">total prices</span></div>
+                  </div>
+                </div>
+                <div class="revinue-forecast">
+                  <div class="order-card-text">
+                    <p className="orders-text">revenue forecast</p>
+                    <p className="see-all">?</p>
+                    </div>
+                   
+                </div>
+                <div class="revinue-forecast">
+                  <div class="order-card-text">
+                    <p className="orders-text">avg. revenue/surface</p>
+                    <p className="see-all">?</p>
+                    </div>
+                    <div class="revenue-surface">
+                      <h1>TBD?</h1>
+                   </div>
+                </div>
+                <div class="revinue-forecast">
+                  <div class="order-card-text">
+                    <p className="orders-text">errors</p>
+                    <p className="see-all">?</p>
+                    </div>
+                    <div class="inside-errors">
+                      <div class="error-block">
+<p>No Errors</p>
+                      </div>
+                    </div>
+                </div>
             </div>
-            <div className="revenue-card mt-3">
-              <div className="d-flex inner-revenue-text">
-                <p className="revenue-text mb-0">revenue forecast</p>
-                <div className="question-icon">?</div>
               </div>
-            </div>
-            <div className="revenue-card mt-3">
-              <div className="d-flex inner-revenue-text">
-                <p className="revenue-text mb-0">avg. revenue/surface</p>
-                <div className="question-icon">?</div>
-              </div>
-              <center className="mt-5 TBD-text">TBD?</center>
-            </div>
-            <div className="revenue-card mt-3">
-              <div className="d-flex inner-revenue-text">
-                <p className="revenue-text mb-0">errors</p>
-                <div className="question-icon">?</div>
-              </div>
-              <div className="errors-banner">
-                <center className="mt-5">No errors</center>
-              </div>
-            </div>
-          </div>
+                
+            
         </div>
-      </div>
+     </div>
     );
   };
   
