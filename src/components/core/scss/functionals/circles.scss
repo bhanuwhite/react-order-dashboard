@@ -1,8 +1,0 @@
-@for $i from 1 through 10 {
-    $v: $i * 5;
-    .circle-#{$v} {
-        width: #{$v}px;
-        height: #{$v}px;
-        border-radius: #{$v}px;
-    }
-}

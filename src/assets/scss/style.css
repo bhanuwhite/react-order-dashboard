@@ -111,12 +111,6 @@ body {
 .main-wrapper .login-wrapper .login-form .login-block .login-button {
     width: 100%;
     display: block;
-    background-color: #396eff;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 14px;
-    padding: 8px;
 }
 
 .main-wrapper .login-wrapper .login-form .login-block .forgot-password {
