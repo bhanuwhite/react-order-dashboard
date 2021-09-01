@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import homeIcon from "../../assets/imgs/home.png";
 import homeIconActive from "../../assets/imgs/home-active.png";
 import settings from "../../assets/imgs/settings.png";
@@ -15,15 +15,21 @@ import Products from "../../assets/imgs/products.png";
 import ProductsActive from "../../assets/imgs/products-active.png";
 import Prices from "../../assets/imgs/prices.png";
 import PricesActive from "../../assets/imgs/prices-active.png";
+import {
+    Dropdown,
+  } from "../../core/components";
 const Sidebar = () => {
+    const [status, setStatus] = useState("Atesh's Group")
     return (
         <>
          {/* Select Dropsown */}
-          <select class="custom-select" id="gender2">
-              <option selected>Atesh's Group</option>
-              <option value="1">Group</option>
-              <option value="2">Group1</option>
-            </select>
+           <Dropdown
+            className="atesh-group"
+            value={status}
+            onChange={setStatus}
+            options={["Atesh's Group", "Group1", "Group2"]}
+            invalid
+            />
           <div class="divider margin-bt-8"></div>
             {/* Side menu links */}
             <ul class="navbar-nav">

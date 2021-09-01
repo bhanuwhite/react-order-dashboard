@@ -3,7 +3,11 @@ import searchIcon from "../assets/imgs/search-icon.svg";
 import Footer from "./UI-Components/Footer";
 import Header from "./UI-Components/Header";
 import Sidebar from "./UI-Components/Sidebar";
-
+import {
+  Button,
+  Section,
+  TextBox,
+} from "../core/components";
 
 const Home = () => {
   return (
@@ -11,12 +15,12 @@ const Home = () => {
         {/* header */}
         <Header/>
         {/* Search filter for mobile */}
-        <div class="form-group has-search mobile-filter">
-          <span class="form-control-feedback">
-                  <img src={searchIcon} alt="serarch" />
-              </span>
-          <input type="text" class="form-control" placeholder="Search orders,products and more" />
-        </div>
+        <TextBox
+                prependIcon="fas fa-search"
+                className="global-search mobile-filter"
+                placeholder="Search orders, products and more"
+                defaultValue=""
+              />
         {/* Home Main Conetnt */}
        <div class="main-layout">
          <div class="main-conetnt">
@@ -55,9 +59,9 @@ const Home = () => {
                   {/* Warnings */}
                   <div class="occupancy-card">
                     <p className="orders-text">Warnings</p>
-                    <button className="warning">4</button>
+                    <Button className="warning">4</Button>
                     <p className="orders-text">Errors</p>
-                    <button className="errors">0</button>
+                    <Button className="errors">0</Button>
                   </div>
                 </div>
                 {/* Total Records */}
@@ -69,36 +73,57 @@ const Home = () => {
                 </div>
               </div>
               {/* Revenue Forecast */}
-              <div class="revinue-forecast">
-                <div class="order-card-text">
-                  <p className="orders-text">revenue forecast</p>
-                  <p className="see-all">?</p>
-                  </div>   
-              </div>
-              {/* Avg Revenue */}
-              <div class="revinue-forecast">
-                <div class="order-card-text">
-                  <p className="orders-text">avg. revenue/surface</p>
-                  <p className="see-all">?</p>
-                  </div>
-                  <div class="revenue-surface">
-                    <h1>TBD?</h1>
-                  </div>
-              </div>
-               {/* Errors */}
-              <div class="revinue-forecast">
-                <div class="order-card-text">
-                  <p className="orders-text">errors</p>
-                  <p className="see-all">?</p>
-                  </div>
-                  <div class="inside-errors">
-                    <div class="error-block">
-                    <p>No Errors</p>
+              <Section
+                  className="w-full revinue-forecast"
+                  title="revenue forecast"
+                  infoLink={{
+                    kind: "ext-link",
+                    link: "",
+                    title: "help",
+                  }}
+                >
+                  <div className="p-5 text-gray-500 text-center">
+                    <div class="revenue-surface">
+                      <h1>CHART</h1>
                     </div>
                   </div>
-              </div>
+                </Section>
+              {/* Avg Revenue */}
+              <Section
+                  className="w-full revinue-forecast"
+                  title="avg. revenue/surface"
+                  infoLink={{
+                    kind: "ext-link",
+                    link: "",
+                    title: "help",
+                  }}
+                >
+                  <div className="p-5 text-gray-500 text-center">
+                    <div class="revenue-surface">
+                      <h1>TBD?</h1>
+                    </div>
+                  </div>
+                </Section>
+               {/* Errors */}
+               <Section
+                  className="w-full revinue-forecast"
+                  title="errors"
+                  infoLink={{
+                    kind: "ext-link",
+                    link: "",
+                    title: "help",
+                  }}
+                >
+                  <div className="p-5 text-gray-500 errors text-center">
+                    <div class="revenue-surface">
+                      <h3>No errors</h3>
+                    </div>
+                  </div>
+                </Section>
                {/* Footer */}
+              <div className="inside-footer">
               <Footer />
+              </div>
           </div>
           </div>
          </div>
