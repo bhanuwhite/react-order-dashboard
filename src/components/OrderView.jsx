@@ -102,15 +102,15 @@ const OrderView = () => {
                                <p className="order-label">Order Number</p>
                                <p className="order-data">STS51-1701A</p>
                                </div>
-                               <div className="order-block mt-14">
+                               <div className="order-block margintop-14">
                                 <p className="order-label">Created</p>
                                 <p className="order-data">02/23/2020 by <span>Atesh Hicks</span></p>
                                </div>
-                               <div className="order-block mt-14">
+                               <div className="order-block margintop-14">
                                 <p className="order-label">Revision</p>
                                 <p className="order-data">2nd Revision</p>
                                </div>
-                               <div className="order-block mt-14">
+                               <div className="order-block margintop-14">
                                 <p className="order-label">Approval</p>
                                 <p className="order-data"><i class="fas fa-check-circle"></i> Approved 03/05/2020</p>
                                </div>
@@ -197,8 +197,13 @@ const OrderView = () => {
                     </div>
                 </Section>
                 {/* order items */}
-                <Section className="w-full entry-block" title="order items">
-                <div class="orders-filter">
+                <div class="custom-section mt-4">
+            <div class="custom-section-header">
+                <h4>order items</h4>
+                <a href="">+ ADD NEW ITEM</a>
+            </div>
+            <div class="custom-section-body">
+            <div class="orders-filter">
                       <TextBox
                         prependIcon="fas fa-search"
                         className="order-search"
@@ -263,7 +268,9 @@ const OrderView = () => {
                     Page 1/1
                  </Pagination>
                   </div> 
-                </Section>
+            </div>
+           
+        </div>
                 <div className="update-btn">
                 <Button className="primary-btn">Save changes</Button>
                 </div>

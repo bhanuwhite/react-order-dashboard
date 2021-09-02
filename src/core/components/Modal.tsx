@@ -57,7 +57,7 @@ export const ModalRaw: React.FC<RawProps & { willBeRemoved: boolean }> = ({
     >
       <div className={computeModalClassName(small, willBeRemoved)}>
         <div
-          className={`w-full flex px-8 pt-8 ${
+          className={`w-full flex px-4 pt-4 ${
             header ? "justify-between" : "justify-end"
           }`}
         >
