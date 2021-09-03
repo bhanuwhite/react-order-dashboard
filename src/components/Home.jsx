@@ -74,7 +74,7 @@ const Home = () => {
               </div>
               {/* Revenue Forecast */}
               <Section
-                  className="w-full revinue-forecast"
+                  className="w-full revinue-forecast m-t-20"
                   title="revenue forecast"
                   infoLink={{
                     kind: "ext-link",
@@ -90,7 +90,7 @@ const Home = () => {
                 </Section>
               {/* Avg Revenue */}
               <Section
-                  className="w-full revinue-forecast"
+                  className="w-full revinue-forecast m-t-20"
                   title="avg. revenue/surface"
                   infoLink={{
                     kind: "ext-link",
@@ -106,7 +106,7 @@ const Home = () => {
                 </Section>
                {/* Errors */}
                <Section
-                  className="w-full revinue-forecast"
+                  className="w-full revinue-forecast m-t-20"
                   title="errors"
                   infoLink={{
                     kind: "ext-link",

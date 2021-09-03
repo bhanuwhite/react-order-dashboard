@@ -9,6 +9,8 @@ import OrderView from "./components/OrderView";
 import EntitiesView from "./components/EntitiesView";
 import Products from "./components/Products";
 import ProductsView from "./components/ProductsView";
+import ViewOrderLine from "./components/ViewOrderLine";
+import Settings from "./components/Settings";
 const Layout = ({ children }) => {
   return (
     <div className="main-wrapper">
@@ -32,6 +34,8 @@ function App() {
         <Route exact path="/entitiesview" component={EntitiesView} />
         <Route exact path="/products" component={Products} />
         <Route exact path="/productsview" component={ProductsView} />
+        <Route exact path="/vieworderline" component={ViewOrderLine} />
+        <Route exact path="/settings" component={Settings} />
         <Redirect from="/" to="/login" />
       </Switch>
     </Router>

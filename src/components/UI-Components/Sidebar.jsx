@@ -30,7 +30,7 @@ const Sidebar = () => {
             options={["Atesh's Group", "Group1", "Group2"]}
             invalid
             />
-          <div class="divider margin-bt-8"></div>
+          <div class="divider m-tb-8"></div>
             {/* Side menu links */}
             <ul class="navbar-nav">
                 <li class="navlink active">
@@ -57,7 +57,7 @@ const Sidebar = () => {
                     <a href="#"><img src={Entities} alt="Entities" class="nav-icons"/>
                     <img src={EntitiesActive} alt="Entities" class="nav-icons-active"/> Entities</a>
                 </li>
-                <div class="divider margin-bt-8"></div>
+                <div class="divider m-tb-8"></div>
                 <li class="navlink">
                     <a href="#"><img src={settings} alt="Settings" class="nav-icons"/>
                     <img src={settingsActive} alt="Settings" class="nav-icons-active"/> Settings</a>

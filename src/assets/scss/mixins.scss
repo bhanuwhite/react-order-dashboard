@@ -1,0 +1,33 @@
+@mixin page_heading {
+    font-family: "Ubuntu-Medium";
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+@mixin section_heading {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #777777;
+    line-height: 13px;
+    font-family: "Ubuntu-Medium";
+}
+
+@mixin search_filter {
+    height: 32px;
+    font-size: 13px;
+}
+
+@mixin primary_button {
+    padding: 4px 17px !important;
+    border-radius: 6px !important;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-size: 12px !important;
+    color: #fff !important;
+}
+
+@mixin primary_input {
+    height: 35px;
+    padding: 10px 12px !important;
+}

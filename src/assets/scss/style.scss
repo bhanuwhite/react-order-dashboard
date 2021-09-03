@@ -1,4 +1,5 @@
 @import "variable.scss";
+@import "mixins.scss";
 @font-face {
     font-family: "Ubuntu-Regular";
     src: url("../fonts/Ubuntu-Regular.ttf") format("truetype");
@@ -33,34 +34,46 @@ img {
     display: inline-block !important;
 }
 
+.bt-none {
+    border-top: none !important;
+}
+
 .no-gutters {
     margin-left: 0px;
     margin-right: 0px;
 }
 
-// .mb-8 {
-//     margin-bottom: 8px;
-// }
-.margin-bt-8 {
+//Margins
+.m-tb-8 {
     margin-bottom: 8px;
     margin-top: 4px;
 }
 
-.margin-tp {
+.m-t-20 {
     margin-top: 20px;
 }
 
-.margin-tp-40 {
+.m-t-40 {
     margin-top: 40px;
 }
 
-.margintop-14 {
+.m-t-14 {
     margin-top: 14px;
 }
 
+//Paddings
 .no-padding {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+//Text colors
+.light-gray-text {
+    color: #777777;
+}
+
+.blue-text {
+    color: #396EFF;
 }
 
  ::placeholder {
@@ -446,7 +459,6 @@ header {
 }
 
 .revinue-forecast {
-    margin-top: 20px;
     .text-sm {
         padding: 13px 16px !important;
         border-bottom: 1px solid #E3E3E3;
@@ -454,11 +466,7 @@ header {
         align-items: center;
     }
     .font-medium {
-        font-size: 12px;
-        text-transform: uppercase;
-        color: #777777;
-        line-height: 13px;
-        font-family: "Ubuntu-Medium";
+        @include section_heading;
     }
     .errors {
         background-color: #FAFAFA;
@@ -477,20 +485,30 @@ header {
     }
 }
 
-//Globar styles
+//Global styles
 .orders-text {
     margin-bottom: 0px;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #777777;
-    line-height: 13px;
-    font-family: "Ubuntu-Medium";
+    @include section_heading;
+}
+
+.status {
+    width: 4px;
+    height: 11px;
+    background-color: #53C716;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.paused {
+    background-color: #EDAB15;
+}
+
+.complete {
+    background-color: #B5B5B5;
 }
 
 .heading {
-    font-family: "Ubuntu-Medium";
-    font-size: 22px;
-    margin-bottom: 0px;
+    @include page_heading;
     span {
         color: #396EFF;
     }
@@ -501,13 +519,7 @@ header {
 }
 
 .primary-btn {
-    padding: 4px 17px !important;
-    border-radius: 6px !important;
-    display: flex;
-    align-items: center;
-    height: 30px;
-    font-size: 12px !important;
-    color: #fff !important;
+    @include primary_button;
     i {
         margin-right: 13px;
     }
@@ -516,13 +528,7 @@ header {
 .order-view {
     background-color: #D07308 !IMPORTANT;
     border-color: #D07308 !IMPORTANT;
-    padding: 4px 17px !important;
-    border-radius: 6px !important;
-    display: flex;
-    align-items: center;
-    height: 30px;
-    font-size: 12px !important;
-    color: #fff !important;
+    @include primary_button;
     i {
         margin-right: 13px;
     }
@@ -605,8 +611,7 @@ button.order-view:hover {
     .order-search {
         width: 75%;
         .text-sm {
-            height: 32px;
-            font-size: 13px;
+            @include search_filter;
         }
     }
     .all-orders {
@@ -641,19 +646,6 @@ button.order-view:hover {
         color: #396EFF;
         display: flex;
         align-items: center;
-        .status {
-            width: 4px;
-            height: 11px;
-            background-color: #53C716;
-            display: inline-block;
-            margin-right: 10px;
-        }
-        .paused {
-            background-color: #EDAB15;
-        }
-        .complete {
-            background-color: #B5B5B5;
-        }
         .progress {
             width: 60%;
             height: 8px;
@@ -678,18 +670,13 @@ button.order-view:hover {
 
 // OrderView Page Styles
 .add-info-block {
-    margin-top: 20px;
     .justify-between {
         padding: 13px 16px !important;
         display: flex;
         align-items: center;
     }
     .font-medium {
-        font-size: 12px;
-        text-transform: uppercase;
-        color: #777777;
-        line-height: 13px;
-        font-family: "Ubuntu-Medium";
+        @include section_heading;
     }
     .p-4 {
         padding: 0px !important;
@@ -745,18 +732,13 @@ button.order-view:hover {
 
 // EntitiesView Page Styles
 .entry-block {
-    margin-top: 20px;
     .justify-between {
         padding: 13px 16px !important;
         display: flex;
         align-items: center;
     }
     .font-medium {
-        font-size: 12px;
-        text-transform: uppercase;
-        color: #777777;
-        line-height: 13px;
-        font-family: "Ubuntu-Medium";
+        @include section_heading;
     }
     .p-4 {
         padding: 18px !important;
@@ -765,20 +747,14 @@ button.order-view:hover {
 
 .entry-filed {
     .text-sm {
-        height: 35px;
-        padding: 10px 12px !important;
+        @include primary_input;
     }
 }
 
 .entry-dropdown {
     .items-center {
-        height: 35px;
-        padding: 10px 12px !important;
+        @include primary_input;
     }
-}
-
-.three-fields {
-    margin-top: 20px;
 }
 
 //Products Page styles
@@ -822,13 +798,7 @@ button.order-view:hover {
         margin-left: 15px;
     }
     .btn-delete {
-        padding: 4px 17px !important;
-        border-radius: 6px !important;
-        display: flex;
-        align-items: center;
-        height: 30px;
-        font-size: 12px !important;
-        color: #fff !important;
+        @include primary_button;
         background: #D82B2B;
     }
     .disabled-state {
@@ -882,6 +852,117 @@ button.order-view:hover {
         tbody td:nth-child(3),
         tbody td:nth-child(4) {
             width: 20%;
+        }
+    }
+}
+
+//view order line page UI
+.listprice-label {
+    color: #777777;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.listprice-value {
+    font-size: 14px;
+    color: #000;
+    font-family: "Ubuntu-Medium";
+    line-height: 16px;
+    span {
+        font-family: "Ubuntu-Regular";
+        margin-left: 9px;
+    }
+}
+
+.price-input {
+    display: flex;
+    .entry-filed .border {
+        border-radius: 6px 0px 0px 6px;
+    }
+    .entry-dropdown {
+        margin-top: 22px;
+        .border {
+            border-left: none !important;
+            border-radius: 0px 6px 6px 0px;
+        }
+    }
+}
+
+.order-line-table {
+    margin-top: 25px;
+    .table {
+        thead th {
+            border-bottom: 1.5px solid #848484;
+            font-size: 13px;
+            color: #848484;
+            font-weight: normal;
+            font-family: "Ubuntu-Medium";
+            padding: 10px;
+            border-top: 0px;
+        }
+        .sort {
+            color: #000;
+        }
+        tbody td {
+            padding: 12px;
+            font-size: 13px;
+            border-bottom: 0.9px solid #dee2e6;
+            font-family: "Ubuntu-Medium";
+        }
+        tbody td:last-child {
+            font-size: 12px;
+            color: #777777;
+        }
+    }
+}
+
+.plays {
+    border-top: 1px solid #e6e6e6;
+    .plays-block {
+        display: flex;
+        width: 60%;
+        align-items: center;
+        font-size: 14px;
+        .toggle-btn {
+            display: flex;
+            align-items: center;
+            width: 48%;
+            label {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+//Settings Page Styles
+.notification-type {
+    padding: 0px !important;
+    border-bottom: 0px !important;
+}
+
+.setting-notification {
+    display: flex;
+    padding: 20px 0px;
+    justify-content: flex-end;
+    border-bottom: 1px solid #e6e6e6;
+    align-items: center;
+    .notification-label {
+        width: 93%;
+        p {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        i {
+            font-size: 11px;
+        }
+    }
+    .notification-check {
+        width: 7%;
+        display: flex;
+        justify-content: space-between;
+        .w-6 {
+            width: 21px;
+            height: 21px;
         }
     }
 }
@@ -1093,6 +1174,14 @@ button.order-view:hover {
             margin-bottom: 14px;
         }
     }
+    .setting-notification {
+        .notification-label {
+            width: 80%;
+        }
+        .notification-check {
+            width: 20%;
+        }
+    }
 }
 
 //Dialoge Styles
@@ -1115,12 +1204,13 @@ button.order-view:hover {
 }
 
 .product-popup-table .item-cell {
-    color: #777777;
+    color: #000;
 }
 
 .custom-section {
     border: 1px solid #E0E0E0;
     border-radius: 5px;
+    background: #fff;
     .custom-section-header {
         display: flex;
         justify-content: space-between;
@@ -1128,10 +1218,7 @@ button.order-view:hover {
         padding: 14px;
         border-bottom: 1px solid #E0E0E0;
         h4 {
-            color: #777777;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-family: "Ubuntu-Medium";
+            @include section_heading;
         }
         a {
             color: #396EFF;
@@ -1193,4 +1280,8 @@ button.delete:hover {
     width: 80% !important;
     height: 90vh;
     overflow-y: scroll;
+}
+
+.update-btn {
+    margin-bottom: 15px;
 }

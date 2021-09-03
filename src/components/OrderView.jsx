@@ -3,7 +3,6 @@ import moment from "moment";
 import Header from './UI-Components/Header'
 import Sidebar from "./UI-Components/Sidebar";
 import Footer from "./UI-Components/Footer";
-import Plus from "../assets/imgs/plus.png";
 import {
     Button,
     Section,
@@ -43,7 +42,6 @@ const OrderView = () => {
             placeholder="Search orders, products and more"
             defaultValue=""
             />
-             {/*Orders Main Conetnt */}
         <div class="main-layout">
             <div class="main-conetnt">
                 {/* Side Bar */}
@@ -56,7 +54,7 @@ const OrderView = () => {
                     <Button className="primary-btn order-view"><i class="fas fa-pause-circle"></i>Pause</Button>
                 </div>
                 {/* Entity information */}
-                <Section className="w-full add-info-block" title="ad info">
+                <Section className="w-full add-info-block m-t-20" title="ad info">
                     <div class="row">
                         <div class="col-lg-8">
                             <div className="add-info-form">
@@ -67,7 +65,7 @@ const OrderView = () => {
                                 invalid
                             />
                             <Dropdown
-                            className="w-full entry-dropdown margin-tp"
+                            className="w-full entry-dropdown m-t-20"
                             label="Category"
                             value={category}
                             onChange={setCategory}
@@ -77,7 +75,7 @@ const OrderView = () => {
                             <div className="row">
                                 <div class="col-lg-6">
                                 <DatePicker
-                                    className="w-full entry-dropdown margin-tp"
+                                    className="w-full entry-dropdown m-t-20"
                                     label="Start Date"
                                     value={date}
                                     onChange={setDate}
@@ -86,7 +84,7 @@ const OrderView = () => {
                                 </div>
                                 <div class="col-lg-6">
                                 <DatePicker
-                                    className="w-full entry-dropdown margin-tp"
+                                    className="w-full entry-dropdown m-t-20"
                                     label="End Date"
                                     value={endate}
                                     onChange={setEndate}
@@ -102,15 +100,15 @@ const OrderView = () => {
                                <p className="order-label">Order Number</p>
                                <p className="order-data">STS51-1701A</p>
                                </div>
-                               <div className="order-block margintop-14">
+                               <div className="order-block m-t-14">
                                 <p className="order-label">Created</p>
                                 <p className="order-data">02/23/2020 by <span>Atesh Hicks</span></p>
                                </div>
-                               <div className="order-block margintop-14">
+                               <div className="order-block m-t-14">
                                 <p className="order-label">Revision</p>
                                 <p className="order-data">2nd Revision</p>
                                </div>
-                               <div className="order-block margintop-14">
+                               <div className="order-block m-t-14">
                                 <p className="order-label">Approval</p>
                                 <p className="order-data"><i class="fas fa-check-circle"></i> Approved 03/05/2020</p>
                                </div>
@@ -119,7 +117,7 @@ const OrderView = () => {
                     </div>
                 </Section>
                 {/* Main Address */}
-                <Section className="w-full entry-block" title="advertiser">
+                <Section className="w-full entry-block m-t-20" title="advertiser">
                     <div class="row">
                         
                         <div class="col-lg-3">
@@ -145,7 +143,7 @@ const OrderView = () => {
                     </div>
                 </Section>
                 {/* Agency */}
-                <Section className="w-full entry-block" title="agency">
+                <Section className="w-full entry-block m-t-20" title="agency">
                     <div class="row">
                         
                         <div class="col-lg-3">
@@ -171,7 +169,7 @@ const OrderView = () => {
                     </div>
                 </Section>
                 {/* billing */}
-                <Section className="w-full entry-block" title="billing">
+                <Section className="w-full entry-block m-t-20" title="billing">
                     <div class="row">
                         
                         <div class="col-lg-3">

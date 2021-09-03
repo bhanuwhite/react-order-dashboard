@@ -27,24 +27,24 @@ const ProductModal = () => {
                 <TextBox className="entry-filed" label="Name" defaultValue="Seoul/Lotte - 250 Plays/Screen" />
             </div>
             <div class="col-md-12">
-                <div class="form-group margintop-14 cstm-textarea">
+                <div class="form-group m-t-14 cstm-textarea">
                     <label for="description">Description</label>
                     <textarea class="form-control" id="description" rows="3"
                     value="Regular notation across all the inventory in Lotte stores located in the Seoul market, guaranteeing 250 plays per day per screen across the rotation."></textarea>
                 </div>
            </div>
         </div>
-        <div class="divider margin-bt-8"></div>
+        <div class="divider m-tb-8"></div>
         <div class="row mb-4">
             <div class="col-md-5">
               <Dropdown
-                className="w-full entry-dropdown margin-tp"
+                className="w-full entry-dropdown m-t-20"
                 label="Goal Type"
                 value={goal} onChange={setGoal} options={["Plays/Screen", "Goal", "Goal1"]} />
             </div>
             <div class="col-md-3">
                 <TextBox
-                    className="entry-filed margin-tp"
+                    className="entry-filed m-t-20"
                     label="Value"
                     defaultValue="250"
                     invalid
@@ -52,7 +52,7 @@ const ProductModal = () => {
             </div>
             <div class="col-md-2">
                 <TextBox
-                    className="entry-filed margin-tp"
+                    className="entry-filed m-t-20"
                     label="Nominal ad length"
                     defaultValue="8"
                     invalid
@@ -60,11 +60,11 @@ const ProductModal = () => {
             </div>
             <div class="col-md-2">
               <Dropdown
-                className="w-full entry-dropdown margin-tp-40"
+                className="w-full entry-dropdown m-t-40"
                 value={time} onChange={setTime} options={["Secounds", "Minuties", "Hours"]} />
             </div>
         </div>
-        <div class="divider margin-bt-8"></div>
+        <div class="divider m-tb-8"></div>
         <div class="custom-section mt-4">
             <div class="custom-section-header">
                 <h4>inventory</h4>
