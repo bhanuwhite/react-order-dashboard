@@ -35,7 +35,7 @@ const ProductsView = () => {
             <Sidebar/>
             </div>
             <div class="content-wrapper">
-                <div class="order-heading-block">
+                <div class="order-heading-block mb-block">
                     <h2 class="heading">Products</h2>
                     <div className="products-btn-group">
                       <Button className="btn-delete disabled-state" red>Delete selected</Button>
@@ -79,35 +79,35 @@ const ProductsView = () => {
                     <tbody>
                         <tr>
                             <td></td>
-                            <td colspan="3"><i class="fas fa-upload"></i> One folder up...</td>
+                            <td colspan="3" className="blue-text"><i class="fas fa-upload"></i> One folder up...</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-folder-open"></i> Seoul</td>
+                            <td class="w-50 blue-text"><i class="fas fa-folder-open"></i> Seoul</td>
                             <td>Folder</td>
                             <td>2 folders</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-folder-open"></i> New York</td>
+                            <td class="w-50 blue-text"><i class="fas fa-folder-open"></i> New York</td>
                             <td>Product</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-file-alt document-icon"></i> London - 5% DSOV/Screen</td>
+                            <td class="w-50 blue-text"><i class="fas fa-file-alt document-icon"></i> London - 5% DSOV/Screen</td>
                             <td>Product</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-file-alt document-icon"></i> London - 5% DSOV</td>
+                            <td class="w-50 blue-text"><i class="fas fa-file-alt document-icon"></i> London - 5% DSOV</td>
                             <td>Product</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-file-alt document-icon"></i> London - 250 Plays/Screen</td>
+                            <td class="w-50 blue-text"><i class="fas fa-file-alt document-icon"></i> London - 250 Plays/Screen</td>
                             <td>Gateway Node</td>
                             <td>4</td>
                         </tr>

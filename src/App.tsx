@@ -11,6 +11,7 @@ import Products from "./components/Products";
 import ProductsView from "./components/ProductsView";
 import ViewOrderLine from "./components/ViewOrderLine";
 import Settings from "./components/Settings";
+import Entities from "./components/Entities";
 const Layout = ({ children }) => {
   return (
     <div className="main-wrapper">
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/productsview" component={ProductsView} />
         <Route exact path="/vieworderline" component={ViewOrderLine} />
         <Route exact path="/settings" component={Settings} />
+        <Route exact path="/entities" component={Entities} />
         <Redirect from="/" to="/login" />
       </Switch>
     </Router>

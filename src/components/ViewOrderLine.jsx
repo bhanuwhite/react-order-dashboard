@@ -3,6 +3,7 @@ import moment from "moment";
 import Header from './UI-Components/Header'
 import Sidebar from "./UI-Components/Sidebar";
 import Footer from "./UI-Components/Footer";
+import AddInventoryModal from "./UI-Components/AddInventoryModal";
 import {
     Button,
     Section,
@@ -21,6 +22,7 @@ import {
     Dropdown,
     DatePicker,
   } from "../core/components";
+  import { Modal } from "../core/components";
 
 const ViewOrderLine = () => {
     const [status, setStatus] = useState("All statuses")
@@ -33,6 +35,7 @@ const ViewOrderLine = () => {
     const [date, setDate] = useState(moment());
     const [endate, setEndate] = useState(moment());
     const [toggle1, setToggle1] = React.useState(false);
+    const [modal1Open, setModal1Open] = useState(false);
     return (
         <>
          {/* header */}
@@ -43,8 +46,8 @@ const ViewOrderLine = () => {
             className="global-search mobile-filter"
             placeholder="Search orders, products and more"
             defaultValue=""
-            />
-             {/*Orders Main Conetnt */}
+         />
+        {/*Orders Main Conetnt */}
         <div class="main-layout">
             <div class="main-conetnt">
                 {/* Side Bar */}
@@ -58,7 +61,7 @@ const ViewOrderLine = () => {
                         <i class="fas fa-caret-right"></i>Order Item #1
                     </h2>
                 </div>
-                {/* Entity information */}
+                {/* ADD information */}
                 <Section className="w-full add-info-block m-t-20" title="ad info">
                     <div class="row">
                         <div class="col-lg-8">
@@ -145,7 +148,7 @@ const ViewOrderLine = () => {
                         </div>
                     </div>
                 </Section>
-                {/* Main Address */}
+                {/* pricing & scheduling */}
                 <div class="custom-section mt-4">
                     <div class="custom-section-header">
                         <h4>pricing & scheduling</h4>
@@ -196,117 +199,125 @@ const ViewOrderLine = () => {
                         </div>
                     </div>
                </div>
-                {/* order items */}
+                {/* creatives */}
                 <div class="custom-section mt-4">
-            <div class="custom-section-header">
-                <h4>creatives</h4>
-                <a href="">+ ADD NEW ITEM</a>
-            </div>
-            <div class="custom-section-body">
-               <div class="orders-filter">
-                    <TextBox
-                    prependIcon="fas fa-search"
-                    className="order-search"
-                    placeholder="Search items"
-                    defaultValue=""
-                    />
-                    <Dropdown
-                    className="all-orders"
-                    value={status}
-                    onChange={setStatus}
-                    options={["All statuses", "status1", "status2"]}
-                    invalid
-                    />
+                    <div class="custom-section-header">
+                        <h4>creatives</h4>
+                        <a href="">+ ADD NEW ITEM</a>
+                    </div>
+                    <div class="custom-section-body">
+                    <div class="orders-filter">
+                            <TextBox
+                            prependIcon="fas fa-search"
+                            className="order-search"
+                            placeholder="Search items"
+                            defaultValue=""
+                            />
+                            <Dropdown
+                            className="all-orders"
+                            value={status}
+                            onChange={setStatus}
+                            options={["All statuses", "status1", "status2"]}
+                            invalid
+                            />
+                        </div>
+                        <div className="products-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="sort">Item</th>
+                                    <th>Description</th>
+                                    <th>Type</th>
+                                    <th></th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="blue-text">Creative #1</td>
+                                    <td class="w-50">Primary creative</td>
+                                    <td>HTML-based</td>
+                                    <td class="blue-text">Visit</td>
+                                    <td className="table-satus-text"><span className="status"></span>Approved</td>
+                                </tr>
+                                
+                            </tbody>
+                            </table>
+                        </div> 
+                        <div className="table-pagination bt-none">
+                        <Pagination
+                            hasNext={false}
+                            hasPrev={false}
+                            nextPage={() => {}}
+                            prevPage={() => {}}
+                        >
+                            Page 1/1
+                        </Pagination>
+                        </div> 
+                    </div>
+                
                 </div>
-                <div className="order-line-table">
-                  <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="sort">Item</th>
-                            <th>Description</th>
-                            <th>Type</th>
-                            <th></th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="blue-text">Creative #1</td>
-                            <td class="w-50">Primary creative</td>
-                            <td>HTML-based</td>
-                            <td class="blue-text">Visit</td>
-                            <td><span className="status"></span>Approved</td>
-                        </tr>
-                        
-                    </tbody>
-                    </table>
-                  </div> 
-                  <div className="table-pagination bt-none">
-                  <Pagination
-                    hasNext={false}
-                    hasPrev={false}
-                    nextPage={() => {}}
-                    prevPage={() => {}}
-                  >
-                    Page 1/1
-                 </Pagination>
-                  </div> 
-            </div>
-           
-        </div>
-        <div class="custom-section mt-4">
-            <div class="custom-section-header">
-                <h4>inventory</h4>
-                <a href="">+ ADD NEW ITEM</a>
-            </div>
-            <div class="custom-section-body">
-                <div class="orders-filter">
-                    <TextBox
-                        prependIcon="fas fa-search"
-                        className="order-search"
-                        placeholder="Search items"
-                        defaultValue=""
-                    />
-                    <Dropdown
-                        className="all-orders"
-                        value={status}
-                        onChange={setStatus}
-                        options={["All statuses", "status1", "status2"]}
-                        invalid
-                    />
-                </div>
-                <div className="order-table product-popup-table">
-                  <Table cols="grid-cols-5 table-responsive">
-                    <Row>
-                    <HeaderCell>Item</HeaderCell>
-                    <HeaderCell>Group</HeaderCell>
-                    <HeaderCell>Target(s)</HeaderCell>
-                    <HeaderCell>Market</HeaderCell>
-                    <HeaderCell>Status</HeaderCell>
-                    </Row>
-                    <Row>
-                    <LinkCell>Inventory #1</LinkCell>
-                    <ItemCell>Cumberland Farms</ItemCell>
-                    <ItemCell>All stores – Entrance Displays (HTML)</ItemCell>
-                    <ItemCell>Boston, MA</ItemCell>
-                    <ItemCell><span className="status"></span>Reserved</ItemCell>
-                    </Row>
+                {/* inventory */}
+                <div class="custom-section mt-4 inventory">
+                    <div class="custom-section-header">
+                        <h4>inventory</h4>
+                        <a onClick={() => setModal1Open(true)}>+ ADD NEW ITEM</a>
+                    </div>
+                    <div class="custom-section-body">
+                        <div class="orders-filter">
+                            <TextBox
+                                prependIcon="fas fa-search"
+                                className="order-search"
+                                placeholder="Search items"
+                                defaultValue=""
+                            />
+                            <Dropdown
+                                className="all-orders"
+                                value={status}
+                                onChange={setStatus}
+                                options={["All statuses", "status1", "status2"]}
+                                invalid
+                            />
+                        </div>
+                        <div className="order-table product-popup-table">
+                        <Table cols="grid-cols-5">
+                            <Row>
+                            <HeaderCell>Item</HeaderCell>
+                            <HeaderCell>Group</HeaderCell>
+                            <HeaderCell>Target(s)</HeaderCell>
+                            <HeaderCell>Market</HeaderCell>
+                            <HeaderCell>Status</HeaderCell>
+                            </Row>
+                            <Row>
+                            <LinkCell>Inventory #1</LinkCell>
+                            <ItemCell>Cumberland Farms</ItemCell>
+                            <ItemCell>All stores – Entrance Displays (HTML)</ItemCell>
+                            <ItemCell>Boston, MA</ItemCell>
+                            <ItemCell><span className="status"></span>Reserved</ItemCell>
+                            </Row>
 
-                  </Table> 
-                </div> 
-                <div className="table-pagination">
-                    <Pagination
-                        hasNext={false}
-                        hasPrev={false}
-                        nextPage={() => {}}
-                        prevPage={() => {}}
-                    >
-                    Page 1/1
-                </Pagination>
-                </div> 
-            </div>
-           
-        </div>
+                        </Table> 
+                        </div> 
+                        <div className="table-pagination">
+                            <Pagination
+                                hasNext={false}
+                                hasPrev={false}
+                                nextPage={() => {}}
+                                prevPage={() => {}}
+                            >
+                            Page 1/1
+                        </Pagination>
+                        </div> 
+                    </div>
+                    <Modal
+                      open={modal1Open}
+                      onClose={() => setModal1Open(false)}
+                      header={<h1 className="prducts-dialoge-header">Edit "Seoul/Lotte - 250 Plays/Screen"</h1>}
+                      className="prducts-dialoge"
+                  >
+                    <AddInventoryModal/>
+                    </Modal>
+                </div>
         
                 <div className="update-btn">
                 <Button className="primary-btn">Save changes</Button>

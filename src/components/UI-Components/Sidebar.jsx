@@ -34,8 +34,7 @@ const Sidebar = () => {
             {/* Side menu links */}
             <ul class="navbar-nav">
                 <li class="navlink active">
-                    <a href="#"><img src={homeIcon} alt="Home Page" class="nav-icons"/>
-                    <img src={homeIconActive} alt="Home" class="nav-icons-active"/> Home</a>
+                    <a href="#"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="navlink">
                     <a href="#"><img src={Orders} alt="Orders" class="nav-icons"/> 

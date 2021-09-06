@@ -38,7 +38,7 @@ const Products = () => {
             <Sidebar/>
             </div>
             <div class="content-wrapper">
-                <div class="order-heading-block">
+                <div class="order-heading-block mb-block">
                     <h2 class="heading">Products</h2>
                     <div className="products-btn-group">
                       <Button className="btn-delete disabled-state" red>Delete selected</Button>
@@ -82,31 +82,31 @@ const Products = () => {
                     <tbody>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-folder-open"></i> Impression-Based</td>
+                            <td class="w-50 blue-text"><i class="fas fa-folder-open"></i> Impression-Based</td>
                             <td>Folder</td>
                             <td>2 folders, 3 products</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-folder-open"></i> Time-Based</td>
+                            <td class="w-50 blue-text"><i class="fas fa-folder-open"></i> Time-Based</td>
                             <td>Folder</td>
                             <td>2 folders</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-folder-open"></i> Under Consideration</td>
+                            <td class="w-50 blue-text"><i class="fas fa-folder-open"></i> Under Consideration</td>
                             <td>Folder</td>
                             <td>4 products</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td><i class="fas fa-folder-open"></i> Archived</td>
+                            <td class="w-50 blue-text"><i class="fas fa-folder-open"></i> Archived</td>
                             <td>Folder</td>
                             <td>0 children</td>
                         </tr>
                         <tr>
                             <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td onClick={() => setModal1Open(true)}><i class="fas fa-file-alt document-icon"></i> Seoul/Lotte - 250 Plays/Screen</td>
+                            <td class="w-50 blue-text" onClick={() => setModal1Open(true)}><i class="fas fa-file-alt document-icon"></i> Seoul/Lotte - 250 Plays/Screen</td>
                             <td>Product</td>
                             <td>-</td>
                         </tr>

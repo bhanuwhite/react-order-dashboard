@@ -132,7 +132,7 @@ const OrderView = () => {
                         </div>
                         <div class="col-lg-3">
                         <Dropdown
-                            className="w-full entry-dropdown"
+                            className="w-full entry-dropdown m-t-20-mobile"
                             label="Advertiser Contact"
                             value={contact}
                             onChange={setContact}
@@ -158,7 +158,7 @@ const OrderView = () => {
                         </div>
                         <div class="col-lg-3">
                         <Dropdown
-                            className="w-full entry-dropdown"
+                            className="w-full entry-dropdown m-t-20-mobile"
                             label="Agency Contact"
                             value={agencycontact}
                             onChange={setAgencyContact}
@@ -184,7 +184,7 @@ const OrderView = () => {
                         </div>
                         <div class="col-lg-3">
                         <Dropdown
-                            className="w-full entry-dropdown"
+                            className="w-full entry-dropdown m-t-20-mobile"
                             label="Bill To"
                             value={bill}
                             onChange={setBill}
