@@ -1,5 +1,4 @@
 import React from "react";
-import searchIcon from "../assets/imgs/search-icon.svg";
 import Footer from "./UI-Components/Footer";
 import Header from "./UI-Components/Header";
 import Sidebar from "./UI-Components/Sidebar";
@@ -12,25 +11,23 @@ import {
 const Home = () => {
   return (
       <>
-        {/* header */}
         <Header/>
-        {/* Search filter for mobile */}
+        {/*Global Search mobile */}
         <TextBox
-                prependIcon="fas fa-search"
-                className="global-search mobile-filter"
-                placeholder="Search orders, products and more"
-                defaultValue=""
-              />
-        {/* Home Main Conetnt */}
+          prependIcon="fas fa-search"
+          className="global-search mobile-filter"
+          placeholder="Search orders, products and more"
+          defaultValue=""
+        />
        <div class="main-layout">
          <div class="main-conetnt">
            {/* Side Bar */}
            <div className="sidemenu">
             <Sidebar/>
             </div>
+            {/* Home Content */}
             <div class="content-wrapper">
               <h2 class="heading">Home</h2>
-               {/* Stats */}
               <div class="stats-block">
                 {/* Orders */}
                 <div class="order-card">
@@ -44,12 +41,6 @@ const Home = () => {
                     {/* Occupancy */}
                   <div class="occupancy-card">
                     <p className="orders-text">Occupancy</p>
-                    <div class="progress cstm-border">
-                        <span class="title timer" data-from="0" data-to="70" data-speed="1800">70%</span>
-                        <div class="overlay"></div>
-                        <div class="left cstm-border"></div>
-                        <div class="right cstm-border"></div>
-                    </div>
                   </div>
                     {/* Availability */}
                   <div class="occupancy-card">

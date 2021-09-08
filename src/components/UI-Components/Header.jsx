@@ -38,9 +38,8 @@ const Header = () => {
                 {/* Sidebar body */}
                 <Sidebar/>
                 {/* Sidebar footer */}
-              <div class="mobile-footer">
-                <div>
-                <ul class="widget-links">
+              <div class="mobile-footer">                
+              <ul class="widget-links">
                   <li>
                     <a href="">Terms of Use</a>
                   </li>
@@ -57,7 +56,6 @@ const Header = () => {
                     <a href="">4G Faileovers Terms</a>
                   </li>
                 </ul>
-                  </div>
                 <p class="copy-right"> @2 020 Veea Inc. All Rigts Reserved.</p>
                 <p>
                   VeeHub is a trademark of Veea Inc. All other trademarks and tradenames are the property of their respective

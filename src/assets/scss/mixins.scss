@@ -1,3 +1,4 @@
+@import "variable.scss";
 @mixin page_heading {
     font-family: "Ubuntu-Medium";
     font-size: 22px;
@@ -7,7 +8,7 @@
 @mixin section_heading {
     font-size: 12px;
     text-transform: uppercase;
-    color: #777777;
+    color: $primary-gray-color;
     line-height: 13px;
     font-family: "Ubuntu-Medium";
 }

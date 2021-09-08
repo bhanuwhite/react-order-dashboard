@@ -22,11 +22,11 @@ const LoginForm = () => {
               <form action="" method="">
                 <div className="full-input">
                   <label>e-mail address</label>
-                  <input type="email" name="email" placeholder="required" required />
+                  <input id="primary-input" type="email" name="email" placeholder="required" required />
                 </div>
                 <div className="full-input">
                   <label>password</label>
-                  <input type="password" name="password" placeholder="required" required />
+                  <input id="primary-input" type="password" name="password" placeholder="required" required />
                 </div>
                 <Button className="login-button">Login</Button>
               </form>
