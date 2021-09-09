@@ -35,7 +35,11 @@ const ViewOrderLine = () => {
     const [date, setDate] = useState(moment());
     const [endate, setEndate] = useState(moment());
     const [toggle1, setToggle1] = React.useState(false);
-    const [modal1Open, setModal1Open] = useState(false);
+    const [modalnewpen, setModalnewpen] = useState(false);
+    const [market, setMarket] = useState("All Markets");
+    const [retailers, setRetailers] = useState("All Retailers");
+    const [audiences, setAudiences] = useState("All Audiences");
+    const [formats, setFormats] = useState("All Formats");
     return (
         <>
          {/* header */}
@@ -261,7 +265,7 @@ const ViewOrderLine = () => {
                 <div class="custom-section mt-4 inventory">
                     <div class="custom-section-header">
                         <h4>inventory</h4>
-                        <a onClick={() => setModal1Open(true)}>+ ADD NEW ITEM</a>
+                        <a onClick={() => setModalnewpen(true)}>+ ADD NEW ITEM</a>
                     </div>
                     <div class="custom-section-body">
                         <div class="orders-filter">
@@ -310,10 +314,47 @@ const ViewOrderLine = () => {
                         </div> 
                     </div>
                     <Modal
-                      open={modal1Open}
-                      onClose={() => setModal1Open(false)}
-                      header={<h1 className="prducts-dialoge-header">Edit "Seoul/Lotte - 250 Plays/Screen"</h1>}
+                      open={modalnewpen}
+                      onClose={() => setModalnewpen(false)}
+                      header={<h1 className="prducts-dialoge-header">Add New Inventory</h1>}
                       className="prducts-dialoge"
+                      sidebar={true}
+                      sidebarHtml={
+                      <div>
+                            <Dropdown
+                            className="w-full entry-dropdown"
+                            label="Markets"
+                            value={market}
+                            onChange={setMarket}
+                            options={["option1", "option2"]}
+                            invalid
+                            />
+                            <Dropdown
+                            className="w-full entry-dropdown m-t-20"
+                            label="Retailers"
+                            value={retailers}
+                            onChange={setRetailers}
+                            options={["option1", "option2"]}
+                            invalid
+                            />
+                            <Dropdown
+                            className="w-full entry-dropdown m-t-20"
+                            label="Audiences"
+                            value={audiences}
+                            onChange={setAudiences}
+                            options={["General Public", "Private"]}
+                            invalid
+                            />
+                            <Dropdown
+                            className="w-full entry-dropdown m-t-20"
+                            label="Formats"
+                            value={formats}
+                            onChange={setFormats}
+                            options={["option1", "option2"]}
+                            invalid
+                            />
+                            <a href="" className="clear-filters">clear filters</a>
+                      </div>}
                   >
                     <AddInventoryModal/>
                     </Modal>
@@ -326,7 +367,7 @@ const ViewOrderLine = () => {
               <div className="inside-footer">
               <Footer />
               </div>
-                </div>
+              </div>
             </div>
          </div>   
         </>

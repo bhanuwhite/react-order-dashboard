@@ -62,7 +62,7 @@ const Orders = () => {
                   </div>
                   </form> 
                   <div className="order-table">
-                  <Table cols="grid-cols-6 table-responsive">
+                  <Table cols="grid-cols-6">
                     <Row>
                       <HeaderCell>Order</HeaderCell>
                       <HeaderCell>Advertiser</HeaderCell>

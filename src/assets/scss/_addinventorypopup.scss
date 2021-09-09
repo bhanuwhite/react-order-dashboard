@@ -1,0 +1,98 @@
+.cstm-modal {
+    display: flex;
+    height: 100%;
+}
+
+.modal-sidebar {
+    width: 25%;
+    background-color: $bg-light-gray;
+    padding: 50px 26px;
+}
+
+.modal-content {
+    width: 75%;
+    border: none;
+}
+
+.inventory-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .inventory-search-box {
+        width: 70%;
+        .text-sm {
+            height: 32px;
+            font-size: 13px;
+        }
+    }
+    .content-view {
+        width: 30%;
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            li {
+                a {
+                    font-size: 14px;
+                    padding: 8px 18px;
+                    border: 1px solid $blue-color;
+                    color: $blue-color;
+                    font-family: "Ubuntu-Medium";
+                }
+                a:hover {
+                    text-decoration: none;
+                    background-color: $blue-color;
+                    color: #fff;
+                }
+            }
+            li:first-child a {
+                border-radius: 6px 0px 0px 6px;
+            }
+            li:last-child a {
+                border-radius: 0px 6px 6px 0px;
+            }
+            li.active a {
+                background-color: $blue-color;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.inventory-table {
+    margin-top: 25px;
+    .border-black {
+        border-color: #848484;
+        border-bottom-width: 2px;
+    }
+    .header-cell {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: "Ubuntu-Medium";
+        color: #848484;
+    }
+    .header-cell:first-child {
+        color: $black-color;
+        font-family: "Ubuntu-Bold";
+    }
+    .item-cell {
+        font-family: "Ubuntu-Medium";
+        font-size: 13px;
+        color: $black-color;
+        display: flex;
+        align-items: center;
+        .progress {
+            width: 60%;
+            height: 8px;
+            .progress-bar {
+                height: 8px;
+                background: #C1C1C1;
+            }
+        }
+    }
+}
+
+.incomplete {
+    background-color: #B9090F;
+}

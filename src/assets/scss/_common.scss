@@ -221,6 +221,7 @@ img {
             font-size: 11px;
             font-family: "Ubuntu-Bold";
             text-decoration: none;
+            cursor: pointer;
         }
     }
     .custom-section-body {
@@ -276,6 +277,41 @@ img {
     }
 }
 
+.order-table {
+    margin-top: 25px;
+    .border-black {
+        border-color: #848484;
+        border-bottom-width: 2px;
+    }
+    .header-cell {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: "Ubuntu-Medium";
+        color: #848484;
+    }
+    .header-cell:first-child {
+        color: $black-color;
+        font-family: "Ubuntu-Bold";
+    }
+    .item-cell {
+        font-family: "Ubuntu-Medium";
+        font-size: 13px;
+        color: #396EFF;
+        display: flex;
+        align-items: center;
+        .progress {
+            width: 60%;
+            height: 8px;
+            .progress-bar {
+                height: 8px;
+                background: #C1C1C1;
+            }
+        }
+    }
+}
+
 .products-table {
     margin-top: 25px;
     .table {
@@ -325,6 +361,14 @@ img {
     }
     .p-4 {
         padding: 18px !important;
+    }
+}
+
+.modal-wrapper {
+    overflow-y: scroll;
+    padding-top: 100px;
+    .shadow-2xl {
+        width: 80%;
     }
 }
 
