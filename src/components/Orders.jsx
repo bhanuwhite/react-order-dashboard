@@ -81,7 +81,7 @@ const Orders = () => {
                         <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       </ItemCell>
-                      <ItemCell><span className="status"></span>Running</ItemCell>
+                      <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
                     </Row>
                     <Row>
                       <LinkCell>STS51-1701B</LinkCell>
@@ -93,7 +93,7 @@ const Orders = () => {
                         <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       </ItemCell>
-                      <ItemCell><span className="status paused"></span>Paused</ItemCell>
+                      <ItemCell  className="light-gray-text"><span className="status paused"></span>Paused</ItemCell>
                     </Row>
                     <Row>
                       <LinkCell>STS51-1701C</LinkCell>
@@ -105,7 +105,7 @@ const Orders = () => {
                         <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       </ItemCell>
-                      <ItemCell><span className="status complete"></span>Completed</ItemCell>
+                      <ItemCell  className="light-gray-text"><span className="status complete"></span>Completed</ItemCell>
                     </Row>
                     <Row>
                       <LinkCell>STS51-1701D</LinkCell>
@@ -117,7 +117,7 @@ const Orders = () => {
                         <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       </ItemCell>
-                      <ItemCell><span className="status"></span>Running</ItemCell>
+                      <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
                     </Row>
                     <Row>
                       <LinkCell>STS51-1701E</LinkCell>
@@ -129,7 +129,7 @@ const Orders = () => {
                         <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       </ItemCell>
-                      <ItemCell><span className="status"></span>Active</ItemCell>
+                      <ItemCell className="light-gray-text"><span className="status"></span>Active</ItemCell>
                     </Row>
                   </Table> 
                   </div>  

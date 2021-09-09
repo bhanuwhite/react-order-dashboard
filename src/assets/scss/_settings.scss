@@ -1,0 +1,43 @@
+.notification-type {
+    padding: 0px !important;
+    border-bottom: 0px !important;
+}
+
+.setting-notification {
+    display: flex;
+    padding: 20px 0px;
+    justify-content: flex-end;
+    border-bottom: 1px solid #e6e6e6;
+    align-items: center;
+    .notification-label {
+        width: 93%;
+        p {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        i {
+            font-size: 11px;
+        }
+    }
+    .notification-check {
+        width: 7%;
+        display: flex;
+        justify-content: space-between;
+        .w-6 {
+            width: 21px;
+            height: 21px;
+        }
+    }
+}
+
+// Media Quires
+@media screen and (max-width: 767px) {
+    .setting-notification {
+        .notification-label {
+            width: 80%;
+        }
+        .notification-check {
+            width: 20%;
+        }
+    }
+}

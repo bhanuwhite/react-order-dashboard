@@ -32,3 +32,10 @@
     height: 35px;
     padding: 10px 12px !important;
 }
+
+@mixin card {
+    background-color: $white-color;
+    border: 1px solid $card-border-color;
+    border-radius: 5px;
+    padding: 16px;
+}

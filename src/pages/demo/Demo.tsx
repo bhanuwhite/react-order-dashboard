@@ -40,6 +40,7 @@ export const Demo: FC<Props> = ({}) => {
   );
   const [modal1Open, setModal1Open] = React.useState(false);
   const [modal2Open, setModal2Open] = React.useState(false);
+  const [modalnewpen, setModalnewpen] = React.useState(false);
   const [showToast, setShowToast] = React.useState(false);
   const [toastPos, setToastPos] = React.useState<
     | "top-middle"
@@ -652,6 +653,28 @@ export const Demo: FC<Props> = ({}) => {
             <Button onClick={() => setModal2Open(false)} className="w-full">
               Done
             </Button>
+          </Modal>
+              <Button className="ml-3" onClick={() => setModalnewpen(true)}>Open Modal 3</Button>
+
+          <Modal
+            open={modalnewpen}
+            onClose={() => setModalnewpen(false)}
+            header={<h1 className="text-lg font-bold">Add New Cat</h1>}
+            className="p-8"
+            sidebar={true}
+            sidebarHtml={
+            <div>sidebarfgsd</div>
+            }
+          >
+            <TextBox label="E-mail Address" defaultValue="" />
+            <TextBox className="mt-4" label="Breed" defaultValue="" />
+            <TextBox className="mt-4" label="Favorite Toy" defaultValue="" />
+            <div className="mt-4 flex">
+              <Button className="flex-1 mr-2">Add Cat</Button>
+              <Button secondary className="flex-1 ml-2">
+                Add multiple cats
+              </Button>
+            </div>
           </Modal>
         </div>
       </div>

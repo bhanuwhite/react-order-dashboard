@@ -1,0 +1,64 @@
+.products-block {
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 15px;
+}
+
+.document-icon {
+    color: #E06C6C;
+}
+
+.products-subheading {
+    padding: 15px;
+    border-bottom: 1px solid #E0E0E0;
+    h3 {
+        font-size: 15px;
+        font-family: "Ubuntu-Bold";
+        span {
+            color: #396EFF;
+        }
+        i {
+            margin: 0px 11px;
+            color: #A7A7A7;
+        }
+    }
+}
+
+.products-block-inside {
+    padding: 18px;
+}
+
+.products-btn-group {
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .primary-btn {
+        margin-left: 15px;
+    }
+    .btn-delete {
+        @include primary_button;
+        background: #D82B2B;
+    }
+    .disabled-state {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+// Media Quires
+@media screen and (max-width: 767px) {
+    //products page responsive
+    .products-btn-group {
+        display: block;
+        width: 100%;
+        .primary-btn,
+        .btn-delete {
+            margin-left: 0px;
+            width: 100%;
+            justify-content: center;
+            margin-top: 15px;
+        }
+    }
+}

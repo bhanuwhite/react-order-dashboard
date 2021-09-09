@@ -1,0 +1,178 @@
+//header styles
+header {
+    box-shadow: 0px 0px 5px 0px #dcdbdb;
+    padding: 0px 90px;
+    border: 1px solid #E3E3E3;
+    .home-header {
+        display: flex;
+        height: 55px;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-between;
+        .navbar-header {
+            display: none;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            width: 32%;
+            img {
+                width: 22px;
+            }
+        }
+        .global-search {
+            width: 30%;
+            .border {
+                border: none !important;
+            }
+            .items-center {
+                background-color: #F5F5F5;
+                border-radius: 8px;
+                height: 32px;
+                font-size: 13px;
+                .text-sm {
+                    font-size: 13px;
+                    text-align: center;
+                }
+                #input2::placeholder {
+                    color: #A5A5A5;
+                }
+            }
+        }
+        .notification-block {
+            font-size: 12px;
+            color: #707070;
+            font-family: "Ubuntu-Regular";
+            width: 35%;
+            text-align: right;
+            .user-profile {
+                width: 30px;
+                margin-left: 8px;
+            }
+            .notification {
+                width: 13px;
+                margin-left: 15px;
+                height: 16px;
+            }
+        }
+        .logo-text {
+            display: inline-block;
+            font-family: "Ubuntu-Light";
+            margin-bottom: 0px;
+            color: #8B8B8B;
+            font-size: 15px;
+            margin-left: 8px;
+        }
+    }
+}
+
+// Media Quires
+@media screen and (max-width: 767px) {
+    // Responsive Home header
+    header {
+        padding: 0px 15px;
+        .home-header {
+            .navbar-header {
+                display: inline-block;
+                width: 25%;
+            }
+            .sidebar {
+                position: absolute;
+                top: 0;
+                left: -300px;
+                width: 300px;
+                transition: all linear 0.5s;
+                height: 100vh;
+                background-color: #fff;
+                padding: 23px;
+                z-index: 10000;
+            }
+            .sidebar-mobile {
+                position: absolute;
+                top: 0;
+                left: 0px;
+                width: 300px;
+                transition: all linear 0.5s;
+                box-shadow: 6px 3px 6px #00000029;
+                background: #fff;
+                height: 100vh;
+                z-index: 10000;
+                padding: 23px;
+                overflow-y: scroll;
+            }
+            .header-logo {
+                width: 50%;
+                justify-content: center;
+            }
+        }
+        .modile-header-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            .close {
+                width: 12px;
+            }
+        }
+        .navbar-nav {
+            display: block;
+            width: 100%;
+            .navlink {
+                a {
+                    color: #7A869A;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-family: "Ubuntu-Regular";
+                    padding: 8px 10px 8px 0px;
+                    display: block;
+                    .nav-icons {
+                        width: 15px;
+                        margin-right: 10px;
+                        margin-top: -4px;
+                        height: 15px;
+                    }
+                    .nav-icons-active {
+                        display: none !important;
+                    }
+                }
+            }
+            .navlink.active {
+                a {
+                    color: #B9090F;
+                    .nav-icons {
+                        display: none !important;
+                    }
+                    .nav-icons-active {
+                        width: 15px;
+                        margin-right: 10px;
+                        margin-top: -4px;
+                        height: 15px;
+                        display: inline-block !important;
+                    }
+                }
+            }
+        }
+        .mobile-footer {
+            .widget-links {
+                li {
+                    width: 100%;
+                    padding: 3px 0px;
+                    a {
+                        padding: 5px 0px;
+                    }
+                }
+                li:last-child {
+                    margin-bottom: 30px;
+                }
+            }
+            p {
+                margin-bottom: 0px;
+                font-size: 12px;
+                color: #ADADAD;
+            }
+        }
+        .atesh-group .bg-white {
+            background-color: #fff !important;
+        }
+    }
+}

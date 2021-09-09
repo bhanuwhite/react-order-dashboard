@@ -1,0 +1,27 @@
+.tabs-sctm {
+    margin-bottom: 28px;
+    .h-8 {
+        font-size: 15px;
+        margin-right: 40px;
+    }
+    .h-8::after {
+        height: 5px !important;
+    }
+}
+
+.circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #3F96E0;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.agency {
+    background-color: #BE55FF;
+}
+
+.seller {
+    background-color: #78D3C5;
+}

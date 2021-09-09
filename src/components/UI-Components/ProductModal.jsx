@@ -87,7 +87,7 @@ const ProductModal = () => {
                     />
                 </div>
                 <div className="order-table product-popup-table">
-                  <Table cols="grid-cols-5 table-responsive">
+                  <Table cols="grid-cols-5">
                     <Row>
                     <HeaderCell>Item</HeaderCell>
                     <HeaderCell>Group</HeaderCell>
@@ -96,11 +96,11 @@ const ProductModal = () => {
                     <HeaderCell>Status</HeaderCell>
                     </Row>
                     <Row>
-                    <LinkCell>Inventory #1</LinkCell>
+                    <LinkCell className="blue-text">Inventory #1</LinkCell>
                     <ItemCell>Cumberland Farms</ItemCell>
                     <ItemCell>All stores – Entrance Displays (HTML)</ItemCell>
                     <ItemCell>Boston, MA</ItemCell>
-                    <ItemCell><span className="status"></span>Reserved</ItemCell>
+                    <ItemCell className="light-gray-text"><span className="status"></span>Reserved</ItemCell>
                     </Row>
 
                   </Table> 

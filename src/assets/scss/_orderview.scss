@@ -1,0 +1,28 @@
+.order-view {
+    background-color: #D07308 !IMPORTANT;
+    border-color: #D07308 !IMPORTANT;
+    @include primary_button;
+    i {
+        margin-right: 13px;
+    }
+}
+
+a.order-view:focus,
+a.order-view:hover,
+button.order-view:focus,
+button.order-view:hover {
+    background-color: #D07308 !IMPORTANT;
+    box-shadow: 0px 0px 0px 2px rgb(208 115 8 / 50%);
+}
+
+.add-info-form {
+    padding: 20px;
+}
+
+.order-view-table {
+    .item-cell:nth-child(4),
+    .item-cell:nth-child(5),
+    .item-cell:nth-child(6) {
+        color: $black-color;
+    }
+}

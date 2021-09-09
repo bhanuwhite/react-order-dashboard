@@ -221,7 +221,7 @@ const ViewOrderLine = () => {
                             invalid
                             />
                         </div>
-                        <div className="products-table">
+                        <div className="products-table table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -279,7 +279,7 @@ const ViewOrderLine = () => {
                                 invalid
                             />
                         </div>
-                        <div className="order-table product-popup-table">
+                        <div className="order-table view_order_line">
                         <Table cols="grid-cols-5">
                             <Row>
                             <HeaderCell>Item</HeaderCell>
@@ -289,11 +289,11 @@ const ViewOrderLine = () => {
                             <HeaderCell>Status</HeaderCell>
                             </Row>
                             <Row>
-                            <LinkCell>Inventory #1</LinkCell>
+                            <LinkCell className="blue-text">Inventory #1</LinkCell>
                             <ItemCell>Cumberland Farms</ItemCell>
                             <ItemCell>All stores – Entrance Displays (HTML)</ItemCell>
                             <ItemCell>Boston, MA</ItemCell>
-                            <ItemCell><span className="status"></span>Reserved</ItemCell>
+                            <ItemCell className="light-gray-text"><span className="status"></span>Reserved</ItemCell>
                             </Row>
 
                         </Table> 

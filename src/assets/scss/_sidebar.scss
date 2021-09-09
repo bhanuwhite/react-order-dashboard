@@ -1,0 +1,65 @@
+// Side Menu Styles
+.sidemenu {
+    width: 13%;
+    padding: 20px 0px;
+    .navbar-nav {
+        display: block;
+        width: 100%;
+        .navlink {
+            a {
+                color: #7A869A;
+                text-decoration: none;
+                font-size: 14px;
+                font-family: "Ubuntu-Regular";
+                padding: 8px 10px 8px 0px;
+                display: block;
+                .nav-icons {
+                    width: 15px;
+                    margin-right: 10px;
+                    margin-top: -4px;
+                    height: 15px;
+                }
+                .nav-icons-active {
+                    display: none !important;
+                }
+            }
+        }
+        .navlink.active {
+            a {
+                color: #B9090F;
+                .nav-icons {
+                    display: none !important;
+                }
+                .nav-icons-active {
+                    width: 15px;
+                    margin-right: 10px;
+                    margin-top: -4px;
+                    height: 15px;
+                    display: inline-block !important;
+                }
+            }
+        }
+    }
+}
+
+.atesh-group {
+    .bg-white {
+        background-color: #fafafa !important;
+    }
+    .border {
+        border: none !important;
+    }
+    .items-center {
+        padding: 6px 3px 0px 3px!important;
+        border: none;
+        font-size: 13px;
+        color: #8B8B8B;
+    }
+}
+
+// Media Quires
+@media screen and (max-width: 767px) {
+    .sidemenu {
+        display: none;
+    }
+}

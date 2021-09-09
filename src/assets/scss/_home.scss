@@ -1,0 +1,132 @@
+//Home Page content styles
+.stats-block {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    .order-card {
+        @include card;
+        width: 30%;
+        height: 138px;
+        .order-card-text {
+            display: flex;
+            justify-content: space-between;
+            .see-all {
+                margin-bottom: 0px;
+                font-size: 12px;
+                text-transform: uppercase;
+                color: #396EFF;
+                line-height: 13px;
+                font-family: "Ubuntu-Medium";
+            }
+        }
+        .order-text-inside {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 24px;
+            line-height: 27px;
+            .number {
+                width: 15%;
+                font-size: 20px;
+                font-family: "Ubuntu-Medium";
+                color: #396EFF;
+                text-align: right;
+                margin-right: 24px;
+            }
+            .text {
+                width: 80%;
+                font-size: 13px;
+                font-family: "Ubuntu-Regular";
+                color: #777777;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .occupancy-block {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 13px;
+        .occupancy-card {
+            @include card;
+            width: 31%;
+            height: 138px;
+            text-align: center;
+            .warning {
+                background-color: #FEAB39 !important;
+                color: #533408 !important;
+                border: none !important;
+                border-radius: 7px;
+                width: 100%;
+                font-size: 13px;
+                padding: 4px !important;
+                display: inline-block;
+                margin: 8px 0px;
+            }
+            .errors {
+                background-color: #E6E6E6 !important;
+                color: #959595 !important;
+                border: none !important;
+                border-radius: 7px;
+                width: 100%;
+                font-size: 13px;
+                padding: 4px !important;
+                display: inline-block;
+                margin: 8px 0px;
+            }
+        }
+    }
+}
+
+.revinue-forecast {
+    .text-sm {
+        padding: 13px 16px !important;
+        border-bottom: 1px solid #E3E3E3;
+        display: flex;
+        align-items: center;
+    }
+    .font-medium {
+        @include section_heading;
+    }
+    .errors {
+        background-color: #FAFAFA;
+        h3 {
+            font-size: 14px;
+            color: #A8A7A7;
+        }
+    }
+    .revenue-surface {
+        h1 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-family: "Ubuntu-Bold";
+            color: #A8A7A7;
+        }
+    }
+}
+
+a.warning:focus,
+a.warning:hover,
+button.warning:focus,
+button.warning:hover {
+    box-shadow: 0px 0px 0px 2px rgb(254 171 57 / 50%);
+}
+
+// Media Quires
+@media screen and (max-width: 767px) {
+    .stats-block {
+        display: block;
+        .occupancy-block {
+            width: 100%;
+            margin: 0px 0px;
+            margin-bottom: 19px;
+        }
+        .order-card {
+            width: 100%;
+            margin-bottom: 19px;
+        }
+    }
+    .occupancy-card {
+        padding: 10px !important;
+    }
+}

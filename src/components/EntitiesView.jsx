@@ -205,21 +205,21 @@ const OrderView = () => {
                             <ItemCell>Chief Executive Officer</ItemCell>
                             <ItemCell>steve@newbelgium.com</ItemCell>
                             <ItemCell></ItemCell>
-                            <ItemCell><span className="status"></span>Active</ItemCell>
+                            <ItemCell className="light-gray-text"><span className="status"></span>Active</ItemCell>
                             </Row>
                             <Row>
                             <LinkCell>Randy Rainbow</LinkCell>
                             <ItemCell>Chief Marketing Officer</ItemCell>
                             <ItemCell>randy@newbelgium.com</ItemCell>
                             <ItemCell></ItemCell>
-                            <ItemCell><span className="status paused"></span>On Hold</ItemCell>
+                            <ItemCell className="light-gray-text"><span className="status paused"></span>On Hold</ItemCell>
                             </Row>
                             <Row>
                             <LinkCell>Daddy Warbucks</LinkCell>
                             <ItemCell>Chief Financial Officer</ItemCell>
                             <ItemCell>daddy@newbelgium.com</ItemCell>
                             <ItemCell></ItemCell>
-                            <ItemCell><span className="status complete"></span>Inactive</ItemCell>
+                            <ItemCell className="light-gray-text"><span className="status complete"></span>Inactive</ItemCell>
                             </Row>
 
                         </Table> 

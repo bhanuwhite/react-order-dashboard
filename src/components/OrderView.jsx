@@ -51,7 +51,7 @@ const OrderView = () => {
                 <div class="content-wrapper">
                 <div class="order-heading-block">
                     <h2 class="heading"><span>Orders</span><i class="fas fa-caret-right"></i>STS51-1701A</h2>
-                    <Button className="primary-btn order-view"><i class="fas fa-pause-circle"></i>Pause</Button>
+                    <Button className="order-view"><i class="fas fa-pause-circle"></i>Pause</Button>
                 </div>
                 {/* Entity information */}
                 <Section className="w-full add-info-block m-t-20" title="ad info">
@@ -234,7 +234,7 @@ const OrderView = () => {
                       <ItemCell>05/06/2021 - 07/07/2021</ItemCell>
                       <ItemCell>170</ItemCell>
                       <ItemCell>$1700.00</ItemCell>
-                      <ItemCell><span className="status"></span>Running</ItemCell>
+                      <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
                     </Row>
                     <Row>
                       <LinkCell>Order #3</LinkCell>
@@ -243,7 +243,7 @@ const OrderView = () => {
                       <ItemCell>05/06/2021 - 07/07/2021</ItemCell>
                       <ItemCell>60</ItemCell>
                       <ItemCell>$420.00</ItemCell>
-                      <ItemCell><span className="status"></span>Running</ItemCell>
+                      <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
                     </Row>
                     <Row>
                       <LinkCell>Order #1</LinkCell>
@@ -252,7 +252,7 @@ const OrderView = () => {
                       <ItemCell className="text-black">05/06/2021 - 07/07/2021</ItemCell>
                       <ItemCell>150</ItemCell>
                       <ItemCell>$1500.00</ItemCell>
-                      <ItemCell><span className="status"></span>Running</ItemCell>
+                      <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
                     </Row>
                   </Table> 
                   </div> 

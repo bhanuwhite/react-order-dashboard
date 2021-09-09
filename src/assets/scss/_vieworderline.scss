@@ -1,0 +1,55 @@
+//view order line page UI
+.listprice-label {
+    color: #777777;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.listprice-value {
+    font-size: 14px;
+    color: $black-color;
+    font-family: "Ubuntu-Medium";
+    line-height: 16px;
+    span {
+        font-family: "Ubuntu-Regular";
+        margin-left: 9px;
+    }
+}
+
+.price-input {
+    display: flex;
+    .entry-filed .border {
+        border-radius: 6px 0px 0px 6px;
+    }
+    .entry-dropdown {
+        margin-top: 22px;
+        .border {
+            border-left: none !important;
+            border-radius: 0px 6px 6px 0px;
+        }
+    }
+}
+
+.plays {
+    border-top: 1px solid #e6e6e6;
+    .plays-block {
+        display: flex;
+        width: 60%;
+        align-items: center;
+        font-size: 14px;
+        .toggle-btn {
+            display: flex;
+            align-items: center;
+            width: 48%;
+            label {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.view_order_line {
+    .item-cell {
+        color: $black-color;
+    }
+}
