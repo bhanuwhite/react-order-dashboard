@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <div className="privacy-block">
+      <div className="privacy-block flex justify-between">
         <div>
           <ul className="widget-links">
             <li>

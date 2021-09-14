@@ -1,15 +1,10 @@
 //Home Page content styles
 .stats-block {
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
     .order-card {
         @include card;
         width: 30%;
         height: 138px;
         .order-card-text {
-            display: flex;
-            justify-content: space-between;
             .see-all {
                 margin-bottom: 0px;
                 font-size: 12px;
@@ -20,9 +15,6 @@
             }
         }
         .order-text-inside {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding-left: 24px;
             line-height: 27px;
             .number {
@@ -44,8 +36,6 @@
     }
     .occupancy-block {
         width: 40%;
-        display: flex;
-        justify-content: space-between;
         margin: 0px 13px;
         .occupancy-card {
             @include card;

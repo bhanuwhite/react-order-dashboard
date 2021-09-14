@@ -1,6 +1,10 @@
 // Login Page Styles
+.login-wrapper {
+    display: flex;
+}
+
 .login-image {
-    width: 100%;
+    width: 50%;
     height: calc(100vh - 110px);
     background-image: url(../imgs/login_image.png);
     background-size: 100%;
@@ -8,7 +12,7 @@
 }
 
 .login-form {
-    width: 100%;
+    width: 50%;
     height: calc(100vh - 110px);
     display: flex;
     align-items: center;

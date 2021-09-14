@@ -76,10 +76,6 @@ img {
 }
 
 //Global Styles
-.main-wrapper {
-    height: 100vh;
-}
-
 .main-wrapper .mobile-filter {
     display: none;
 }
@@ -161,8 +157,6 @@ img {
 }
 
 .orders-filter {
-    display: flex;
-    justify-content: space-between;
     .order-search {
         width: 75%;
         .text-sm {
@@ -298,7 +292,6 @@ img {
     .item-cell {
         font-family: "Ubuntu-Medium";
         font-size: 13px;
-        color: #396EFF;
         display: flex;
         align-items: center;
         .progress {

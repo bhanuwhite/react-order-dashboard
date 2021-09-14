@@ -14,7 +14,7 @@ import Settings from "./components/Settings";
 import Entities from "./components/Entities";
 const Layout = ({ children }) => {
   return (
-    <div className="main-wrapper">
+    <div className="main-wrapper h-screen">
       {children}
       {/* <Footer /> */}
     </div>

@@ -9,11 +9,7 @@ const LoginForm = () => {
   return (
     <>
     <div className="login-wrapper">
-      <div className="row no-gutters">
-        <div className="col-lg-6">
           <div className="login-image"></div>
-        </div>
-        <div className="col-lg-6">
           <div className="login-form">
             <div className="login-block">
               <img src={adEdgeLogo} alt="AdEdge Logo" />
@@ -35,8 +31,6 @@ const LoginForm = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
     </div>
     <Footer />
     </>

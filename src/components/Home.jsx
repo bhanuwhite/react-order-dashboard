@@ -20,7 +20,7 @@ const Home = () => {
           defaultValue=""
         />
        <div class="main-layout">
-         <div class="main-conetnt">
+         <div class="main-conetnt flex">
            {/* Side Bar */}
            <div className="sidemenu">
             <Sidebar/>
@@ -28,27 +28,27 @@ const Home = () => {
             {/* Home Content */}
             <div class="content-wrapper">
               <h2 class="heading">Home</h2>
-              <div class="stats-block">
+              <div class="stats-block flex-none md:flex justify-between mt-4">
                 {/* Orders */}
-                <div class="order-card">
-                  <div class="order-card-text">
+                <div class="order-card bg-white">
+                  <div class="order-card-text flex justify-between">
                   <p className="orders-text">Orders</p>
                   <p className="see-all">see all</p>
                   </div>
                 </div>
               
-                <div class="occupancy-block">
+                <div class="occupancy-block flex justify-between">
                     {/* Occupancy */}
-                  <div class="occupancy-card">
+                  <div class="occupancy-card bg-white">
                     <p className="orders-text">Occupancy</p>
                   </div>
                     {/* Availability */}
-                  <div class="occupancy-card">
+                  <div class="occupancy-card bg-white p-4">
                     <p className="orders-text">Availability</p>
                   
                   </div>
                   {/* Warnings */}
-                  <div class="occupancy-card">
+                  <div class="occupancy-card bg-white">
                     <p className="orders-text">Warnings</p>
                     <Button className="warning">4</Button>
                     <p className="orders-text">Errors</p>
@@ -56,16 +56,16 @@ const Home = () => {
                   </div>
                 </div>
                 {/* Total Records */}
-                <div class="order-card mb-none">
-                    <div className="order-text-inside"><span class="number">38</span> <span class="text">total orders</span></div>
-                    <div className="order-text-inside"><span class="number">8</span> <span class="text">total products</span></div>
-                    <div className="order-text-inside"><span class="number">12</span> <span class="text">total entities</span></div>
-                    <div className="order-text-inside"><span class="number">5</span> <span class="text">total prices</span></div>
+                <div class="order-card mb-none bg-white">
+                    <div className="order-text-inside flex justify-between items-center"><span class="number">38</span> <span class="text">total orders</span></div>
+                    <div className="order-text-inside flex justify-between items-center"><span class="number">8</span> <span class="text">total products</span></div>
+                    <div className="order-text-inside flex justify-between items-center"><span class="number">12</span> <span class="text">total entities</span></div>
+                    <div className="order-text-inside flex justify-between items-center"><span class="number">5</span> <span class="text">total prices</span></div>
                 </div>
               </div>
               {/* Revenue Forecast */}
               <Section
-                  className="w-full revinue-forecast m-t-20"
+                  className="w-full revinue-forecast mt-5"
                   title="revenue forecast"
                   infoLink={{
                     kind: "ext-link",
@@ -81,7 +81,7 @@ const Home = () => {
                 </Section>
               {/* Avg Revenue */}
               <Section
-                  className="w-full revinue-forecast m-t-20"
+                  className="w-full revinue-forecast mt-5"
                   title="avg. revenue/surface"
                   infoLink={{
                     kind: "ext-link",
@@ -97,7 +97,7 @@ const Home = () => {
                 </Section>
                {/* Errors */}
                <Section
-                  className="w-full revinue-forecast m-t-20"
+                  className="w-full revinue-forecast mt-5"
                   title="errors"
                   infoLink={{
                     kind: "ext-link",

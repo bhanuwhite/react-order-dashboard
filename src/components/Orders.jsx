@@ -33,19 +33,19 @@ const Orders = () => {
             />
        {/*Orders Main Conetnt */}
        <div class="main-layout">
-         <div class="main-conetnt">
+         <div class="main-conetnt flex">
             {/* Side Bar */}
             <div className="sidemenu">
             <Sidebar/>
             </div>
             <div class="content-wrapper">
-                <div class="order-heading-block">
+                <div class="order-heading-block flex justify-between">
                     <h2 class="heading">Orders</h2>
                     <Button className="primary-btn"><i class="fas fa-plus-circle"></i>New Order</Button>
                 </div>
-                <div class="orders-block">
+                <div class="orders-block bg-white">
                   <form action="" method="">
-                  <div class="orders-filter">
+                  <div class="orders-filter flex-none md:flex justify-between">
                       <TextBox
                         prependIcon="fas fa-search"
                         className="order-search"
@@ -57,7 +57,6 @@ const Orders = () => {
                         value={status}
                         onChange={setStatus}
                         options={["All orders", "Order1", "Order2"]}
-                        invalid
                       />
                   </div>
                   </form> 

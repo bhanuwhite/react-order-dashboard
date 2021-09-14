@@ -10,6 +10,13 @@ import {
     Dropdown,
     Pagination,
   } from "../core/components";
+  import {
+    Table,
+    Row,
+    ItemCell,
+    HeaderCell,
+    LinkCell,
+  } from "../core/components";
 const Entities = () => {
     const [tabIndex, setTabIndex] = React.useState(0);
     const [status, setStatus] = useState("All statuses")
@@ -32,17 +39,17 @@ const Entities = () => {
             defaultValue=""
         /> 
         <div class="main-layout">
-            <div class="main-conetnt">
+            <div class="main-conetnt flex">
                 {/* Side Menu */}
                 <div className="sidemenu">
                  <Sidebar/>
                 </div>
                 <div class="content-wrapper">
-                    <div class="order-heading-block">
+                    <div class="order-heading-block flex justify-between">
                         <h2 class="heading">Entities</h2>
                         <Button className="primary-btn"><i class="fas fa-plus-circle"></i>New Account</Button>
                     </div>
-                    <div class="orders-block">
+                    <div class="orders-block bg-white">
                        <TabBar
                         className="tabs-sctm"
                         onChange={handleTabIndexChange}
@@ -53,7 +60,7 @@ const Entities = () => {
                         </TabBar>
                         <div className="accounts">
                         <form action="" method="">
-                            <div class="orders-filter">
+                            <div class="entities-filter flex justify-between">
                                 <TextBox
                                     prependIcon="fas fa-search"
                                     className="order-search w-50"
@@ -65,71 +72,56 @@ const Entities = () => {
                                     value={type}
                                     onChange={setType}
                                     options={["All types", "Type1", "Type2"]}
-                                    invalid
                                 />
                                 <Dropdown
                                     className="all-orders"
                                     value={status}
                                     onChange={setStatus}
                                     options={["All statuses", "statuse1", "statuse2"]}
-                                    invalid
                                 />
                             </div>
                         </form> 
-                        <div className="products-table">
-                           <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="sort">Name</th>
-                                        <th>Type</th>
-                                        <th>Market</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="w-50 blue-text">New Belgium</td>
-                                        <td><span class="circle"></span>Advertiser</td>
-                                        <td>NA-US</td>
-                                        <td className="table-satus-text"><span className="status"></span>Active</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-50 blue-text">Hill Farmstead</td>
-                                        <td><span class="circle"></span>Advertiser</td>
-                                        <td>NA-US-NE</td>
-                                        <td className="table-satus-text"><span className="status paused"></span>On Hold</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-50 blue-text">Billups</td>
-                                        <td><span class="circle agency"></span>Agency</td>
-                                        <td>NA-US</td>
-                                        <td className="table-satus-text"><span className="status complete"></span>Inactive</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-50 blue-text">Exterion</td>
-                                        <td><span class="circle seller"></span>Seller</td>
-                                        <td>EMEA</td>
-                                        <td className="table-satus-text"><span className="status"></span>Active</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-50 blue-text">Riker Networks</td>
-                                        <td><span class="circle seller"></span>Seller</td>
-                                        <td>Global</td>
-                                        <td className="table-satus-text"><span className="status"></span>Active</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div className="product-table-pagination">
-                            <Pagination
-                                hasNext={false}
-                                hasPrev={false}
-                                nextPage={() => {}}
-                                prevPage={() => {}}
-                            >
-                                Page 1/1
-                            </Pagination>
-                            </div> 
-                        </div>
+                        <div className="order-table">
+                  <Table cols="grid-cols-5">
+                    <Row>
+                      <HeaderCell className="col-span-2">Name</HeaderCell>
+                      <HeaderCell>Type</HeaderCell>
+                      <HeaderCell>Market</HeaderCell>
+                      <HeaderCell>Status</HeaderCell>
+                    </Row>
+                    <Row>
+                      <LinkCell className="col-span-2">New Belgium</LinkCell>
+                      <ItemCell className="text-black"><span className="circle"></span>Advertiser</ItemCell>
+                      <ItemCell className="text-black">NA-US</ItemCell>
+                      <ItemCell className="text-gray-500"><span className="status"></span>Active </ItemCell>
+                    </Row>
+                    <Row>
+                      <LinkCell className="col-span-2">Hill Farmstead</LinkCell>
+                      <ItemCell className="text-black"><span className="circle"></span>Advertiser</ItemCell>
+                      <ItemCell className="text-black">NA-US-NE</ItemCell>
+                      <ItemCell className="text-gray-500"><span className="status paused"></span>On Hold </ItemCell>
+                    </Row>
+                    <Row>
+                      <LinkCell className="col-span-2">Billups</LinkCell>
+                      <ItemCell className="text-black"><span className="circle agency"></span>Agency</ItemCell>
+                      <ItemCell className="text-black">NA-US</ItemCell>
+                      <ItemCell className="text-gray-500"><span className="status complete"></span>Inactive </ItemCell>
+                    </Row>
+                    <Row>
+                      <LinkCell className="col-span-2">Exterion</LinkCell>
+                      <ItemCell className="text-black"><span className="circle seller"></span>Seller</ItemCell>
+                      <ItemCell className="text-black">EMEA</ItemCell>
+                      <ItemCell className="text-gray-500"><span className="status"></span>Active </ItemCell>
+                    </Row>
+                    <Row>
+                      <LinkCell className="col-span-2">Riker Networks</LinkCell>
+                      <ItemCell className="text-black"><span className="circle seller"></span>Seller</ItemCell>
+                      <ItemCell className="text-black">Global</ItemCell>
+                      <ItemCell className="text-gray-500"><span className="status"></span>Active </ItemCell>
+                    </Row>
+                  </Table> 
+                  </div> 
+                        
                         </div>
                     </div>
                     

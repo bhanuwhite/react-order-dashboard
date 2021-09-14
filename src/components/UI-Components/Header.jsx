@@ -17,7 +17,7 @@ const Header = () => {
   };
   return (
     <header>
-      <div class="home-header">
+      <div class="home-header flex justify-between items-center bg-white h-14">
           <div className="navbar-header">
             <img src={sidebarMenu} alt="sidebarMenuIcon"   className="navbar-toggle collapsed" onClick={handleSidebarShow}/>
             
