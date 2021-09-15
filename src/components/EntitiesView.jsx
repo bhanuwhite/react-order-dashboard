@@ -38,7 +38,7 @@ const OrderView = () => {
             defaultValue=""
             />
         <div class="main-layout">
-            <div class="main-conetnt">
+            <div class="main-conetnt flex">
                 {/* Side Bar */}
                 <div className="sidemenu">
                 <Sidebar/>
@@ -48,135 +48,122 @@ const OrderView = () => {
                         <h2 class="heading"><span>Orders</span><i class="fas fa-caret-right"></i>New Belgium Brewery</h2>
                     </div>
                     {/* Entity information */}
-                    <Section className="w-full entry-block m-t-20" title="entity information">
-                        <div class="row">
-                            <div class="col-lg-8">
+                    <Section className="w-full entry-block mt-5" title="entity information">
+                        <div class="sm:flex justify-between items-center">
+                            <div class="sm:w-2/3 sm:mr-5">
                                 <TextBox
                                     className="entry-filed"
                                     label="Name"
                                     defaultValue="New Belgium Brewery"
-                                    invalid
                                 />
                             </div>
-                            <div class="col-lg-4">
+                            <div class="sm:w-1/3 m-t-20-mobile">
                                 <Dropdown
                                 className="w-full entry-dropdown"
                                 label="Parent"
                                 value={parent}
                                 onChange={setParent}
                                 options={["All orders", "Order1", "Order2"]}
-                                invalid
                                 />
                             </div>
                         </div>
                 
-                    <div className="three-fields m-t-20">
-                        <div class="row">
-                                <div class="col-lg-4">
-                                    <Dropdown
-                                    className="w-full entry-dropdown"
-                                    label="Market"
-                                    value={market}
-                                    onChange={setMarket}
-                                    options={["Lips", "Market1", "Market2"]}
-                                    invalid
-                                    />
-                                </div>
-                                <div class="col-lg-4">
-                                    <Dropdown
-                                    className="w-full entry-dropdown"
-                                    label="Account Type"
-                                    value={account}
-                                    onChange={setAccount}
-                                    options={["Lips1", "Account1", "Account2"]}
-                                    invalid
-                                    />
-                                </div>
-                                <div class="col-lg-4">
-                                    <Dropdown
-                                    className="w-full entry-dropdown"
-                                    label="Owner"
-                                    value={owner}
-                                    onChange={setOwner}
-                                    options={["Owner1", "Owner2", "Owner3"]}
-                                    invalid
-                                    />
-                                </div>
+                    <div className="mt-5">
+                        <div class="sm:flex justify-between items-center">
+                            <div class="sm:w-1/3 sm:mr-5">
+                                <Dropdown
+                                className="w-full entry-dropdown"
+                                label="Market"
+                                value={market}
+                                onChange={setMarket}
+                                options={["Lips", "Market1", "Market2"]}
+                                />
                             </div>
-                    
-                    </div>
+                            <div class="sm:w-1/3 sm:mr-5 m-t-20-mobile">
+                                <Dropdown
+                                className="w-full entry-dropdown"
+                                label="Account Type"
+                                value={account}
+                                onChange={setAccount}
+                                options={["Lips1", "Account1", "Account2"]}
+                                />
+                            </div>
+                            <div class="sm:w-1/3 m-t-20-mobile">
+                                <Dropdown
+                                className="w-full entry-dropdown"
+                                label="Owner"
+                                value={owner}
+                                onChange={setOwner}
+                                options={["Owner1", "Owner2", "Owner3"]}
+                                />
+                            </div>
+                        </div>
+                     </div>
                     </Section>
                     {/* Main Address */}
-                    <Section className="w-full entry-block m-t-20" title="Main Address">
-                        <div class="row">
-                            <div class="col-lg-4">
+                    <Section className="w-full entry-block mt-5" title="Main Address">
+                        <div class="sm:flex justify-between items-center">
+                            <div class="sm:w-1/3 sm:mr-5">
                                 <TextBox
                                     className="entry-filed"
                                     label="Address Line 1"
                                     defaultValue="123 Fake Street"
-                                    invalid
                                 />
                             </div>
-                            <div class="col-lg-4">
+                            <div class="sm:w-1/3 sm:mr-5 m-t-20-mobile">
                                 <TextBox
                                     className="entry-filed"
                                     label="City"
                                     defaultValue=""
-                                    invalid
                                 />
                             </div>
-                            <div class="col-lg-4">
+                            <div class="sm:w-1/3 m-t-20-mobile">
                                 <Dropdown
                                 className="w-full entry-dropdown"
                                 label="State / Province"
                                 value={state}
                                 onChange={setState}
                                 options={["State1", "State2", "State3"]}
-                                invalid
                                 />
                             </div>
                         </div>
                 
-                    <div className="three-fields m-t-20">
-                        <div class="row">
-                            <div class="col-lg-4">
+                    <div className="mt-5">
+                        <div class="sm:flex justify-between items-center">
+                            <div class="sm:w-1/3 sm:mr-5">
                                 <TextBox
                                     className="entry-filed"
                                     label="Address Line 2"
                                     defaultValue=""
-                                    invalid
                                 />
                             </div>
-                            <div class="col-lg-4">
+                            <div class="sm:w-1/3 sm:mr-5 m-t-20-mobile">
                                 <TextBox
                                     className="entry-filed"
                                     label="ZIP Code"
                                     defaultValue=""
-                                    invalid
                                 />
                             </div>
-                            <div class="col-lg-4">
+                            <div class="sm:w-1/3 m-t-20-mobile">
                                 <Dropdown
                                 className="w-full entry-dropdown"
                                 label="Country"
                                 value={country}
                                 onChange={setCountry}
                                 options={["United States", "United Kingdom", "India"]}
-                                invalid
                                 />
                             </div>
-                            </div>
-                    
+                         </div>
                     </div>
                     </Section>
                     {/* Contacts */}
-                    <div class="custom-section mt-4">
-                    <div class="custom-section-header">
+                    <div class="custom-section mt-5">
+                    <div class="custom-section-header flex justify-between items-center">
                         <h4>Contacts</h4>
                         <a href="">+ ADD NEW ITEM</a>
                     </div>
                     <div class="custom-section-body">
-                        <div class="orders-filter">
+                        <div class="orders-filter sm:flex justify-between items-center">
                             <TextBox
                                 prependIcon="fas fa-search"
                                 className="order-search"
@@ -188,42 +175,37 @@ const OrderView = () => {
                                 value={status}
                                 onChange={setStatus}
                                 options={["All statuses", "status1", "status2"]}
-                                invalid
                             />
                         </div>
-                        <div className="order-table product-popup-table">
-                        <Table cols="grid-cols-5 table-responsive">
-                            <Row>
-                            <HeaderCell>Name</HeaderCell>
-                            <HeaderCell>Title</HeaderCell>
-                            <HeaderCell>E-mail</HeaderCell>
-                            <HeaderCell></HeaderCell>
-                            <HeaderCell>Status</HeaderCell>
-                            </Row>
-                            <Row>
-                            <LinkCell>Steve Fechheimer</LinkCell>
-                            <ItemCell>Chief Executive Officer</ItemCell>
-                            <ItemCell>steve@newbelgium.com</ItemCell>
-                            <ItemCell></ItemCell>
-                            <ItemCell className="light-gray-text"><span className="status"></span>Active</ItemCell>
-                            </Row>
-                            <Row>
-                            <LinkCell>Randy Rainbow</LinkCell>
-                            <ItemCell>Chief Marketing Officer</ItemCell>
-                            <ItemCell>randy@newbelgium.com</ItemCell>
-                            <ItemCell></ItemCell>
-                            <ItemCell className="light-gray-text"><span className="status paused"></span>On Hold</ItemCell>
-                            </Row>
-                            <Row>
-                            <LinkCell>Daddy Warbucks</LinkCell>
-                            <ItemCell>Chief Financial Officer</ItemCell>
-                            <ItemCell>daddy@newbelgium.com</ItemCell>
-                            <ItemCell></ItemCell>
-                            <ItemCell className="light-gray-text"><span className="status complete"></span>Inactive</ItemCell>
-                            </Row>
+                        <div className="order-table">
+                            <Table cols="grid-cols-4 table-responsive">
+                                <Row>
+                                <HeaderCell>Name</HeaderCell>
+                                <HeaderCell>Title</HeaderCell>
+                                <HeaderCell>E-mail</HeaderCell>
+                                <HeaderCell>Status</HeaderCell>
+                                </Row>
+                                <Row>
+                                <LinkCell className="blue-text">Steve Fechheimer</LinkCell>
+                                <ItemCell>Chief Executive Officer</ItemCell>
+                                <ItemCell>steve@newbelgium.com</ItemCell>
+                                <ItemCell className="light-gray-text"><span className="status"></span>Active</ItemCell>
+                                </Row>
+                                <Row>
+                                <LinkCell className="blue-text">Randy Rainbow</LinkCell>
+                                <ItemCell>Chief Marketing Officer</ItemCell>
+                                <ItemCell>randy@newbelgium.com</ItemCell>
+                                <ItemCell className="light-gray-text"><span className="status paused"></span>On Hold</ItemCell>
+                                </Row>
+                                <Row>
+                                <LinkCell className="blue-text">Daddy Warbucks</LinkCell>
+                                <ItemCell>Chief Financial Officer</ItemCell>
+                                <ItemCell>daddy@newbelgium.com</ItemCell>
+                                <ItemCell className="light-gray-text"><span className="status complete"></span>Inactive</ItemCell>
+                                </Row>
 
-                        </Table> 
-                        </div> 
+                            </Table> 
+                            </div> 
                         <div className="table-pagination">
                             <Pagination
                                 hasNext={false}
@@ -237,7 +219,7 @@ const OrderView = () => {
                     </div>
                 
                   </div>
-                  <Section className="w-full entry-block m-t-20" title="entity family"></Section>
+                  <Section className="w-full entry-block mt-5" title="entity family"></Section>
                   {/* Footer */}
                   <div className="inside-footer">
                       <Footer />

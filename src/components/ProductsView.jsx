@@ -11,7 +11,13 @@ import {
 import {
   Dropdown,
 } from "../core/components";
-
+import {
+  Table,
+  Row,
+  ItemCell,
+  HeaderCell,
+  LinkCell,
+} from "../core/components";
 
 const ProductsView = () => {
     const [toggle1, setToggle1] = useState(false);
@@ -29,15 +35,15 @@ const ProductsView = () => {
             />
        {/*Orders Main Conetnt */}
        <div class="main-layout">
-         <div class="main-conetnt">
+         <div class="main-conetnt flex">
             {/* Side Bar */}
             <div className="sidemenu">
             <Sidebar/>
             </div>
             <div class="content-wrapper">
-                <div class="order-heading-block mb-block">
+                <div class="order-heading-block mb-block sm:flex justify-between items-center">
                     <h2 class="heading">Products</h2>
-                    <div className="products-btn-group">
+                    <div className="products-btn-group sm:flex justify-end">
                       <Button className="btn-delete disabled-state" red>Delete selected</Button>
                       <Button className="primary-btn disabled-state" >Move selected...</Button>
                       <Button className="primary-btn"><i class="fas fa-plus-circle"></i>New Folder</Button>
@@ -50,7 +56,7 @@ const ProductsView = () => {
                     </div>
                     <div class="products-block-inside">
                     <form action="" method="">
-                  <div class="orders-filter">
+                  <div class="orders-filter sm:flex justify-between items-center">
                       <TextBox
                         prependIcon="fas fa-search"
                         className="order-search"
@@ -62,59 +68,58 @@ const ProductsView = () => {
                         value={status}
                         onChange={setStatus}
                         options={["All goal types", "type1", "type2"]}
-                        invalid
                       />
                   </div>
                   </form> 
-                  <div className="products-table">
-                  <table class="table">
-                    <thead>
-                        <tr>
-                        <th></th>
-                        <th class="sort">Name</th>
-                        <th>Type</th>
-                        <th>Children</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td colspan="3" className="blue-text"><i class="fas fa-upload"></i> One folder up...</td>
-                        </tr>
-                        <tr>
-                            <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td class="w-50 blue-text"><i class="fas fa-folder-open"></i> Seoul</td>
-                            <td>Folder</td>
-                            <td>2 folders</td>
-                        </tr>
-                        <tr>
-                            <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td class="w-50 blue-text"><i class="fas fa-folder-open"></i> New York</td>
-                            <td>Product</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td class="w-50 blue-text"><i class="fas fa-file-alt document-icon"></i> London - 5% DSOV/Screen</td>
-                            <td>Product</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td class="w-50 blue-text"><i class="fas fa-file-alt document-icon"></i> London - 5% DSOV</td>
-                            <td>Product</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td><Checkbox className="" value={toggle1} onChange={setToggle1} /></td>
-                            <td class="w-50 blue-text"><i class="fas fa-file-alt document-icon"></i> London - 250 Plays/Screen</td>
-                            <td>Gateway Node</td>
-                            <td>4</td>
-                        </tr>
-                    </tbody>
-                    </table>
-                  </div> 
-                  <div className="product-table-pagination">
+                  <div className="order-table">
+                      <Table cols="grid-cols-5">
+                        <Row>
+                          <HeaderCell className="col-span-3 pl-9">Name</HeaderCell>
+                          <HeaderCell>Type</HeaderCell>
+                          <HeaderCell>Children</HeaderCell>
+                        </Row>
+                        <Row>
+                          <ItemCell className="col-span-5 folder-lable">
+                            <span className="pl-9"><i class="fas fa-upload"></i> One folder up...</span></ItemCell>
+                        </Row>
+                        <Row>
+                          <ItemCell className="col-span-3 folder-lable">
+                            <Checkbox className="cstm-checkbox" value={toggle1} onChange={setToggle1} /> 
+                            <span><i class="fas fa-folder-open"></i> Seoul</span></ItemCell>
+                          <ItemCell className="text-black">Folder</ItemCell>
+                          <ItemCell className="text-black">2 folders</ItemCell>
+                        </Row>
+                        <Row>
+                          <ItemCell className="col-span-3 folder-lable">
+                            <Checkbox className="cstm-checkbox" value={toggle1} onChange={setToggle1} /> 
+                            <span><i class="fas fa-folder-open"></i> New York</span></ItemCell>
+                          <ItemCell className="text-black">Product</ItemCell>
+                          <ItemCell className="text-black">-</ItemCell>
+                        </Row>
+                        <Row>
+                          <ItemCell className="col-span-3 folder-lable">
+                            <Checkbox className="cstm-checkbox" value={toggle1} onChange={setToggle1} /> 
+                            <span><i class="fas fa-file-alt document-icon"></i> London - 5% DSOV/Screen</span></ItemCell>
+                          <ItemCell className="text-black">Product</ItemCell>
+                          <ItemCell className="text-black">-</ItemCell>
+                        </Row>
+                        <Row>
+                          <ItemCell className="col-span-3 folder-lable">
+                            <Checkbox className="cstm-checkbox" value={toggle1} onChange={setToggle1} /> 
+                            <span><i class="fas fa-file-alt document-icon"></i> London - 5% DSOV</span></ItemCell>
+                          <ItemCell className="text-black">Product</ItemCell>
+                          <ItemCell className="text-black">-</ItemCell>
+                        </Row>
+                        <Row>
+                          <ItemCell className="col-span-3 folder-lable">
+                            <Checkbox className="cstm-checkbox" value={toggle1} onChange={setToggle1} /> 
+                            <span><i class="fas fa-file-alt document-icon"></i> London - 250 Plays/Screen</span></ItemCell>
+                          <ItemCell className="text-black">Gateway Node</ItemCell>
+                          <ItemCell className="text-black">4</ItemCell>
+                        </Row>
+                       </Table> 
+                      </div> 
+                  <div className="table-pagination">
                   <Pagination
                     hasNext={false}
                     hasPrev={false}

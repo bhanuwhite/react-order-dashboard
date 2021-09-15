@@ -43,58 +43,52 @@ const OrderView = () => {
             defaultValue=""
             />
         <div class="main-layout">
-            <div class="main-conetnt">
+            <div class="main-conetnt flex">
                 {/* Side Bar */}
                 <div className="sidemenu">
                 <Sidebar/>
                 </div>
                 <div class="content-wrapper">
-                <div class="order-heading-block">
+                <div class="order-heading-block flex justify-between items-center">
                     <h2 class="heading"><span>Orders</span><i class="fas fa-caret-right"></i>STS51-1701A</h2>
                     <Button className="order-view"><i class="fas fa-pause-circle"></i>Pause</Button>
                 </div>
                 {/* Entity information */}
-                <Section className="w-full add-info-block m-t-20" title="ad info">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div className="add-info-form">
+                <Section className="w-full add-info-block mt-5" title="ad info">
+                    <div class="flex-none sm:flex">
+                        <div class="w-full sm:w-3/4 p-5">
                             <TextBox
                                 className="entry-filed"
                                 label="Name"
                                 defaultValue="Lips of Faith - Spring 2020"
-                                invalid
                             />
                             <Dropdown
-                            className="w-full entry-dropdown m-t-20"
+                            className="w-full entry-dropdown mt-5"
                             label="Category"
                             value={category}
                             onChange={setCategory}
                             options={["Lips", "Category1", "Category2"]}
-                            invalid
                             />
-                            <div className="row">
-                                <div class="col-lg-6">
+                            <div className="flex-none sm:flex justify-between items-center">
+                                <div class="date-picker">
                                 <DatePicker
-                                    className="w-full entry-dropdown m-t-20"
+                                    className="w-full entry-dropdown mt-5"
                                     label="Start Date"
                                     value={date}
                                     onChange={setDate}
-                                    invalid
                                     />
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="date-picker">
                                 <DatePicker
-                                    className="w-full entry-dropdown m-t-20"
+                                    className="w-full entry-dropdown mt-5"
                                     label="End Date"
                                     value={endate}
                                     onChange={setEndate}
-                                    invalid
                                     />
                                 </div>
                             </div>
-                            </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="w-full sm:w-1/4">
                            <div className="order-details">
                               <div className="order-block">
                                <p className="order-label">Order Number</p>
@@ -117,158 +111,147 @@ const OrderView = () => {
                     </div>
                 </Section>
                 {/* Main Address */}
-                <Section className="w-full entry-block m-t-20" title="advertiser">
-                    <div class="row">
-                        
-                        <div class="col-lg-3">
+                <Section className="w-full entry-block mt-5" title="advertiser">
+                    <div class="flex-none sm:flex items-center">  
+                        <div class="w-full sm:w-1/4 mr-5">
                             <Dropdown
                             className="w-full entry-dropdown"
                             label="Advertiser"
                             value={advertiser}
                             onChange={setAdvertiser}
                             options={["Advertiser Inc3.", "Advertiser Inc1.", "Advertiser Inc2."]}
-                            invalid
                             />
                         </div>
-                        <div class="col-lg-3">
+                        <div class="w-full sm:w-1/4">
                         <Dropdown
                             className="w-full entry-dropdown m-t-20-mobile"
                             label="Advertiser Contact"
                             value={contact}
                             onChange={setContact}
                             options={["Mr. Contact", "Mr. Contact1", "Mr. Contact2"]}
-                            invalid
                             />
                         </div>
                     </div>
                 </Section>
                 {/* Agency */}
-                <Section className="w-full entry-block m-t-20" title="agency">
-                    <div class="row">
-                        
-                        <div class="col-lg-3">
+                <Section className="w-full entry-block mt-5" title="agency">
+                    <div class="flex-none sm:flex items-center"> 
+                        <div class="w-full sm:w-1/4 mr-5">
                             <Dropdown
                             className="w-full entry-dropdown"
                             label="Agency"
                             value={agency}
                             onChange={setAgency}
                             options={["Agency Inc.", "Agency Inc.1", "Agency Inc.2"]}
-                            invalid
                             />
                         </div>
-                        <div class="col-lg-3">
+                        <div class="w-full sm:w-1/4">
                         <Dropdown
                             className="w-full entry-dropdown m-t-20-mobile"
                             label="Agency Contact"
                             value={agencycontact}
                             onChange={setAgencyContact}
                             options={["Mr. Contact", "Mr. Contact1", "Mr. Contact2"]}
-                            invalid
                             />
                         </div>
                     </div>
                 </Section>
                 {/* billing */}
-                <Section className="w-full entry-block m-t-20" title="billing">
-                    <div class="row">
-                        
-                        <div class="col-lg-3">
+                <Section className="w-full entry-block mt-5" title="billing">
+                    <div class="flex-none sm:flex items-center">    
+                        <div class="w-full sm:w-1/4 mr-5">
                             <Dropdown
                             className="w-full entry-dropdown"
                             label="Sales Contact"
                             value={sales}
                             onChange={setSales}
                             options={["Mrs. Contact", "Mrs. Contact1", "Mrs. Contact2"]}
-                            invalid
                             />
                         </div>
-                        <div class="col-lg-3">
+                        <div class="w-full sm:w-1/4">
                         <Dropdown
                             className="w-full entry-dropdown m-t-20-mobile"
                             label="Bill To"
                             value={bill}
                             onChange={setBill}
                             options={["Bill Paying Inc.", "Bill Paying Inc.1", "Bill Paying Inc."]}
-                            invalid
                             />
                         </div>
                     </div>
                 </Section>
                 {/* order items */}
-                <div class="custom-section mt-4">
-            <div class="custom-section-header">
-                <h4>order items</h4>
-                <a href="">+ ADD NEW ITEM</a>
-            </div>
-            <div class="custom-section-body">
-            <div class="orders-filter">
-                      <TextBox
-                        prependIcon="fas fa-search"
-                        className="order-search"
-                        placeholder="Search items"
-                        defaultValue=""
-                      />
-                      <Dropdown
-                        className="all-orders"
-                        value={status}
-                        onChange={setStatus}
-                        options={["All statuses", "status1", "status2"]}
-                        invalid
-                      />
-                  </div>
-                  <div className="order-table order-view-table">
-                  <Table cols="grid-cols-7 table-responsive">
-                    <Row>
-                      <HeaderCell>Order</HeaderCell>
-                      <HeaderCell>Product</HeaderCell>
-                      <HeaderCell>Campaign</HeaderCell>
-                      <HeaderCell>Dates</HeaderCell>
-                      <HeaderCell>Qt.</HeaderCell>
-                      <HeaderCell>Qt.</HeaderCell>
-                      <HeaderCell>Price</HeaderCell>
-                    </Row>
-                    <Row>
-                      <LinkCell>Order #2</LinkCell>
-                      <ItemCell>Placements</ItemCell>
-                      <ItemCell>Lips of Faith</ItemCell>
-                      <ItemCell>05/06/2021 - 07/07/2021</ItemCell>
-                      <ItemCell>170</ItemCell>
-                      <ItemCell>$1700.00</ItemCell>
-                      <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
-                    </Row>
-                    <Row>
-                      <LinkCell>Order #3</LinkCell>
-                      <ItemCell>Placements</ItemCell>
-                      <ItemCell>Lips of Faith</ItemCell>
-                      <ItemCell>05/06/2021 - 07/07/2021</ItemCell>
-                      <ItemCell>60</ItemCell>
-                      <ItemCell>$420.00</ItemCell>
-                      <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
-                    </Row>
-                    <Row>
-                      <LinkCell>Order #1</LinkCell>
-                      <ItemCell>Placements</ItemCell>
-                      <ItemCell>Lips of Faith</ItemCell>
-                      <ItemCell className="text-black">05/06/2021 - 07/07/2021</ItemCell>
-                      <ItemCell>150</ItemCell>
-                      <ItemCell>$1500.00</ItemCell>
-                      <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
-                    </Row>
-                  </Table> 
-                  </div> 
-                  <div className="table-pagination">
-                  <Pagination
-                    hasNext={false}
-                    hasPrev={false}
-                    nextPage={() => {}}
-                    prevPage={() => {}}
-                  >
-                    Page 1/1
-                 </Pagination>
-                  </div> 
-            </div>
-           
-        </div>
+                <div class="custom-section mt-5">
+                    <div class="custom-section-header flex justify-between items-center">
+                        <h4>order items</h4>
+                        <a href="">+ ADD NEW ITEM</a>
+                    </div>
+                    <div class="custom-section-body">
+                    <div class="orders-filter flex-none sm:flex justify-between items-center">
+                            <TextBox
+                                prependIcon="fas fa-search"
+                                className="order-search"
+                                placeholder="Search items"
+                                defaultValue=""
+                            />
+                            <Dropdown
+                                className="all-orders"
+                                value={status}
+                                onChange={setStatus}
+                                options={["All statuses", "status1", "status2"]}
+                            />
+                        </div>
+                        <div className="order-table order-view-table">
+                        <Table cols="grid-cols-7 table-responsive">
+                            <Row>
+                            <HeaderCell>Order</HeaderCell>
+                            <HeaderCell>Product</HeaderCell>
+                            <HeaderCell>Campaign</HeaderCell>
+                            <HeaderCell>Dates</HeaderCell>
+                            <HeaderCell>Qt.</HeaderCell>
+                            <HeaderCell>Qt.</HeaderCell>
+                            <HeaderCell>Price</HeaderCell>
+                            </Row>
+                            <Row>
+                            <LinkCell>Order #2</LinkCell>
+                            <ItemCell className="text-blue-400">Placements</ItemCell>
+                            <ItemCell className="text-blue-400">Lips of Faith</ItemCell>
+                            <ItemCell>05/06/2021 - 07/07/2021</ItemCell>
+                            <ItemCell>170</ItemCell>
+                            <ItemCell>$1700.00</ItemCell>
+                            <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
+                            </Row>
+                            <Row>
+                            <LinkCell>Order #3</LinkCell>
+                            <ItemCell className="text-blue-400">Placements</ItemCell>
+                            <ItemCell className="text-blue-400">Lips of Faith</ItemCell>
+                            <ItemCell>05/06/2021 - 07/07/2021</ItemCell>
+                            <ItemCell>60</ItemCell>
+                            <ItemCell>$420.00</ItemCell>
+                            <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
+                            </Row>
+                            <Row>
+                            <LinkCell>Order #1</LinkCell>
+                            <ItemCell className="text-blue-400">Placements</ItemCell>
+                            <ItemCell className="text-blue-400">Lips of Faith</ItemCell>
+                            <ItemCell className="text-black">05/06/2021 - 07/07/2021</ItemCell>
+                            <ItemCell>150</ItemCell>
+                            <ItemCell>$1500.00</ItemCell>
+                            <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
+                            </Row>
+                        </Table> 
+                        </div> 
+                        <div className="table-pagination">
+                        <Pagination
+                            hasNext={false}
+                            hasPrev={false}
+                            nextPage={() => {}}
+                            prevPage={() => {}}
+                        >
+                            Page 1/1
+                        </Pagination>
+                        </div> 
+                    </div>  
+                </div>
                 <div className="update-btn">
                 <Button className="primary-btn">Save changes</Button>
                 </div>

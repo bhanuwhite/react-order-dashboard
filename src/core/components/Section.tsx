@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 // tslint:disable-next-line: variable-name
 export const Section: FC<Props> = ({ className, title, noPadding, infoLink, children }) => (
     <div className={`rounded border dark:bg-gray-900 dark:text-white bg-white border-solid dark:border-gray-700 border-gray-300 ${className ?? ''}`}>
-        <div className="flex justify-between px-4 py-3 text-sm border-b border-solid dark:border-gray-700 border-gray-300">
+        <div className="flex justify-between px-4 py-3 section-heading text-sm border-b border-solid dark:border-gray-700 border-gray-300">
             <div className="dark:text-gray-400 text-gray-500 uppercase font-medium">{title}</div>
             {infoLink && <InfoIcon info={infoLink} />}
         </div>

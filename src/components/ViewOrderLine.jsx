@@ -53,84 +53,78 @@ const ViewOrderLine = () => {
          />
         {/*Orders Main Conetnt */}
         <div class="main-layout">
-            <div class="main-conetnt">
+            <div class="main-conetnt flex">
                 {/* Side Bar */}
                 <div className="sidemenu">
                 <Sidebar/>
                 </div>
                 <div class="content-wrapper">
-                <div class="order-heading-block">
+                <div class="order-heading-block sm:flex justify-between items-center">
                     <h2 class="heading">
                         <span>Orders</span><i class="fas fa-caret-right"></i><span>STS51-1701A</span>
                         <i class="fas fa-caret-right"></i>Order Item #1
                     </h2>
                 </div>
                 {/* ADD information */}
-                <Section className="w-full add-info-block m-t-20" title="ad info">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div className="add-info-form">
+                <Section className="w-full add-info-block mt-5" title="ad info">
+                    <div class="sm:flex justify-between">
+                        <div class="w-full sm:w-3/4 p-5">
                             <TextBox
                                 className="entry-filed"
                                 label="Name"
                                 defaultValue="Myorderitem1"
-                                invalid
                             />
                             <Dropdown
-                            className="w-full entry-dropdown m-t-20"
+                            className="w-full entry-dropdown mt-5"
                             label="Category"
                             value={category}
                             onChange={setCategory}
                             options={["Lips", "Category1", "Category2"]}
-                            invalid
                             />
-                            <div className="row">
-                                <div class="col-lg-6">
+                            <div className="flex-none sm:flex justify-between items-center">
+                                <div class="date-picker">
                                 <DatePicker
-                                    className="w-full entry-dropdown m-t-20"
+                                    className="w-full entry-dropdown mt-5"
                                     label="Start Date"
                                     value={date}
                                     onChange={setDate}
-                                    invalid
                                     />
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="date-picker">
                                 <DatePicker
-                                    className="w-full entry-dropdown m-t-20"
+                                    className="w-full entry-dropdown mt-5"
                                     label="End Date"
                                     value={endate}
                                     onChange={setEndate}
-                                    invalid
                                     />
                                 </div>
                             </div>
                                 <Dropdown
-                                className="w-full entry-dropdown m-t-20"
+                                className="w-full entry-dropdown mt-5"
                                 label="Media Type"
                                 value={media}
                                 onChange={setMedia}
                                 options={["Full Portrait", "Landscape"]}
-                                invalid
                                 />
                                  <Dropdown
-                                className="w-full entry-dropdown m-t-20"
+                                className="w-full entry-dropdown mt-5"
                                 label="Target Audience"
                                 value={audience}
                                 onChange={setAudience}
                                 options={["General Public", "Private"]}
-                                invalid
                                 />
-                                 <Dropdown
-                                className="w-full entry-dropdown m-t-20"
-                                label="Campaign"
-                                value={campaign}
-                                onChange={setCampaign}
-                                options={["Lips of Faith", "Lips"]}
-                                invalid
-                                />
-                            </div>
+                                <div className="flex-none sm:flex justify-between items-center">
+                                    <Dropdown
+                                    className="sm:w-3/4 entry-dropdown mt-5"
+                                    label="Campaign"
+                                    value={campaign}
+                                    onChange={setCampaign}
+                                    options={["Lips of Faith", "Lips"]}
+                                    />
+                                    <span className="edit-campign">Edit campaign</span>
+                                </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="w-full sm:w-1/4">
                            <div className="order-details">
                               <div className="order-block">
                                <p className="order-label">Order Number</p>
@@ -153,22 +147,20 @@ const ViewOrderLine = () => {
                     </div>
                 </Section>
                 {/* pricing & scheduling */}
-                <div class="custom-section mt-4">
+                <div class="custom-section mt-5">
                     <div class="custom-section-header">
                         <h4>pricing & scheduling</h4>
                     </div>
                     <div class="custom-section-body">
-                        <div class="row"> 
-                            <div class="col-lg-3">
-                            <div class="list-price">
+                        <div class="sm:flex"> 
+                            <div class="sm:w-1/3">
                                 <p class="listprice-label">Approval</p>
                                 <p class="listprice-value">150,000<span>USD</span></p>
                             </div>
-                            </div>
-                            <div class="col-lg-3">
+                            <div class="sm:w-1/3 m-t-20-mobile ">
                                 <div class="price-input">
                                     <TextBox
-                                        className="entry-filed"
+                                        className="entry-filed "
                                         label="Line Price"
                                         defaultValue="150,000"
                                     />
@@ -177,40 +169,39 @@ const ViewOrderLine = () => {
                                         value={currency}
                                         onChange={setCurrency}
                                         options={["USD", "EUR", "GBP"]}
-                                        invalid
                                         />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="custom-section-body plays">
-                        <div class="plays-block">
+                        <div class="plays-block sm:flex items-center justify-between">
                             <TextBox
-                                    className="entry-filed w-25"
+                                    className="entry-filed sm:w-1/6 sm:mr-4"
                                     defaultValue="150,000"
                                 />
-                                <span class="ml-3">every</span>
+                                <span class="sm:mr-4 m-t-20-mobile inline-block">every</span>
                                 <TextBox
-                                    className="entry-filed w-25 ml-3"
+                                    className="entry-filed sm:w-1/6 sm:mr-4 m-t-20-mobile"
                                     defaultValue="150,000"
                                 />
                                 <Dropdown
-                                    className="entry-dropdown w-25 ml-3"
+                                    className="entry-dropdown sm:w-1/6 sm:mr-4 m-t-20-mobile"
                                     value={time} onChange={setTime} options={["Hours", "Minuties", "Secounds"]} />
-                                <div class="toggle-btn">
+                                <div class="toggle-btn m-t-20-mobile">
                                 <Toggle className="ml-3" value={toggle1} onChange={setToggle1} /><span class="ml-3">Guaranteed plays</span>
                                 </div>
                         </div>
                     </div>
                </div>
                 {/* creatives */}
-                <div class="custom-section mt-4">
-                    <div class="custom-section-header">
+                <div class="custom-section mt-5">
+                    <div class="custom-section-header flex justify-between items-center">
                         <h4>creatives</h4>
                         <a href="">+ ADD NEW ITEM</a>
                     </div>
                     <div class="custom-section-body">
-                    <div class="orders-filter">
+                    <div class="orders-filter sm:flex justify-between items-center">
                             <TextBox
                             prependIcon="fas fa-search"
                             className="order-search"
@@ -222,33 +213,27 @@ const ViewOrderLine = () => {
                             value={status}
                             onChange={setStatus}
                             options={["All statuses", "status1", "status2"]}
-                            invalid
                             />
                         </div>
-                        <div className="products-table table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th class="sort">Item</th>
-                                    <th>Description</th>
-                                    <th>Type</th>
-                                    <th></th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="blue-text">Creative #1</td>
-                                    <td class="w-50">Primary creative</td>
-                                    <td>HTML-based</td>
-                                    <td class="blue-text">Visit</td>
-                                    <td className="table-satus-text"><span className="status"></span>Approved</td>
-                                </tr>
-                                
-                            </tbody>
-                            </table>
+                        <div className="order-table">
+                            <Table cols="grid-cols-7">
+                                <Row>
+                                <HeaderCell>Item</HeaderCell>
+                                <HeaderCell className="col-span-3">Description</HeaderCell>
+                                <HeaderCell>Type</HeaderCell>
+                                <HeaderCell></HeaderCell>
+                                <HeaderCell>Status</HeaderCell>
+                                </Row>
+                                <Row>
+                                <LinkCell className="blue-text">Creative #1</LinkCell>
+                                <ItemCell  className="col-span-3">Primary creative</ItemCell>
+                                <ItemCell>HTML-based</ItemCell>
+                                <ItemCell className="blue-text">Visit</ItemCell>
+                                <ItemCell className="light-gray-text"><span className="status"></span>Approved</ItemCell>
+                                </Row>
+                            </Table> 
                         </div> 
-                        <div className="table-pagination bt-none">
+                        <div className="table-pagination">
                         <Pagination
                             hasNext={false}
                             hasPrev={false}
@@ -262,13 +247,13 @@ const ViewOrderLine = () => {
                 
                 </div>
                 {/* inventory */}
-                <div class="custom-section mt-4 inventory">
-                    <div class="custom-section-header">
+                <div class="custom-section mt-5 inventory">
+                    <div class="custom-section-header flex justify-between items-center">
                         <h4>inventory</h4>
                         <a onClick={() => setModalnewpen(true)}>+ ADD NEW ITEM</a>
                     </div>
                     <div class="custom-section-body">
-                        <div class="orders-filter">
+                        <div class="orders-filter sm:flex justify-between items-center">
                             <TextBox
                                 prependIcon="fas fa-search"
                                 className="order-search"
@@ -280,22 +265,21 @@ const ViewOrderLine = () => {
                                 value={status}
                                 onChange={setStatus}
                                 options={["All statuses", "status1", "status2"]}
-                                invalid
                             />
                         </div>
-                        <div className="order-table view_order_line">
-                        <Table cols="grid-cols-5">
+                        <div className="order-table">
+                        <Table cols="grid-cols-6">
                             <Row>
                             <HeaderCell>Item</HeaderCell>
                             <HeaderCell>Group</HeaderCell>
-                            <HeaderCell>Target(s)</HeaderCell>
+                            <HeaderCell className="col-span-2">Target(s)</HeaderCell>
                             <HeaderCell>Market</HeaderCell>
                             <HeaderCell>Status</HeaderCell>
                             </Row>
                             <Row>
                             <LinkCell className="blue-text">Inventory #1</LinkCell>
                             <ItemCell>Cumberland Farms</ItemCell>
-                            <ItemCell>All stores – Entrance Displays (HTML)</ItemCell>
+                            <ItemCell className="col-span-2">All stores – Entrance Displays (HTML)</ItemCell>
                             <ItemCell>Boston, MA</ItemCell>
                             <ItemCell className="light-gray-text"><span className="status"></span>Reserved</ItemCell>
                             </Row>
@@ -330,7 +314,7 @@ const ViewOrderLine = () => {
                             invalid
                             />
                             <Dropdown
-                            className="w-full entry-dropdown m-t-20"
+                            className="w-full entry-dropdown mt-5"
                             label="Retailers"
                             value={retailers}
                             onChange={setRetailers}
@@ -338,7 +322,7 @@ const ViewOrderLine = () => {
                             invalid
                             />
                             <Dropdown
-                            className="w-full entry-dropdown m-t-20"
+                            className="w-full entry-dropdown mt-5"
                             label="Audiences"
                             value={audiences}
                             onChange={setAudiences}
@@ -346,7 +330,7 @@ const ViewOrderLine = () => {
                             invalid
                             />
                             <Dropdown
-                            className="w-full entry-dropdown m-t-20"
+                            className="w-full entry-dropdown mt-5"
                             label="Formats"
                             value={formats}
                             onChange={setFormats}

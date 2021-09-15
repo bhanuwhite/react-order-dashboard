@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header>
       <div class="home-header flex justify-between items-center bg-white h-14">
-          <div className="navbar-header">
+          <div className="navbar-header sm:hidden">
             <img src={sidebarMenu} alt="sidebarMenuIcon"   className="navbar-toggle collapsed" onClick={handleSidebarShow}/>
             
             {/* Sidebar Mobile */}
@@ -56,7 +56,7 @@ const Header = () => {
                     <a href="">4G Faileovers Terms</a>
                   </li>
                 </ul>
-                <p class="copy-right"> @2 020 Veea Inc. All Rigts Reserved.</p>
+                <p class="copy-right"> @2020 Veea Inc. All Rigts Reserved.</p>
                 <p>
                   VeeHub is a trademark of Veea Inc. All other trademarks and tradenames are the property of their respective
                   owners.
@@ -64,17 +64,17 @@ const Header = () => {
               </div>
               </div>
           </div>
-          <div class="header-logo">
+          <div class="header-logo w-1/3 flex items-center">
               <img src={adEdgeLogo} alt="AdEdge Logo" class="logo"/>
               <h3 class="logo-text mb-none">AdEdge Order Center</h3>
           </div>
           <TextBox
               prependIcon="fas fa-search"
-              className="global-search mb-none"
+              className="global-search mb-none w-1/3"
               placeholder="Search orders, products and more"
               defaultValue=""
             />
-          <div class="notification-block">
+          <div class="notification-block w-1/3 flex justify-end items-center">
               <span class="mb-none">A.Hicks</span>
               <span class="mb-none">
                   <img src={personImage} alt="Avatar" class="user-profile"/>

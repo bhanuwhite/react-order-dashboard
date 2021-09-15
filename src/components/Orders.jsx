@@ -60,7 +60,7 @@ const Orders = () => {
                       />
                   </div>
                   </form> 
-                  <div className="order-table">
+                  <div className="order-table orders-table-wrapper">
                   <Table cols="grid-cols-6">
                     <Row>
                       <HeaderCell>Order</HeaderCell>
@@ -71,62 +71,62 @@ const Orders = () => {
                       <HeaderCell>Status</HeaderCell>
                     </Row>
                     <Row>
-                      <LinkCell>STS51-1701A</LinkCell>
+                      <LinkCell className="blue-text">STS51-1701A</LinkCell>
                       <ItemCell>New Belgium</ItemCell>
                       <ItemCell>Varick</ItemCell>
                       <ItemCell>Lips of Faith</ItemCell>
                       <ItemCell>
-                      <div class="progress">
-                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                        <div className="progress">
+                            <div className="progress-bar"></div>
+                        </div>
                       </ItemCell>
                       <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
                     </Row>
                     <Row>
-                      <LinkCell>STS51-1701B</LinkCell>
+                      <LinkCell  className="blue-text">STS51-1701B</LinkCell>
                       <ItemCell>IPG</ItemCell>
                       <ItemCell>A very long</ItemCell>
                       <ItemCell>Society & Solitude</ItemCell>
                       <ItemCell>
-                      <div class="progress">
-                        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                         <div className="progress">
+                            <div className="progress-bar"></div>
+                         </div>
                       </ItemCell>
-                      <ItemCell  className="light-gray-text"><span className="status paused"></span>Paused</ItemCell>
+                      <ItemCell className="light-gray-text"><span className="status paused"></span>Paused</ItemCell>
                     </Row>
                     <Row>
-                      <LinkCell>STS51-1701C</LinkCell>
+                      <LinkCell className="blue-text">STS51-1701C</LinkCell>
                       <ItemCell>Carat</ItemCell>
                       <ItemCell>Boulevard</ItemCell>
                       <ItemCell>Another very long</ItemCell>
                       <ItemCell>
-                      <div class="progress">
-                        <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                      <div className="progress">
+                            <div className="progress-bar"></div>
+                         </div>
                       </ItemCell>
                       <ItemCell  className="light-gray-text"><span className="status complete"></span>Completed</ItemCell>
                     </Row>
                     <Row>
-                      <LinkCell>STS51-1701D</LinkCell>
+                      <LinkCell className="blue-text">STS51-1701D</LinkCell>
                       <ItemCell>Billups</ItemCell>
                       <ItemCell>Foam & Foam Inc.</ItemCell>
                       <ItemCell>Togetherness</ItemCell>
                       <ItemCell>
-                      <div class="progress">
-                        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                      <div className="progress">
+                            <div className="progress-bar"></div>
+                         </div>
                       </ItemCell>
                       <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
                     </Row>
                     <Row>
-                      <LinkCell>STS51-1701E</LinkCell>
+                      <LinkCell className="blue-text">STS51-1701E</LinkCell>
                       <ItemCell>-</ItemCell>
                       <ItemCell>Zero Gravity</ItemCell>
                       <ItemCell>Mr. Sulu</ItemCell>
                       <ItemCell>
-                      <div class="progress">
-                        <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                      <div className="progress">
+                            <div className="progress-bar"></div>
+                         </div>
                       </ItemCell>
                       <ItemCell className="light-gray-text"><span className="status"></span>Active</ItemCell>
                     </Row>

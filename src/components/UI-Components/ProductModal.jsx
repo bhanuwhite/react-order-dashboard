@@ -38,13 +38,13 @@ const ProductModal = () => {
         <div class="row mb-4">
             <div class="col-md-5">
               <Dropdown
-                className="w-full entry-dropdown m-t-20"
+                className="w-full entry-dropdown mt-5"
                 label="Goal Type"
                 value={goal} onChange={setGoal} options={["Plays/Screen", "Goal", "Goal1"]} />
             </div>
             <div class="col-md-3">
                 <TextBox
-                    className="entry-filed m-t-20"
+                    className="entry-filed mt-5"
                     label="Value"
                     defaultValue="250"
                     invalid
@@ -52,7 +52,7 @@ const ProductModal = () => {
             </div>
             <div class="col-md-2">
                 <TextBox
-                    className="entry-filed m-t-20"
+                    className="entry-filed mt-5"
                     label="Nominal ad length"
                     defaultValue="8"
                     invalid
@@ -60,7 +60,7 @@ const ProductModal = () => {
             </div>
             <div class="col-md-2">
               <Dropdown
-                className="w-full entry-dropdown m-t-40"
+                className="w-full entry-dropdown mt-10"
                 value={time} onChange={setTime} options={["Secounds", "Minuties", "Hours"]} />
             </div>
         </div>

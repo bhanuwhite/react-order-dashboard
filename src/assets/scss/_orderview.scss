@@ -26,3 +26,16 @@ button.order-view:hover {
         color: $black-color;
     }
 }
+
+.date-picker {
+    width: 48%;
+}
+
+@media screen and (max-width: 767px) {
+    .date-picker {
+        width: 100%;
+    }
+    .order-details {
+        border-left: 0px;
+    }
+}

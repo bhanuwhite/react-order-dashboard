@@ -2,21 +2,12 @@
 header {
     box-shadow: 0px 0px 5px 0px #dcdbdb;
     padding: 0px 90px;
-    border: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
     .home-header {
-        .navbar-header {
-            display: none;
-        }
-        .header-logo {
-            display: flex;
-            align-items: center;
-            width: 32%;
-            img {
-                width: 22px;
-            }
+        .header-logo img {
+            width: 22px;
         }
         .global-search {
-            width: 30%;
             .border {
                 border: none !important;
             }
@@ -38,8 +29,6 @@ header {
             font-size: 12px;
             color: #707070;
             font-family: "Ubuntu-Regular";
-            width: 35%;
-            text-align: right;
             .user-profile {
                 width: 30px;
                 margin-left: 8px;

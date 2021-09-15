@@ -28,7 +28,7 @@ const Home = () => {
             {/* Home Content */}
             <div class="content-wrapper">
               <h2 class="heading">Home</h2>
-              <div class="stats-block flex-none md:flex justify-between mt-4">
+              <div class="stats-block flex-none sm:flex justify-between mt-5">
                 {/* Orders */}
                 <div class="order-card bg-white">
                   <div class="order-card-text flex justify-between">

@@ -60,21 +60,21 @@ const Entities = () => {
                         </TabBar>
                         <div className="accounts">
                         <form action="" method="">
-                            <div class="entities-filter flex justify-between">
+                            <div class="entities-filter sm:flex justify-between items-center">
                                 <TextBox
                                     prependIcon="fas fa-search"
-                                    className="order-search w-50"
+                                    className="order-search sm:w-3/6"
                                     placeholder="Search accounts"
                                     defaultValue=""
                                 />
                                 <Dropdown
-                                    className="all-orders"
+                                    className="all-orders sm:w-3/12 sm:ml-4 m-t-20-mobile"
                                     value={type}
                                     onChange={setType}
                                     options={["All types", "Type1", "Type2"]}
                                 />
                                 <Dropdown
-                                    className="all-orders"
+                                    className="all-orders sm:w-3/12 sm:ml-4 m-t-20-mobile"
                                     value={status}
                                     onChange={setStatus}
                                     options={["All statuses", "statuse1", "statuse2"]}
@@ -121,7 +121,16 @@ const Entities = () => {
                     </Row>
                   </Table> 
                   </div> 
-                        
+                  <div className="table-pagination">
+                  <Pagination
+                    hasNext={false}
+                    hasPrev={false}
+                    nextPage={() => {}}
+                    prevPage={() => {}}
+                  >
+                    Page 1/1
+                 </Pagination>
+                  </div>   
                         </div>
                     </div>
                     

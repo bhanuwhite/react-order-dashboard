@@ -33,9 +33,6 @@
 .plays {
     border-top: 1px solid #e6e6e6;
     .plays-block {
-        display: flex;
-        width: 60%;
-        align-items: center;
         font-size: 14px;
         .toggle-btn {
             display: flex;
@@ -63,4 +60,10 @@
     margin-top: 20px;
     display: block;
     text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+    .listprice-label {
+        margin-bottom: 5px;
+    }
 }

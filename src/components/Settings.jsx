@@ -35,46 +35,42 @@ const Settings = () => {
             defaultValue=""
          />
          <div class="main-layout">
-            <div class="main-conetnt">
+            <div class="main-conetnt flex">
                 {/* Sidemenu  */}
                 <div className="sidemenu">
                   <Sidebar/>
                 </div>
                 <div class="content-wrapper">
-                    <div class="order-heading-block">
+                    <div class="order-heading-block flex justify-between items-center">
                         <h2 class="heading">Settings</h2>
                     </div>
-                    <Section className="w-full entry-block m-t-20" title="general">
+                    <Section className="w-full entry-block mt-5" title="general">
                         <TextBox
                             className="entry-filed"
                             label="Name"
                             defaultValue="Atesh Hicks"
-                            invalid
                         />
                         <TextBox
-                            className="entry-filed m-t-20"
+                            className="entry-filed mt-5"
                             label="Primary E-mail"
                             defaultValue="atesh@veea.com"
-                            invalid
                         />
                         <Dropdown
-                            className="entry-dropdown m-t-20"
+                            className="entry-dropdown mt-5"
                             label="Language"
                             value={language}
                             onChange={setLanguage}
                             options={["English", "Hindi"]}
-                            invalid
                         />
                         <Dropdown
-                            className="entry-dropdown m-t-20"
+                            className="entry-dropdown mt-5"
                             label="Timezone"
                             value={timezone}
                             onChange={setTimezone}
                             options={["Automatic", "Manual"]}
-                            invalid
                         />
                     </Section>
-                    <Section className="w-full entry-block m-t-20" title="notifications">
+                    <Section className="w-full entry-block mt-5" title="notifications">
                         <div className="setting-notification notification-type">
                             <div className="notification-label">
 

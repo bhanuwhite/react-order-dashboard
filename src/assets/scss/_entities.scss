@@ -28,13 +28,11 @@
 
 .entities-filter {
     .order-search {
-        width: 50%;
         .text-sm {
             @include search_filter;
         }
     }
     .all-orders {
-        width: 23%;
         .group {
             height: 32px;
             font-size: 14px;
