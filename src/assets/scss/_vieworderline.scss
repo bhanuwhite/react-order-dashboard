@@ -45,12 +45,6 @@
     }
 }
 
-.view_order_line {
-    .item-cell {
-        color: $black-color;
-    }
-}
-
 .clear-filters {
     letter-spacing: 1.32px;
     color: $blue-color;
@@ -60,6 +54,17 @@
     margin-top: 20px;
     display: block;
     text-decoration: none;
+}
+
+.edit-campign {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.32px;
+    font-family: "Ubuntu-Bold";
+    color: #396EFF;
+    display: block;
+    margin-top: 35px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

@@ -311,7 +311,6 @@ const ViewOrderLine = () => {
                             value={market}
                             onChange={setMarket}
                             options={["option1", "option2"]}
-                            invalid
                             />
                             <Dropdown
                             className="w-full entry-dropdown mt-5"
@@ -319,7 +318,6 @@ const ViewOrderLine = () => {
                             value={retailers}
                             onChange={setRetailers}
                             options={["option1", "option2"]}
-                            invalid
                             />
                             <Dropdown
                             className="w-full entry-dropdown mt-5"
@@ -327,7 +325,6 @@ const ViewOrderLine = () => {
                             value={audiences}
                             onChange={setAudiences}
                             options={["General Public", "Private"]}
-                            invalid
                             />
                             <Dropdown
                             className="w-full entry-dropdown mt-5"
@@ -335,7 +332,6 @@ const ViewOrderLine = () => {
                             value={formats}
                             onChange={setFormats}
                             options={["option1", "option2"]}
-                            invalid
                             />
                             <a href="" className="clear-filters">clear filters</a>
                       </div>}

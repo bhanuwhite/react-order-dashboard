@@ -81,11 +81,6 @@ img {
     @include section_heading;
 }
 
-.table-satus-text {
-    font-size: 12px;
-    color: #777777;
-}
-
 .status {
     width: 4px;
     height: 11px;
@@ -275,14 +270,6 @@ img {
     }
 }
 
-.modal-wrapper {
-    overflow-y: scroll;
-    padding-top: 100px;
-    .shadow-2xl {
-        width: 80%;
-    }
-}
-
 .products-subheading {
     padding: 15px;
     border-bottom: 1px solid #E0E0E0;
@@ -321,15 +308,14 @@ img {
     }
 }
 
-.edit-campign {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.32px;
-    font-family: "Ubuntu-Bold";
-    color: #396EFF;
-    display: block;
-    margin-top: 35px;
-    cursor: pointer;
+//modal popup styles
+.modal-wrapper {
+    overflow-y: scroll;
+    padding: 50px 0px;
+    .shadow-2xl {
+        width: 80%;
+        margin: auto;
+    }
 }
 
 // Media Quires
@@ -391,6 +377,47 @@ img {
         .all-orders {
             width: 100%;
             margin-bottom: 14px;
+        }
+    }
+    .order-table,
+    .inventory-table {
+        width: 100%;
+        overflow-y: scroll;
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(140px, 1fr));
+        }
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(140px, 1fr));
+        }
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(140px, 1fr));
+        }
+        .grid-cols-4 {
+            grid-template-columns: repeat(4, minmax(140px, 1fr));
+        }
+        .grid-cols-5 {
+            grid-template-columns: repeat(5, minmax(140px, 1fr));
+        }
+        .grid-cols-6 {
+            grid-template-columns: repeat(6, minmax(140px, 1fr));
+        }
+        .grid-cols-7 {
+            grid-template-columns: repeat(7, minmax(140px, 1fr));
+        }
+        .grid-cols-8 {
+            grid-template-columns: repeat(8, minmax(140px, 1fr));
+        }
+        .grid-cols-9 {
+            grid-template-columns: repeat(9, minmax(140px, 1fr));
+        }
+        .grid-cols-10 {
+            grid-template-columns: repeat(10, minmax(140px, 1fr));
+        }
+        .grid-cols-11 {
+            grid-template-columns: repeat(11, minmax(140px, 1fr));
+        }
+        .grid-cols-12 {
+            grid-template-columns: repeat(12, minmax(140px, 1fr));
         }
     }
 }

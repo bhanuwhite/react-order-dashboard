@@ -9,6 +9,20 @@
     }
 }
 
+.entities-filter {
+    .order-search {
+        .text-sm {
+            @include search_filter;
+        }
+    }
+    .all-orders {
+        .group {
+            height: 32px;
+            font-size: 14px;
+        }
+    }
+}
+
 .circle {
     width: 6px;
     height: 6px;
@@ -24,18 +38,4 @@
 
 .seller {
     background-color: #78D3C5;
-}
-
-.entities-filter {
-    .order-search {
-        .text-sm {
-            @include search_filter;
-        }
-    }
-    .all-orders {
-        .group {
-            height: 32px;
-            font-size: 14px;
-        }
-    }
 }

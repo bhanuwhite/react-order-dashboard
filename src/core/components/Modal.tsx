@@ -59,7 +59,7 @@ export const ModalRaw: React.FC<RawProps & { willBeRemoved: boolean }> = ({
 
   return createPortal(
     <div
-      className={`fixed modal-wrapper flex items-center justify-center inset-0 transition-colors ${
+      className={`fixed modal-wrapper inset-0 transition-colors ${
         willBeRemoved ? "bg-transparent" : "bg-black/50"
       }`}
       style={{ zIndex }}
@@ -67,11 +67,11 @@ export const ModalRaw: React.FC<RawProps & { willBeRemoved: boolean }> = ({
       <div className={computeModalClassName(small, willBeRemoved)}>
       {
         sidebar ?
-        <div className="cstm-modal">
-          <div className="modal-sidebar">
+        <div className="sm:flex h-full">
+          <div className="modal-sidebar sm:w-1/4">
             {sidebarHtml}
           </div>
-          <div className="modal-content">
+          <div className="modal-content sm:w-3/4 border-0">
             <div className={`w-full flex px-4 pt-4 ${header ? "justify-between" : "justify-end"}`}>
               {header}
               {!noClose && (
@@ -86,7 +86,7 @@ export const ModalRaw: React.FC<RawProps & { willBeRemoved: boolean }> = ({
         :
         <div>
      
-            <div className={`w-full cstm-modal flex px-4 pt-4 ${header ? "justify-between" : "justify-end"}`}>
+            <div className={`w-full flex px-4 pt-4 ${header ? "justify-between" : "justify-end"}`}>
               {header}
               {!noClose && (
                 <button className="outline-none focus-visible:outline-black" onClick={onClose}>

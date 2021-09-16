@@ -20,8 +20,8 @@ const AddInventoryModal = () => {
     const [toggle1, setToggle1] = useState(false);
     return (
         <>
-          <div className="inventory-search">
-            <div className="inventory-search-box">
+          <div className="inventory-search sm:flex justify-between items-center">
+            <div className="inventory-search-box sm:w-8/12">
                 <TextBox
                 prependIcon="fas fa-search"
                 className="order-search"
@@ -29,8 +29,8 @@ const AddInventoryModal = () => {
                 defaultValue=""
                 />
             </div>  
-            <div className="content-view">
-              <ul>
+            <div className="content-view sm:w-4/12">
+              <ul className="flex justify-end items-center m-t-20-mobile">
                   <li className="active"><a href="">List View</a></li>
                   <li><a href="">Map View</a></li>
               </ul>

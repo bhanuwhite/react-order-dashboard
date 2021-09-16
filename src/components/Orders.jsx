@@ -77,7 +77,7 @@ const Orders = () => {
                       <ItemCell>Lips of Faith</ItemCell>
                       <ItemCell>
                         <div className="progress">
-                            <div className="progress-bar"></div>
+                            
                         </div>
                       </ItemCell>
                       <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
@@ -89,7 +89,7 @@ const Orders = () => {
                       <ItemCell>Society & Solitude</ItemCell>
                       <ItemCell>
                          <div className="progress">
-                            <div className="progress-bar"></div>
+                   
                          </div>
                       </ItemCell>
                       <ItemCell className="light-gray-text"><span className="status paused"></span>Paused</ItemCell>
@@ -100,8 +100,8 @@ const Orders = () => {
                       <ItemCell>Boulevard</ItemCell>
                       <ItemCell>Another very long</ItemCell>
                       <ItemCell>
-                      <div className="progress">
-                            <div className="progress-bar"></div>
+                         <div className="progress">
+                            
                          </div>
                       </ItemCell>
                       <ItemCell  className="light-gray-text"><span className="status complete"></span>Completed</ItemCell>
@@ -112,8 +112,8 @@ const Orders = () => {
                       <ItemCell>Foam & Foam Inc.</ItemCell>
                       <ItemCell>Togetherness</ItemCell>
                       <ItemCell>
-                      <div className="progress">
-                            <div className="progress-bar"></div>
+                         <div className="progress">
+                           
                          </div>
                       </ItemCell>
                       <ItemCell className="light-gray-text"><span className="status"></span>Running</ItemCell>
@@ -124,8 +124,8 @@ const Orders = () => {
                       <ItemCell>Zero Gravity</ItemCell>
                       <ItemCell>Mr. Sulu</ItemCell>
                       <ItemCell>
-                      <div className="progress">
-                            <div className="progress-bar"></div>
+                         <div className="progress">
+                         
                          </div>
                       </ItemCell>
                       <ItemCell className="light-gray-text"><span className="status"></span>Active</ItemCell>

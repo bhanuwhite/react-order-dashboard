@@ -21,57 +21,47 @@ const ProductModal = () => {
     
     return (
         <>
-       
-        <div class="row">
-            <div class="col-md-7">
-                <TextBox className="entry-filed" label="Name" defaultValue="Seoul/Lotte - 250 Plays/Screen" />
-            </div>
-            <div class="col-md-12">
-                <div class="form-group m-t-14 cstm-textarea">
-                    <label for="description">Description</label>
-                    <textarea class="form-control" id="description" rows="3"
-                    value="Regular notation across all the inventory in Lotte stores located in the Seoul market, guaranteeing 250 plays per day per screen across the rotation."></textarea>
-                </div>
-           </div>
-        </div>
-        <div class="divider m-tb-8"></div>
-        <div class="row mb-4">
-            <div class="col-md-5">
+       <TextBox className="entry-filed sm:w-3/5" label="Name" defaultValue="Seoul/Lotte - 250 Plays/Screen" />
+       <div className="cstm-textarea mt-5">
+            <label>Description</label>
+            <textarea class="resize border rounded-md w-full border-gray-300" value="Regular notation across all the inventory in Lotte stores located in the Seoul market, guaranteeing 250 plays per day per screen across the rotation."></textarea>
+       </div>
+        <div class="divider my-6"></div>
+        <div class="sm:flex">
+            <div class="sm:w-2/5 sm:mr-10">
               <Dropdown
-                className="w-full entry-dropdown mt-5"
+                className="w-full entry-dropdown"
                 label="Goal Type"
                 value={goal} onChange={setGoal} options={["Plays/Screen", "Goal", "Goal1"]} />
             </div>
-            <div class="col-md-3">
+            <div class="sm:w-1/6 sm:mr-10 m-t-20-mobile">
                 <TextBox
-                    className="entry-filed mt-5"
+                    className="entry-filed"
                     label="Value"
                     defaultValue="250"
-                    invalid
                 />
             </div>
-            <div class="col-md-2">
+            <div class="sm:w-1/6 sm:mr-2 m-t-20-mobile">
                 <TextBox
-                    className="entry-filed mt-5"
+                    className="entry-filed"
                     label="Nominal ad length"
                     defaultValue="8"
-                    invalid
                 />
             </div>
-            <div class="col-md-2">
+            <div class="sm:w-1/6 mt-5 m-t-20-mobile">
               <Dropdown
-                className="w-full entry-dropdown mt-10"
+                className="w-full entry-dropdown"
                 value={time} onChange={setTime} options={["Secounds", "Minuties", "Hours"]} />
             </div>
         </div>
-        <div class="divider m-tb-8"></div>
-        <div class="custom-section mt-4">
-            <div class="custom-section-header">
+        <div class="divider my-6"></div>
+        <div class="custom-section">
+            <div class="custom-section-header flex justify-between items-center">
                 <h4>inventory</h4>
                 <a href="">+ ADD NEW ITEM</a>
             </div>
             <div class="custom-section-body">
-                <div class="orders-filter">
+                <div class="orders-filter sm:flex justify-between items-center">
                     <TextBox
                         prependIcon="fas fa-search"
                         className="order-search"
@@ -83,10 +73,9 @@ const ProductModal = () => {
                         value={status}
                         onChange={setStatus}
                         options={["All statuses", "status1", "status2"]}
-                        invalid
                     />
                 </div>
-                <div className="order-table product-popup-table">
+                <div className="order-table">
                   <Table cols="grid-cols-5">
                     <Row>
                     <HeaderCell>Item</HeaderCell>
@@ -118,8 +107,8 @@ const ProductModal = () => {
             </div>
            
         </div>
-        <div class="popup-buttons mt-4">
-                <div class="action-buutons">
+        <div class="sm:flex justify-between mt-5">
+                <div class="action-buutons sm:flex sm:w-1/2">
                 <Button className="move-to mr-3" secondary>
                   Move to...
                 </Button>
@@ -127,7 +116,7 @@ const ProductModal = () => {
                   Delete
                 </Button>
                 </div>
-                <div class="update-buutons">
+                <div class="update-buutons sm:flex sm:w-1/2 justify-end">
                 <Button className="move-to mr-3" secondary>
                    Discard changes
                 </Button>
