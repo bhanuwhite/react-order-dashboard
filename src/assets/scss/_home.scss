@@ -6,10 +6,7 @@
         height: 138px;
         .order-card-text {
             .see-all {
-                margin-bottom: 0px;
                 font-size: 12px;
-                text-transform: uppercase;
-                color: #396EFF;
                 line-height: 13px;
                 font-family: "Ubuntu-Medium";
             }
@@ -21,9 +18,7 @@
                 width: 15%;
                 font-size: 20px;
                 font-family: "Ubuntu-Medium";
-                color: #396EFF;
                 text-align: right;
-                margin-right: 24px;
             }
             .text {
                 width: 80%;
@@ -76,7 +71,9 @@
         align-items: center;
     }
     .font-medium {
-        @include section_heading;
+        font-size: 12px;
+        line-height: 13px;
+        font-family: "Ubuntu-Medium";
     }
     .errors {
         background-color: #FAFAFA;

@@ -38,11 +38,11 @@ const OrderView = () => {
         {/* Search filter for mobile */}
         <TextBox
             prependIcon="fas fa-search"
-            className="global-search mobile-filter"
+            className="mobile-filter sm:hidden"
             placeholder="Search orders, products and more"
             defaultValue=""
             />
-        <div class="main-layout">
+        <div class="bg-clear-white">
             <div class="main-conetnt flex">
                 {/* Side Bar */}
                 <div className="sidemenu">
@@ -182,7 +182,7 @@ const OrderView = () => {
                 {/* order items */}
                 <div class="custom-section mt-5">
                     <div class="custom-section-header flex justify-between items-center">
-                        <h4>order items</h4>
+                        <h4 className="text-neutral-dark uppercase mb-0">order items</h4>
                         <a href="">+ ADD NEW ITEM</a>
                     </div>
                     <div class="custom-section-body">

@@ -27,7 +27,7 @@ const Header = () => {
               {/* Sidebar Header */}
               <div class="modile-header-block">
                 <div>
-                  <img src={adEdgeLogo} alt="AdEdge Logo" class="logo"/>
+                  <img src={adEdgeLogo} alt="AdEdge Logo" class="w-5"/>
                   <h3 class="logo-text">AdEdge Order Center</h3>
                 </div>
                 <div>

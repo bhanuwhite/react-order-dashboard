@@ -30,11 +30,11 @@ const Settings = () => {
         {/* Search filter for mobile */}
         <TextBox
             prependIcon="fas fa-search"
-            className="global-search mobile-filter"
+            className="mobile-filter sm:hidden"
             placeholder="Search orders, products and more"
             defaultValue=""
          />
-         <div class="main-layout">
+         <div class="bg-clear-white">
             <div class="main-conetnt flex">
                 {/* Sidemenu  */}
                 <div className="sidemenu">

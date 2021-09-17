@@ -29,19 +29,19 @@ const ProductsView = () => {
       {/* Search filter for mobile */}
       <TextBox
             prependIcon="fas fa-search"
-            className="global-search mobile-filter"
+            className="mobile-filter sm:hidden"
             placeholder="Search orders, products and more"
             defaultValue=""
             />
        {/*Orders Main Conetnt */}
-       <div class="main-layout">
+       <div class="bg-clear-white">
          <div class="main-conetnt flex">
             {/* Side Bar */}
             <div className="sidemenu">
             <Sidebar/>
             </div>
             <div class="content-wrapper">
-                <div class="order-heading-block mb-block sm:flex justify-between items-center">
+                <div class="order-heading-block sm:flex justify-between items-center">
                     <h2 class="heading">Products</h2>
                     <div className="products-btn-group sm:flex justify-end">
                       <Button className="btn-delete disabled-state" red>Delete selected</Button>

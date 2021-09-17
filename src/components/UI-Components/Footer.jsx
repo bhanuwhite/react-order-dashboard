@@ -27,7 +27,7 @@ const Footer = () => {
             <li>
               <a href="">Limited Warranty</a>
             </li>
-            <li className="mb-30">
+            <li className="mb-8 sm:mb-0">
               <a href="">4G Faileovers Terms</a>
             </li>
           </ul>

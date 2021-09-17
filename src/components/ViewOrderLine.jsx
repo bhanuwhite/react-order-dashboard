@@ -47,12 +47,12 @@ const ViewOrderLine = () => {
         {/* Search filter for mobile */}
         <TextBox
             prependIcon="fas fa-search"
-            className="global-search mobile-filter"
+            className="mobile-filter sm:hidden"
             placeholder="Search orders, products and more"
             defaultValue=""
          />
         {/*Orders Main Conetnt */}
-        <div class="main-layout">
+        <div class="bg-clear-white">
             <div class="main-conetnt flex">
                 {/* Side Bar */}
                 <div className="sidemenu">
@@ -149,7 +149,7 @@ const ViewOrderLine = () => {
                 {/* pricing & scheduling */}
                 <div class="custom-section mt-5">
                     <div class="custom-section-header">
-                        <h4>pricing & scheduling</h4>
+                        <h4 className="text-neutral-dark uppercase mb-0">pricing & scheduling</h4>
                     </div>
                     <div class="custom-section-body">
                         <div class="sm:flex"> 
@@ -197,7 +197,7 @@ const ViewOrderLine = () => {
                 {/* creatives */}
                 <div class="custom-section mt-5">
                     <div class="custom-section-header flex justify-between items-center">
-                        <h4>creatives</h4>
+                        <h4 className="text-neutral-dark uppercase mb-0">creatives</h4>
                         <a href="">+ ADD NEW ITEM</a>
                     </div>
                     <div class="custom-section-body">
@@ -249,7 +249,7 @@ const ViewOrderLine = () => {
                 {/* inventory */}
                 <div class="custom-section mt-5 inventory">
                     <div class="custom-section-header flex justify-between items-center">
-                        <h4>inventory</h4>
+                        <h4 className="text-neutral-dark uppercase mb-0">inventory</h4>
                         <a onClick={() => setModalnewpen(true)}>+ ADD NEW ITEM</a>
                     </div>
                     <div class="custom-section-body">

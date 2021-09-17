@@ -5,14 +5,6 @@
     margin-bottom: 0px;
 }
 
-@mixin section_heading {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: $primary-gray-color;
-    line-height: 13px;
-    font-family: "Ubuntu-Medium";
-}
-
 @mixin search_filter {
     height: 32px;
     font-size: 13px;
